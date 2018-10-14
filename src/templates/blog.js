@@ -14,6 +14,13 @@ const findNode = (path, data) => data.allMarkdownRemark.edges
 
 export default function Template ({ data }) {
   const { markdownRemark: post } = data
+
+
+  if (!post) {
+    console.log(data);
+    return null;
+  }
+
   const related = post.frontmatter.related ? post.frontmatter.related.map(r => findNode(r.post, data)) : []
   return (
     <Layout>
