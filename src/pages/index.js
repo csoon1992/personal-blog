@@ -15,9 +15,7 @@ const IndexPage = ({ data }) => {
 
           if (post.frontmatter.tags) {
             tagContent = post.frontmatter.tags.map((tag) => (
-              <CardText>
-                <Badge href="#" color="light">{tag}</Badge>
-                </CardText>
+              <Badge href="#" color="light">{tag}</Badge>
             ));
           }
 
@@ -25,7 +23,9 @@ const IndexPage = ({ data }) => {
           <Card style={{marginBottom: 10}} key={post.id}>
             <CardBody>
               <CardTitle><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></CardTitle>
-              {tagContent}
+              <CardText>
+                {tagContent}
+              </CardText>
               <CardSubtitle style={{marginBottom: 10}}>{post.frontmatter.date}</CardSubtitle>
               <CardText>{post.excerpt}</CardText>
             </CardBody>
