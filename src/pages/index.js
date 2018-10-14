@@ -6,24 +6,31 @@ import Layout from '../components/layout'
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
-  console.log(posts)
   return (
     <Layout>
       <Container>
-        {posts.map(({ node: post }) => (
+        {posts.map(({ node: post }) =>{ 
+          
+          let tagContent = null;
+
+          if (post.frontmatter.tags) {
+            tagContent = post.frontmatter.tags.map((tag) => (
+              <CardText>
+                <Badge href="#" color="light">{tag}</Badge>
+                </CardText>
+            ));
+          }
+
+          return (
           <Card style={{marginBottom: 10}} key={post.id}>
             <CardBody>
               <CardTitle><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></CardTitle>
-              <CardText>
-                {post.frontmatter.tags.map((tag) => (
-                  <Badge href="#" color="light">{tag}</Badge>
-                ))}
-              </CardText>
+              {tagContent}
               <CardSubtitle style={{marginBottom: 10}}>{post.frontmatter.date}</CardSubtitle>
               <CardText>{post.excerpt}</CardText>
             </CardBody>
           </Card>
-        ))}
+        )})}
       </Container>
     </Layout>
   )
