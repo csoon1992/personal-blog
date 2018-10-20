@@ -1,37 +1,35 @@
 import React from 'react'
-import { Container, Card, CardText, CardBody, CardTitle, CardSubtitle, Badge } from 'reactstrap'
+import {  Col } from 'reactstrap'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/layout/index'
 
 const IndexPage = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
+  
   return (
     <Layout>
-      <Container>
-        {posts.map(({ node: post }) =>{ 
-          
-          let tagContent = null;
+        <Col className='section blog px-0 h-100'>
+            <Link to='/blog' className='section-link no-underline d-block h-100 position-relative d-flex align-items-center position-relative'>
+                <div className='overlay h-100 w-100 position-absolute'></div>
 
-          if (post.frontmatter.tags) {
-            tagContent = post.frontmatter.tags.map((tag) => (
-              <Badge href="#" color="light">{tag}</Badge>
-            ));
-          }
+                <div className='content ml-auto mr-5 text-center position-relative'>
+                    <h2 className='name'>Blog</h2>
+                    <p className='description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, repudiandae molestiae, obcaecati, rem provident quis quae veritatis ut enim labore ipsum voluptatum sapiente totam alias officiis similique voluptas culpa error.</p>
+                </div>
+            </Link>
+        </Col>
+    
 
-          return (
-          <Card style={{marginBottom: 10}} key={post.id}>
-            <CardBody>
-              <CardTitle><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></CardTitle>
-              <CardText>
-                {tagContent}
-              </CardText>
-              <CardSubtitle style={{marginBottom: 10}}>{post.frontmatter.date}</CardSubtitle>
-              <CardText>{post.excerpt}</CardText>
-            </CardBody>
-          </Card>
-        )})}
-      </Container>
+        <Col className='section portfolio px-0 h-100'>
+            <Link to='/about' className='section-link no-underline d-block h-100 position-relative d-flex align-items-center position-relative'>
+                <div className='overlay h-100 w-100 position-absolute'></div>
+
+                <div className='content mr-auto ml-5 text-center position-relative'>
+                    <h2 className='name'>Portfolio</h2>
+                    <p className='description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, repudiandae molestiae, obcaecati, rem provident quis quae veritatis ut enim labore ipsum voluptatum sapiente totam alias officiis similique voluptas culpa error.</p>
+                </div>
+            </Link>
+        </Col>
     </Layout>
   )
 }
