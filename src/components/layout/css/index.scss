@@ -4,6 +4,9 @@
 #index {
     font-family: $montserrat; 
 
+    .navbar {
+        z-index: 99;
+    }
     .main-sections {
         overflow: hidden;
         .section {
