@@ -1,9 +1,33 @@
-.bg-primary {
-    background: $brand-primary-color !important;
-}
 
 .App {
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
+
+.shadow-light-hover {
+    &:hover {
+        &.shadow-right {
+            -moz-box-shadow: 6px 0px 11px 0px rgba(239,255,233,0.3);
+	        -webkit-box-shadow: 6px 0px 11px 0px rgba(239,255,233,0.3);
+            box-shadow: 6px 0px 11px 0px rgba(239,255,233,0.3);
+        }
+        
+        &.shadow-left {
+            -moz-box-shadow: -6px 0px 11px 0px rgba(239,255,233,0.3);
+	        -webkit-box-shadow: -6px 0px 11px 0px rgba(239,255,233,0.3);
+            box-shadow: -6px 0px 11px 0px rgba(239,255,233,0.3);
+        }
+    }
+}
+
+
+.bg-primary {
+    background: $brand-primary-color !important;
+}
+
+.btn-primary {
+    background: $brand-primary-color !important;
+}
+
+

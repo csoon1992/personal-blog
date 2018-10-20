@@ -8,5 +8,5 @@ $brand-secondary-color: #E71D36;
 $white: #FFFFFF;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import 'gatsby-plugin-google-fonts';
 $montserrat: 'Montserrat', sans-serif;

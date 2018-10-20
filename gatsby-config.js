@@ -37,6 +37,15 @@ module.exports = {
         includePaths: [`${__dirname}/node_modules`, `${__dirname}/src/`],
         precision: 8
       }
+    },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'material icons',
+          'Montserrar:400',
+        ]
+      }
     }
   ]
 }
