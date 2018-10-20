@@ -1,3 +1,9 @@
 .bg-primary {
     background: $brand-primary-color !important;
 }
+
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
