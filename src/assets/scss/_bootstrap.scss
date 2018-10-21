@@ -94,3 +94,15 @@
         text-decoration: none;
     }
 }
+
+.bg-primary {
+    background: $brand-primary-color !important;
+}
+
+.btn-primary {
+    background: $brand-primary-color !important;
+}
+
+.text-primary {
+    color: $brand-primary-color !important;
+}

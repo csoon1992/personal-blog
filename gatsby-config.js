@@ -5,48 +5,43 @@ module.exports = {
     technologies: [
       {
         label: 'Gatsby',
-        icon: 'icon',
+        icon: 'techs/gatsby.svg',
         link: 'https://www.gatsbyjs.org'
       },
       {
         label: 'Netlify',
-        icon: 'icon',
+        icon: 'techs/netlify.svg',
         link: 'https://www.netlify.com/'
       },
       {
         label: 'React.js',
-        icon: 'icon',
+        icon: 'techs/reactjs.svg',
         link: 'https://reactjs.org/'
       },
       {
         label: 'GraphQL',
-        icon: 'icon',
+        icon: 'techs/graphql.svg',
         link: 'https://graphql.org/'
-      },
-      {
-        label: 'Sass',
-        icon: 'icon',
-        link: 'https://sass-lang.com/'
       }
     ],
     disqus: 'cristinasoler',// put your disqus ID here
     author: {
-      name: 'Cristina soler',
+      name: 'Cristina Soler',
       email: 'csoon1992@gmail.com',
       github: 'https://github.com/csoon1992'
     },
     blogMenu: [
       {
-        label: 'Articles',
-        path: '/blog/'
+        label: 'Artículos',
+        link: '/blog/'
       },
       {
-        label: 'About me',
-        path: '/about/'
+        label: 'Sobre mí',
+        link: '/about/'
       },
       {
-        label: 'Contact me',
-        path: '/contact/'
+        label: 'Contacto',
+        link: '/contact/'
       }
     ]
   },
@@ -87,7 +82,7 @@ module.exports = {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          'material icons',
+          'material-icons',
           'Montserrar:400',
         ]
       }

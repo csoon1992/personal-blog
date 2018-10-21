@@ -1,8 +1,12 @@
 import React from 'react'
-import {  Col } from 'reactstrap'
+import { Col } from 'reactstrap'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
 import Layout from '../layouts/index'
+
+// Icons
+import { IconContext } from 'react-icons';
+import { MdChevronRight } from 'react-icons/md';
 
 const IndexPage = () => {
   return (
@@ -14,7 +18,11 @@ const IndexPage = () => {
             <div className='content ml-auto mr-5 text-center position-relative'>
                 <h2 className='name'>Blog</h2>
                 <p className='description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, repudiandae molestiae, obcaecati, rem provident quis quae veritatis ut enim labore ipsum voluptatum sapiente totam alias officiis similique voluptas culpa error.</p>
-                <span className="section-icon material-icons text-center">chevron_right</span>
+                <span className="section-icon material-icons text-center">
+                  <IconContext.Provider value={{ className: 'icon', style: { verticalAlign: 'text-bottom' }}}>
+                    <MdChevronRight/>
+                  </IconContext.Provider>
+                </span>
             </div>
         </Link>
       </Col>
@@ -27,7 +35,11 @@ const IndexPage = () => {
             <div className='content mr-auto ml-5 text-center position-relative'>
                 <h2 className='name'>Portfolio</h2>
                 <p className='description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, repudiandae molestiae, obcaecati, rem provident quis quae veritatis ut enim labore ipsum voluptatum sapiente totam alias officiis similique voluptas culpa error.</p>
-                <span className="section-icon material-icons text-center">chevron_right</span>
+                <span className="section-icon material-icons text-center">
+                  <IconContext.Provider value={{ className: 'icon', style: { verticalAlign: 'text-bottom' }}}>
+                    <MdChevronRight/>
+                  </IconContext.Provider>
+                </span>
             </div>
         </Link>
       </Col>

@@ -80,6 +80,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         disqus
+        ...sidebarFragment
       }
     }
     
