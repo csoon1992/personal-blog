@@ -5,22 +5,26 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import Sidebar from '../components/Sidebar';
+
 // code syntax-highlighting theme
 // feel free to change it to another one
 import 'prismjs/themes/prism-twilight.css'
 
-// home site style
-import './css/index.scss'
-
+import '../assets/scss/pages/blog.scss';
 
 const TemplateWrapper = ({ children, data }) => {
+  /*let user
+  if (typeof window !== 'undefined') {
+    user = window.netlifyIdentity && window.netlifyIdentity.currentUser()
+  }*/
   return (
     <StaticQuery query={pageQuery} render={data => (
-      <div id='index' className='App'>
+      <div className='App'>
         <Helmet title={data.site.siteMetadata.title} />
-        <div className='navbar navbar-expand-lg navbar-dark position-fixed w-100'>
+        <div className='navbar navbar-expand-lg navbar-dark bg-primary'>
           <Container>
-            <Link to='/' className='navbar-brand'><h1>{data.site.siteMetadata.title}</h1></Link>
+            <Link to='/' className='navbar-brand'>{data.site.siteMetadata.title}</Link>
             <ul className='nav navbar-nav'>
               <li className='nav-item'>
                 <Link to='/about' className='nav-link'>About</Link>
@@ -29,20 +33,22 @@ const TemplateWrapper = ({ children, data }) => {
           </Container>
         </div>
 
-        <div className='main-sections mx-auto d-flex h-100 w-100 align-items-center'>
+
+        <div className='pageContent'>
           {children}
         </div>
+
       </div>
     )} />
   )
 }
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.func
 }
 
 const pageQuery = graphql`
-  query LayoutIndexQuery {
+  query LayoutBlogQuery {
     site {
       siteMetadata {
         title

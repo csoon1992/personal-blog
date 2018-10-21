@@ -2,7 +2,7 @@ import React from 'react'
 import {  Col } from 'reactstrap'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout/index'
+import Layout from '../layouts/index'
 
 const IndexPage = ({ data }) => {
   

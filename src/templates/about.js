@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from 'reactstrap'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../layouts'
 
 export default function Template ({ data }) {
   const { markdownRemark: post } = data

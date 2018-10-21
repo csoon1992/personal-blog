@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Card, CardText, CardBody, CardTitle, CardSubtitle, Badge } from 'reactstrap'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout/blog'
+import Layout from '../layouts/blog'
 
 const BlogPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')

@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { basename } from 'path'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../layouts'
 
 // find a post title by path
 const findNode = (path, data) => data.allMarkdownRemark.edges
