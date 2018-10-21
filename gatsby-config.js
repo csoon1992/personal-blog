@@ -1,9 +1,54 @@
 module.exports = {
   siteMetadata: {
     title: 'Cristina Soler',
-    author: 'csoon1992',
-    authorLink: 'https://github.com/csoon1992',
-    disqus: 'cristinasoler'// put your disqus ID here
+    subtitle: 'Desarrolladora web',
+    technologies: [
+      {
+        label: 'Gatsby',
+        icon: 'icon',
+        link: 'https://www.gatsbyjs.org'
+      },
+      {
+        label: 'Netlify',
+        icon: 'icon',
+        link: 'https://www.netlify.com/'
+      },
+      {
+        label: 'React.js',
+        icon: 'icon',
+        link: 'https://reactjs.org/'
+      },
+      {
+        label: 'GraphQL',
+        icon: 'icon',
+        link: 'https://graphql.org/'
+      },
+      {
+        label: 'Sass',
+        icon: 'icon',
+        link: 'https://sass-lang.com/'
+      }
+    ],
+    disqus: 'cristinasoler',// put your disqus ID here
+    author: {
+      name: 'Cristina soler',
+      email: 'csoon1992@gmail.com',
+      github: 'https://github.com/csoon1992'
+    },
+    blogMenu: [
+      {
+        label: 'Articles',
+        path: '/blog/'
+      },
+      {
+        label: 'About me',
+        path: '/about/'
+      },
+      {
+        label: 'Contact me',
+        path: '/contact/'
+      }
+    ]
   },
   plugins: [
     {
