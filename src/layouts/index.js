@@ -11,8 +11,7 @@ import 'prismjs/themes/prism-twilight.css'
 
 import '../assets/scss/pages/index.scss';
 
-
-const TemplateWrapper = ({ children, data }) => {
+const TemplateWrapper = ({ children }) => {
   return (
     <StaticQuery query={pageQuery} render={data => (
       <div id='index' className='App'>
@@ -32,7 +31,7 @@ const TemplateWrapper = ({ children, data }) => {
 }
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.array
 }
 
 const pageQuery = graphql`
