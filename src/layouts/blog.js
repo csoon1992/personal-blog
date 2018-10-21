@@ -5,7 +5,7 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Sidebar from '../components/Sidebar';
+//import Sidebar from '../components/Sidebar';
 
 // code syntax-highlighting theme
 // feel free to change it to another one
