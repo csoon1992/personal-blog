@@ -44,7 +44,7 @@ const TemplateWrapper = ({ children, data }) => {
 }
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.element
 }
 
 const pageQuery = graphql`

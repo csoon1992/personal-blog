@@ -14,23 +14,24 @@ const BlogPage = ({ data }) => {
           let tagContent = null;
 
           if (post.frontmatter.tags) {
-            tagContent = post.frontmatter.tags.map((tag) => (
-              <Badge href="#" color="light">{tag}</Badge>
+            tagContent = post.frontmatter.tags.map((tag, ndx) => (
+              <Badge href="#" color="light" key={ndx}>{tag}</Badge>
             ));
           }
 
           return (
-          <Card style={{marginBottom: 10}} key={post.id}>
-            <CardBody>
-              <CardTitle><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></CardTitle>
-              <CardText>
-                {tagContent}
-              </CardText>
-              <CardSubtitle style={{marginBottom: 10}}>{post.frontmatter.date}</CardSubtitle>
-              <CardText>{post.excerpt}</CardText>
-            </CardBody>
-          </Card>
-        )})}
+            <Card style={{marginBottom: 10}} key={post.id}>
+              <CardBody>
+                <CardTitle><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></CardTitle>
+                <CardText>
+                  {tagContent}
+                </CardText>
+                <CardSubtitle style={{marginBottom: 10}}>{post.frontmatter.date}</CardSubtitle>
+                <CardText>{post.excerpt}</CardText>
+              </CardBody>
+            </Card>
+          )
+        })}
       </Container>
     </Layout>
   )
