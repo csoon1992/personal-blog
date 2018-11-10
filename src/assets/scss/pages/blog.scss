@@ -17,6 +17,7 @@
   #sidebar {
     color: $sidebar-color;
     font-size: .9rem;
+    border-right: 1px solid $sidebar-border-color;
 
     a {
       color: $sidebar-color !important;
@@ -54,7 +55,7 @@
 
     .sidebar-content {
       margin-top: 2rem;
-      
+
       .sidebar-techs {
         ul {
           .item {

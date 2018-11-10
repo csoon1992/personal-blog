@@ -28,15 +28,15 @@ class Sidebar extends React.Component {
         );
 
         return(
-            <div id="sidebar">
+            <div id="sidebar" className="h-100">
                 {sidebarHeader}
                 
-                <div className="sidebar-content text-center">
-                    <div className="sidebar-menu mb-3">
-                        <Menu items={blogMenu} classes='text-uppercase pb-1 letter-spacing-2' />
+                <div className="sidebar-content text-center letter-spacing-2">
+                    <div className="sidebar-menu mb-4">
+                        <Menu items={blogMenu} classes='text-uppercase pb-2' />
                     </div>
 
-                    <div className="sidebar-techs mb-3">Hecho con:
+                    <div className="sidebar-techs">Hecho con:
                         <Menu items={technologies} onlyIcons={true} rel='noopener noreferrer' />
                     </div>
                 </div>
