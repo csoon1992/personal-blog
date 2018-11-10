@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardText, CardBody, CardTitle, CardSubtitle, Badge } from 'reactstrap'
+import { Card, CardText, CardBody, CardTitle, Badge } from 'reactstrap'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
 import Layout from '../layouts/blog'
@@ -21,11 +21,8 @@ const BlogContent = ({ data }) => {
         return (
           <Card style={{marginBottom: 10}} key={post.id}>
             <CardBody>
-              <CardTitle><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></CardTitle>
-              <CardText>
-                {tagContent}
-              </CardText>
-              <CardSubtitle style={{marginBottom: 10}}>{post.frontmatter.date}</CardSubtitle>
+              <CardTitle tag='h2'><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></CardTitle>
+              <CardText style={{marginBottom: 10}}>{tagContent}</CardText>
               <CardText>{post.excerpt}</CardText>
             </CardBody>
           </Card>

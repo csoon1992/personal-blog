@@ -17,7 +17,7 @@ const TemplateWrapper = ({ children, isPost }) => {
       <div className='App'>
         <Helmet title={data.site.siteMetadata.title} />
 
-        <Row className='p-4'>
+        <Row className='p-4 mx-0'>
           <Col md='2'>
             <Sidebar siteMetadata={data.site.siteMetadata} isPost={isPost} />
           </Col>

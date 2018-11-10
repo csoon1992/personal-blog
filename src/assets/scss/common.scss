@@ -24,6 +24,8 @@
 }
 
 a {
+    color: $brand-primary-color;
+    
     &:hover {
         text-decoration: none;
         color: $brand-secondary-color !important;
