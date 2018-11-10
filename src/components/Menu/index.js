@@ -11,6 +11,7 @@ import { withPrefix } from 'gatsby'
 class Menu extends React.Component {
     render() {
         const rel = this.props.rel || '';
+        const classes = this.props.classes || 'item';
 
         const menu = (
             <ul className='menu list-unstyled'>
@@ -32,7 +33,7 @@ class Menu extends React.Component {
                     }
 
                     return (
-                        <li className='item' key={i}>
+                        <li className={classes} key={i}>
                             {link}
                         </li>
                     )

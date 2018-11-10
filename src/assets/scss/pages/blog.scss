@@ -36,28 +36,34 @@
           .subtitle {
             font-size: .8rem;
           }
-        }
-      }
-    }
 
-    .sidebar-networks {
-      .network {
-        .icon {
-          &:hover {
-            color: $brand-font-color !important;
+          .networks {
+            .network {
+              .icon {
+                width: 1.5rem;
+
+                &:hover {
+                  color: $brand-font-color !important;
+                }
+              }
+            }
           }
         }
       }
     }
 
-    .sidebar-techs {
-      ul {
-        .item {
-          display: inline-block;
-          margin-right: 1rem;
-          
-          img {
-            width: 1rem;
+    .sidebar-content {
+      margin-top: 2rem;
+      
+      .sidebar-techs {
+        ul {
+          .item {
+            display: inline-block;
+            margin-right: 1rem;
+
+            img {
+              width: 1rem;
+            }
           }
         }
       }
