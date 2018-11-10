@@ -76,7 +76,7 @@ module.exports = {
       options: {
         fonts: [
           'material-icons',
-          'Montserrar:400',
+          'Montserrat:400',
         ]
       }
     }

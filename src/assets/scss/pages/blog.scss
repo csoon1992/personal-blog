@@ -2,6 +2,7 @@
 
 // page-level layout
 .App {
+  font-family: $montserrat;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -15,6 +16,7 @@
 
   #sidebar {
     color: $sidebar-color;
+    font-size: .9rem;
 
     a {
       color: $sidebar-color !important;

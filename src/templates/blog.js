@@ -15,7 +15,6 @@ const findNode = (path, data) => data.allMarkdownRemark.edges
 export default function Template ({ data }) {
   const { markdownRemark: post } = data
 
-
   if (!post) {
     console.log(data);
     return null;
@@ -31,13 +30,15 @@ export default function Template ({ data }) {
           )}
           {data.site.siteMetadata.disqus && (
             <script>{`(function() {
-          var d = document, s = d.createElement('script');
-          s.src = 'https://${data.site.siteMetadata.disqus}.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-          })();`}</script>
+              var d = document, s = d.createElement('script');
+              s.src = 'https://${data.site.siteMetadata.disqus}.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+              })();`}
+            </script>
           )}
         </Helmet>
+        
         <Container>
           <h1 className='display-3'>{post.frontmatter.title}</h1>
         </Container>
@@ -76,6 +77,18 @@ export default function Template ({ data }) {
 }
 
 export const pageQuery = graphql`
+  query BlogPosts {
+    site {
+      siteMetadata {
+        disqus
+        ...sidebarFragment
+      }
+    }
+  }
+`
+
+
+/*export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     site {
       siteMetadata {
@@ -93,9 +106,6 @@ export const pageQuery = graphql`
         attachments {
           filename
         }
-        related {
-          post
-        }
       }
     }
 
@@ -110,4 +120,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`*/
