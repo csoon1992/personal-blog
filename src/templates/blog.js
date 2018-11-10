@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { basename } from 'path'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-import Layout from '../layouts'
+import Layout from '../layouts/blog'
 
 // find a post title by path
 const findNode = (path, data) => data.allMarkdownRemark.edges
@@ -16,13 +16,13 @@ export default function Template ({ data }) {
   const { markdownRemark: post } = data
 
   if (!post) {
-    console.log(data);
     return null;
   }
 
   const related = post.frontmatter.related ? post.frontmatter.related.map(r => findNode(r.post, data)) : []
+
   return (
-    <Layout>
+    <Layout isPost>
       <div>
         <Helmet title={`Blog | ${post.frontmatter.title}`}>
           {data.site.siteMetadata.disqus && (
@@ -76,19 +76,8 @@ export default function Template ({ data }) {
   )
 }
 
+
 export const pageQuery = graphql`
-  query BlogPosts {
-    site {
-      siteMetadata {
-        disqus
-        ...sidebarFragment
-      }
-    }
-  }
-`
-
-
-/*export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     site {
       siteMetadata {
@@ -120,4 +109,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`*/
+`

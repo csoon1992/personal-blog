@@ -8,7 +8,7 @@ const BlogContent = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
   return (
     <Layout>
-      {posts.map(({ node: post }) =>{ 
+      {posts.map(({ node: post }) => { 
         
         let tagContent = null;
 
@@ -38,7 +38,7 @@ const BlogContent = ({ data }) => {
 export default BlogContent
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query PostsQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {

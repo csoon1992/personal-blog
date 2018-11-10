@@ -8,6 +8,7 @@ import { graphql } from 'gatsby'
 class Sidebar extends React.Component {
     render() {
         const { subtitle, technologies, blogMenu, author } = this.props.siteMetadata;
+        const { isPost } = this.props;
         
         const sidebarHeader = (
             <div className="sidebar-header">
@@ -27,6 +28,12 @@ class Sidebar extends React.Component {
             </div>
         );
 
+        let blogPost = null;
+        
+        if (isPost) {
+            blogPost = <div className="blogpost">Contenido que solo se mostrará aquí si se está visualizando un post.</div>
+        }
+
         return(
             <div id="sidebar" className="h-100">
                 {sidebarHeader}
@@ -35,6 +42,8 @@ class Sidebar extends React.Component {
                     <div className="sidebar-menu mb-4">
                         <Menu items={blogMenu} classes='text-uppercase pb-2' />
                     </div>
+
+                    {blogPost}
 
                     <div className="sidebar-techs">Hecho con:
                         <Menu items={technologies} onlyIcons={true} rel='noopener noreferrer' />
