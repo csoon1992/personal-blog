@@ -50,8 +50,17 @@
       }
     }
 
-    .sidebar-menu {
-      
+    .sidebar-techs {
+      ul {
+        .item {
+          display: inline-block;
+          margin-right: 1rem;
+          
+          img {
+            width: 1rem;
+          }
+        }
+      }
     }
   }
 }
