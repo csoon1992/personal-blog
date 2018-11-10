@@ -36,13 +36,13 @@ class Sidebar extends React.Component {
                 {sidebarHeader}
 
                 <div className="sidebar-networks mb-3 text-center">
-                    <Link to={author.github} title='Github' className='network'>
+                    <a href={author.github} title='Github' className='network'>
                         <IconContext.Provider value={{ color: '#BBBBBB', size: '2rem', className: 'icon'}}>
                             <div>
                                 <FaGithubAlt />
                             </div>
                         </IconContext.Provider>
-                    </Link>
+                    </a>
                 </div>
                 
                 <div className="sidebar-menu mb-3">
