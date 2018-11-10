@@ -4,10 +4,6 @@ import mePhoto from '../../../static/files/me.jpeg';
 import Menu from '../Menu';
 import { graphql } from 'gatsby'
 
-// Icons
-import { IconContext } from 'react-icons';
-import { FaGithubAlt } from 'react-icons/fa';
-
 
 class Sidebar extends React.Component {
     render() {
@@ -26,15 +22,6 @@ class Sidebar extends React.Component {
                     <div className="title px-2">
                         <h1 className="main-title text-primary mb-1">{author.name}</h1>
                         <div className="subtitle">{subtitle}</div>
-                        <div className="networks">
-                            <a href={author.github} title='Github' className='network d-inline-block'>
-                                <IconContext.Provider value={{ color: '#BBBBBB', size: '2rem', className: 'icon'}}>
-                                    <div>
-                                        <FaGithubAlt />
-                                    </div>
-                                </IconContext.Provider>
-                            </a>
-                        </div>
                     </div>
                 </Link>
             </div>
