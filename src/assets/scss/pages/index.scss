@@ -9,8 +9,6 @@
     .main-sections {
         overflow: hidden;
         .section {
-            -webkit-transition: all .5s;
-            transition: all .5s;
             width: 50%;
             z-index: 1;
             
@@ -27,18 +25,9 @@
             }
 
             &:hover {
-                -moz-transform: scaleX(1.2) skewX(-7deg);
-                -webkit-transform: scaleX(1.2) skewX(-7deg);
-                transform: scaleX(1.2) skewX(-7deg);
+                width: 60%;
                 z-index: 10;
-
-                .section-link {
-                    .content {
-                        -moz-transform: scaleX(1) skewX(7deg);
-                        -webkit-transform: scaleX(1) skewX(7deg);
-                        transform: scaleX(0.9) skewX(7deg);
-                    }
-                }
+                transition: all .5s;
             }
 
             .section-link {
@@ -48,8 +37,6 @@
                 
                 .content {
                     max-width: 470px;
-                    -webkit-transition: transform .5s;
-                    transition: transform .5s;
                     
                     * {
                         color: $brand-light-color;
