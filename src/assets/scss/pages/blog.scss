@@ -2,6 +2,7 @@
 
 // page-level layout
 .App {
+  font-family: $montserrat;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -15,6 +16,8 @@
 
   #sidebar {
     color: $sidebar-color;
+    font-size: .9rem;
+    border-right: 1px solid $sidebar-border-color;
 
     a {
       color: $sidebar-color !important;
@@ -34,22 +37,37 @@
           .subtitle {
             font-size: .8rem;
           }
-        }
-      }
-    }
 
-    .sidebar-networks {
-      .network {
-        .icon {
-          &:hover {
-            color: $brand-font-color !important;
+          .networks {
+            .network {
+              .icon {
+                width: 1.5rem;
+
+                &:hover {
+                  color: $brand-font-color !important;
+                }
+              }
+            }
           }
         }
       }
     }
 
-    .sidebar-menu {
-      
+    .sidebar-content {
+      margin-top: 2rem;
+
+      .sidebar-techs {
+        ul {
+          .item {
+            display: inline-block;
+            margin-right: 1rem;
+
+            img {
+              width: 1rem;
+            }
+          }
+        }
+      }
     }
   }
 }

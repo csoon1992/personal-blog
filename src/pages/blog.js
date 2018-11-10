@@ -4,11 +4,11 @@ import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
 import Layout from '../layouts/blog'
 
-const BlogPage = ({ data }) => {
+const BlogContent = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
   return (
     <Layout>
-      {posts.map(({ node: post }) =>{ 
+      {posts.map(({ node: post }) => { 
         
         let tagContent = null;
 
@@ -35,10 +35,10 @@ const BlogPage = ({ data }) => {
   )
 }
 
-export default BlogPage
+export default BlogContent
 
 export const pageQuery = graphql`
-  query BlogQuery {
+  query PostsQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
@@ -48,9 +48,8 @@ export const pageQuery = graphql`
             title
             tags
             contentType
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMMM YYYY")
             path
-            hidden
           }
         }
       }

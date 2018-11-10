@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/files`,
   siteMetadata: {
     title: 'Cristina Soler',
     subtitle: 'Desarrolladora web',
@@ -54,13 +55,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/src/examples`,
-        name: 'examples'
-      }
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -83,7 +77,7 @@ module.exports = {
       options: {
         fonts: [
           'material-icons',
-          'Montserrar:400',
+          'Montserrat:400',
         ]
       }
     }

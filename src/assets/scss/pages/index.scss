@@ -11,6 +11,7 @@
         .section {
             width: 50%;
             z-index: 1;
+            transition: all .5s;
             
             &.blog {
                 background-image: url('../../../../static/files/blog-bg.jpg');
@@ -47,7 +48,7 @@
                         border: 2px solid $brand-light-color;
                         width: 3rem;
                         height: 3rem;
-                        line-height: 2.8rem;
+                        line-height: 2.5rem;
                         font-size: 2.2rem;
 
                         &:hover {

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
-import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
@@ -12,7 +11,7 @@ import 'prismjs/themes/prism-twilight.css'
 
 import '../assets/scss/pages/blog.scss';
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, isPost }) => {
   return (
     <StaticQuery query={pageQuery} render={data => (
       <div className='App'>
@@ -20,7 +19,7 @@ const TemplateWrapper = ({ children }) => {
 
         <Row className='p-4'>
           <Col md='2'>
-            <Sidebar siteMetadata={data.site.siteMetadata} />
+            <Sidebar siteMetadata={data.site.siteMetadata} isPost={isPost} />
           </Col>
 
           <Col md='10'>
@@ -35,9 +34,6 @@ const TemplateWrapper = ({ children }) => {
   )
 }
 
-TemplateWrapper.propTypes = {
-  children: PropTypes.element
-}
 
 const pageQuery = graphql`
   query LayoutBlogQuery {

@@ -4,24 +4,21 @@ import mePhoto from '../../../static/files/me.jpeg';
 import Menu from '../Menu';
 import { graphql } from 'gatsby'
 
-// Icons
-import { IconContext } from 'react-icons';
-import { FaGithubAlt } from 'react-icons/fa';
-
 
 class Sidebar extends React.Component {
     render() {
         const { subtitle, technologies, blogMenu, author } = this.props.siteMetadata;
+        const { isPost } = this.props;
         
         const sidebarHeader = (
-            <div className="sidebar-header mb-3">
+            <div className="sidebar-header">
                 <Link to='/' className='no-underline header-link d-flex align-items-center'>
                     <img 
                         src={mePhoto}
                         alt={author.name}
                         className='profile-photo rounded-circle'
-                        width='80'
-                        height='80'
+                        width='90'
+                        height='90'
                     />
                     <div className="title px-2">
                         <h1 className="main-title text-primary mb-1">{author.name}</h1>
@@ -31,26 +28,26 @@ class Sidebar extends React.Component {
             </div>
         );
 
+        let blogPost = null;
+        
+        if (isPost) {
+            blogPost = <div className="blogpost">Contenido que solo se mostrará aquí si se está visualizando un post.</div>
+        }
+
         return(
-            <div id="sidebar">
+            <div id="sidebar" className="h-100">
                 {sidebarHeader}
-
-                <div className="sidebar-networks mb-3 text-center">
-                    <Link to={author.github} title='Github' className='network'>
-                        <IconContext.Provider value={{ color: '#BBBBBB', size: '2rem', className: 'icon'}}>
-                            <div>
-                                <FaGithubAlt />
-                            </div>
-                        </IconContext.Provider>
-                    </Link>
-                </div>
                 
-                <div className="sidebar-menu mb-3">
-                    <Menu items={blogMenu} />
-                </div>
+                <div className="sidebar-content text-center letter-spacing-2">
+                    <div className="sidebar-menu mb-4">
+                        <Menu items={blogMenu} classes='text-uppercase pb-2' />
+                    </div>
 
-                <div className="sidebar-techs mb-3">Hecho con:
-                    <Menu items={technologies} onlyIcons={true} rel='noopener noreferrer' />
+                    {blogPost}
+
+                    <div className="sidebar-techs">Hecho con:
+                        <Menu items={technologies} onlyIcons={true} rel='noopener noreferrer' />
+                    </div>
                 </div>
             </div>
         );

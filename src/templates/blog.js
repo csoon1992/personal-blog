@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { basename } from 'path'
 import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-import Layout from '../layouts'
+import Layout from '../layouts/blog'
 
 // find a post title by path
 const findNode = (path, data) => data.allMarkdownRemark.edges
@@ -15,15 +15,14 @@ const findNode = (path, data) => data.allMarkdownRemark.edges
 export default function Template ({ data }) {
   const { markdownRemark: post } = data
 
-
   if (!post) {
-    console.log(data);
     return null;
   }
 
   const related = post.frontmatter.related ? post.frontmatter.related.map(r => findNode(r.post, data)) : []
+
   return (
-    <Layout>
+    <Layout isPost>
       <div>
         <Helmet title={`Blog | ${post.frontmatter.title}`}>
           {data.site.siteMetadata.disqus && (
@@ -31,13 +30,15 @@ export default function Template ({ data }) {
           )}
           {data.site.siteMetadata.disqus && (
             <script>{`(function() {
-          var d = document, s = d.createElement('script');
-          s.src = 'https://${data.site.siteMetadata.disqus}.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-          })();`}</script>
+              var d = document, s = d.createElement('script');
+              s.src = 'https://${data.site.siteMetadata.disqus}.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+              })();`}
+            </script>
           )}
         </Helmet>
+        
         <Container>
           <h1 className='display-3'>{post.frontmatter.title}</h1>
         </Container>
@@ -75,6 +76,7 @@ export default function Template ({ data }) {
   )
 }
 
+
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     site {
@@ -92,9 +94,6 @@ export const pageQuery = graphql`
         title
         attachments {
           filename
-        }
-        related {
-          post
         }
       }
     }
