@@ -16,8 +16,8 @@ const IndexPage = () => {
             <div className='content ml-auto mr-5 text-center position-relative'>
                 <h2 className='name'>Blog</h2>
                 <p className='description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, repudiandae molestiae, obcaecati, rem provident quis quae veritatis ut enim labore ipsum voluptatum sapiente totam alias officiis similique voluptas culpa error.</p>
-                <span className="section-icon material-icons text-center">
-                  <IconContext.Provider value={{ className: 'icon', style: { verticalAlign: 'text-bottom' }}}>
+                <span className="section-icon material-icons text-center d-block mx-auto">
+                  <IconContext.Provider value={{ className: 'icon'}}>
                     <MdChevronRight/>
                   </IconContext.Provider>
                 </span>
@@ -33,8 +33,8 @@ const IndexPage = () => {
             <div className='content mr-auto ml-5 text-center position-relative'>
                 <h2 className='name'>Portfolio</h2>
                 <p className='description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, repudiandae molestiae, obcaecati, rem provident quis quae veritatis ut enim labore ipsum voluptatum sapiente totam alias officiis similique voluptas culpa error.</p>
-                <span className="section-icon material-icons text-center">
-                  <IconContext.Provider value={{ className: 'icon', style: { verticalAlign: 'text-bottom' }}}>
+                <span className="section-icon material-icons text-center d-block mx-auto">
+                  <IconContext.Provider value={{ className: 'icon'}}>
                     <MdChevronRight/>
                   </IconContext.Provider>
                 </span>
