@@ -14,9 +14,17 @@ class Menu extends React.Component {
         const menu = (
             <ul className='menu list-unstyled'>
                 {this.props.items.map((item, i) => { 
+                    const internal = /^\/(?!\/)/.test(item.link);
+                    console.log(item.link, internal)
                     let link = <Link to={item.link} title={item.label} rel={rel}>
                         <img src={`../../../static/files/${item.icon}`} alt={item.label}/>
-                    </Link> 
+                    </Link>
+
+                    if (!internal) {
+                        link = <a href={item.link} title={item.label} rel={rel}>
+                            <img src={`../../../static/files/${item.icon}`} alt={item.label}/>
+                        </a> 
+                    }
 
                     if(!this.props.onlyIcons) {
                         link = <Link to={item.link} rel={rel}>{item.label}</Link> 
