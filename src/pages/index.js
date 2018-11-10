@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import { graphql } from 'gatsby'
 import Layout from '../layouts/index'
 
 // Icons
@@ -47,24 +46,3 @@ const IndexPage = () => {
 }
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 400)
-          id
-          frontmatter {
-            title
-            tags
-            contentType
-            date(formatString: "MMMM DD, YYYY")
-            path
-            hidden
-          }
-        }
-      }
-    }
-  }
-`
