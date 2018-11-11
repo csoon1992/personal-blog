@@ -24,8 +24,6 @@ export default function Template ({ data }) {
     return null;
   }
 
-  console.log(post)
-
   const related = post.frontmatter.related ? post.frontmatter.related.map(r => findNode(r.post, data)) : []
 
   let headerTitle = <h1 className='title d-block mx-auto text-center'>{post.frontmatter.title}</h1>
