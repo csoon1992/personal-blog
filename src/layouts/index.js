@@ -1,32 +1,49 @@
 import React from 'react'
-import { Container } from 'reactstrap'
+import {Container} from 'reactstrap'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import {StaticQuery, graphql} from 'gatsby'
 
-// code syntax-highlighting theme
-// feel free to change it to another one
+// code syntax-highlighting theme feel free to change it to another one
 import 'prismjs/themes/prism-twilight.css'
 
 import '../assets/scss/pages/index.scss';
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({children}) => {
   return (
     <StaticQuery query={pageQuery} render={data => (
+
       <div id='index' className='App'>
-        <Helmet title={data.site.siteMetadata.title} />
+        <Helmet
+          title="Home"
+          titleTemplate={`%s - ${data.site.siteMetadata.title}`}
+          description={data.site.siteMetadata.subtitle}>
+          <meta name="description" content={ `Web personal de ${data.site.siteMetadata.title}` } />
+          <meta property="og:type" content="website"/>
+          <meta property="og:title" content={data.site.siteMetadata.title}/>
+          <meta property="og:site_name" content="CristinaSoler"/>
+          <meta property="og:url" content="https://cristinasoler.me/"/>
+          <meta property="og:description" content={ `Web personal de ${data.site.siteMetadata.title}` }/>
+          <meta property="og:type" content="website"/>
+          <meta name="og:locale" content="es_ES"/>
+          <link rel="canonical" href="https://cristinasoler.me/"/>
+        </Helmet>
+
         <div className='navbar navbar-expand-lg navbar-dark position-fixed w-100'>
           <Container>
-            <Link to='/' className='navbar-brand'><h1>{data.site.siteMetadata.title}</h1></Link>
+            <Link to='/' className='navbar-brand'>
+              <h1>{data.site.siteMetadata.title}</h1>
+            </Link>
           </Container>
         </div>
 
         <div className='main-sections mx-auto d-flex h-100 w-100 align-items-center'>
           {children}
         </div>
+
       </div>
-    )} />
+    )}/>
   )
 }
 
@@ -34,11 +51,11 @@ TemplateWrapper.propTypes = {
   children: PropTypes.array
 }
 
-const pageQuery = graphql`
+const pageQuery = graphql `
   query LayoutIndexQuery {
     site {
       siteMetadata {
-        title
+        ...sidebarFragment
       }
     }
   }
