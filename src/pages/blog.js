@@ -13,7 +13,7 @@ const BlogContent = ({ data }) => {
 
         if (post.frontmatter.tags) {
           tagContent = post.frontmatter.tags.map((tag, ndx) => (
-            <Badge href="#" color="light" key={ndx}>{tag}</Badge>
+            <Badge href="#" color="light" className="mr-1" key={ndx}>{tag}</Badge>
           ));
         }
 

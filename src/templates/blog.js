@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Card, CardTitle, CardGroup, CardBody } from 'reactstrap'
+import { Container, Card, CardTitle, CardGroup, CardBody, Badge } from 'reactstrap'
 import Helmet from 'react-helmet'
 import { basename } from 'path'
 import Link from 'gatsby-link'
@@ -35,6 +35,13 @@ export default function Template ({ data }) {
       <div className="header-title position-absolute w-100">{headerTitle}</div>
       <div className="header-post-date position-absolute">{post.frontmatter.date}</div>
     </div>
+  }
+
+  let tagContent = null;
+  if (post.frontmatter.tags) {
+    tagContent = post.frontmatter.tags.map((tag, ndx) => (
+      <Badge href="#" color="light" className="mr-2 py-2 px-3" key={ndx}>{tag}</Badge>
+    ));
   }
 
   return (
@@ -83,6 +90,10 @@ export default function Template ({ data }) {
               </Card>
             ))}
           </CardGroup></Container>)}
+
+          <div className="post-tags border-bottom-light py-2">
+            {tagContent}
+          </div>
           
           <h4 className="h4 mt-4 mb-2 font-weight-bold text-center">Comentarios</h4>
 
@@ -111,6 +122,7 @@ export const pageQuery = graphql`
       frontmatter {
         path
         image
+        tags
         date(formatString: "DD MMMM YYYY", locale: "es-ES")
         title
         attachments {
