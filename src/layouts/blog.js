@@ -14,7 +14,7 @@ import '../assets/scss/pages/blog.scss';
 const TemplateWrapper = ({ children, isPost }) => {
   return (
     <StaticQuery query={pageQuery} render={data => (
-      <div className='App'>
+      <div id='blog-page' className='App'>
         <Helmet title={data.site.siteMetadata.title} />
 
         <Row className='p-4 mx-0'>

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Card, CardText, CardBody, CardTitle, Badge } from 'reactstrap'
-import Link from 'gatsby-link'
+import { Row, Col, Badge } from 'reactstrap'
+//import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
 import Layout from '../layouts/blog'
 
@@ -19,13 +19,26 @@ const BlogContent = ({ data }) => {
         }
 
         return (
-          <Card style={{marginBottom: 10}} key={post.id}>
-            <CardBody>
-              <CardTitle tag='h2'><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></CardTitle>
-              <CardText style={{marginBottom: 10}}>{tagContent}</CardText>
-              <CardText>{post.excerpt}</CardText>
-            </CardBody>
-          </Card>
+          <Row className="blog-post mx-0 d-flex align-items-stretch mb-3" key={post.id}>
+            <Col md="1" className="calendar d-flex align-items-center text-center">
+              <div className="w-100">
+                <span className="day d-block">{post.frontmatter.day}</span>
+                <span className="month text-uppercase d-block">{post.frontmatter.month}</span>
+              </div>
+            </Col>
+
+            <Col className="post-content py-2">
+              <h2 className="post-title mb-0">
+                {post.frontmatter.title}
+              </h2>
+
+              <div className="post-tags">
+                {tagContent}
+              </div>
+
+              <div className="post-excerpt">{post.excerpt}</div>
+            </Col>
+          </Row>
         )
       })}
     </Layout>
@@ -39,13 +52,14 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 300)
           id
           frontmatter {
             title
             tags
             contentType
-            date(formatString: "DD MMMM YYYY")
+            day: date(formatString: "DD")
+            month: date(formatString: "MMMM")
             path
           }
         }

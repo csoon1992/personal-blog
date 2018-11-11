@@ -1,7 +1,7 @@
 @import '../common.scss';
 
 // page-level layout
-.App {
+#blog-page {
   font-family: $montserrat;
   display: flex;
   flex-direction: column;
@@ -68,6 +68,63 @@
           }
         }
       }
+    }
+  }
+
+  .pageContent {
+    .blog-post {
+      transition: all .3s;
+      border-radius: 0;
+      border: 1px solid $post-border-color;
+      cursor: pointer;
+
+      .calendar {
+        font-size: .8rem;
+        background: $brand-primary-color;
+        color: $white;
+        transition: all .3s;
+
+        .day {
+          font-size: 2rem;
+          line-height: 1.7rem;
+        }
+      }
+
+      .post-content {
+        .post-title {
+          color: $brand-primary-color;
+          font-size: 1.4rem;
+          transition: all .3s;
+        }
+
+        .post-tags {
+          .badge {
+            color: $brand-font-color;
+          }
+        }
+
+        .post-excerpt {
+          font-size: .9rem;
+        }
+      }
+
+      &:hover {
+        transition: all .3s;
+        border-right: 5px solid $brand-secondary-color;
+
+        .calendar {
+          background: $brand-secondary-color;
+          transition: all .3s;
+        }
+
+        .post-content {
+          .post-title {
+            color: $brand-secondary-color;
+            transition: all .3s;
+          }
+        }
+      }
+      
     }
   }
 }
