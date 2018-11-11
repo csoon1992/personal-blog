@@ -1,0 +1,26 @@
+/* Blockquote */
+.mdc {
+    &.blockquote {
+        border-left: 4px solid $brand-primary-color;
+        background: $gray-light;
+
+        p {
+            font-size: .8rem;
+        }
+    }
+
+    &.paragraph {
+        font-size: .9rem;
+    }
+
+    &.subtitle {
+        font-size: 1.2rem;
+        color: $brand-primary-color;
+    }
+
+    &.code {
+        background: $gray-light;
+        border-radius: 3px;
+        padding: .2em .4em;
+    }
+}

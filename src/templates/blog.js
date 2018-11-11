@@ -8,6 +8,8 @@ import Layout from '../layouts/blog'
 
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
+import Content from '../components/Content'
+
 
 // find a post title by path
 const findNode = (path, data) => data.allMarkdownRemark.edges
@@ -21,6 +23,8 @@ export default function Template ({ data }) {
   if (!post) {
     return null;
   }
+
+  console.log(post)
 
   const related = post.frontmatter.related ? post.frontmatter.related.map(r => findNode(r.post, data)) : []
 
@@ -58,8 +62,8 @@ export default function Template ({ data }) {
             {postHeader}
           </div>
 
-          <Container id="post-content" className="mw-100 px-0 mt-4" dangerouslySetInnerHTML={{ __html: post.html }} />
-
+          <Content id="post-content" className="mw-100 px-0 mt-4 pb-3 border-bottom-light" content={post.htmlAst}/>
+          
           {post.frontmatter.attachments && (<Container><h4>Attachments</h4><CardGroup>
             {post.frontmatter.attachments.map((attachment, i) => (
               <Card key={i}>
@@ -81,6 +85,8 @@ export default function Template ({ data }) {
               </Card>
             ))}
           </CardGroup></Container>)}
+          
+          <h4 className="h4 mt-4 mb-2 font-weight-bold text-center">Comentarios</h4>
 
           {data.site.siteMetadata.disqus && (<Container>
             <div id='disqus_thread' />
@@ -103,6 +109,7 @@ export const pageQuery = graphql`
     
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      htmlAst
       frontmatter {
         path
         image

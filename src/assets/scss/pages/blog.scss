@@ -1,4 +1,5 @@
 @import '../common.scss';
+@import '../mdcomponents/blog/index.scss';
 @import '../themes/custom_prismjs.scss';
 
 // page-level layout
@@ -180,9 +181,9 @@
 
           #post-content {
             img {
-              max-width: 700px;
+              max-width: 500px;
               display: block;
-              margin: 0 auto;
+              margin: 1rem auto;
             }
           }
         }
@@ -193,10 +194,18 @@
 
 /* Adjust the position of the line numbers */
 .gatsby-highlight {
+  margin: 2rem 0;
+
   pre[class*="language-"] {
     border-radius: 0;
     border: 0;
-    
+    padding-top: 0;
+
+    .code {
+      background: transparent;
+      padding: 0 !important;
+    }
+
     &.line-numbers {
       padding: 0;
       padding-left: 2.8em;
@@ -204,6 +213,7 @@
       .line-numbers-rows {
         span {
           padding-left: 4px;
+          line-height: 1.3rem;
         }
       }
     }
