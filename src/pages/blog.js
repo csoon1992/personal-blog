@@ -1,7 +1,6 @@
 import React from 'react'
 import { Row, Col, Badge } from 'reactstrap'
-//import Link from 'gatsby-link'
-import { graphql } from 'gatsby'
+import { graphql, navigate } from 'gatsby'
 import Layout from '../layouts/blog'
 
 const BlogContent = ({ data }) => {
@@ -19,7 +18,7 @@ const BlogContent = ({ data }) => {
         }
 
         return (
-          <Row className="blog-post mx-0 d-flex align-items-stretch mb-3" key={post.id}>
+          <Row className="blog-post mx-0 d-flex align-items-stretch mb-3" key={post.id} onClick={ () => navigate(post.frontmatter.path)}>
             <Col md="1" className="calendar d-flex align-items-center text-center">
               <div className="w-100">
                 <span className="day d-block">{post.frontmatter.day}</span>
