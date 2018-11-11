@@ -85,6 +85,7 @@
     overflow-y: scroll;
 
     .pageContent {
+      position: initial;
       .blog-post {
         transition: all .3s;
         border-radius: 0;
@@ -141,6 +142,50 @@
           }
         }
         
+      }
+    }
+  }
+
+  &.post-page {
+    .pageContent-wrapper {
+      .pageContent {
+        max-width: 70%;
+
+        #post-wrapper {
+          #post-header {
+            .header-content {
+              color: $white;
+
+              .overlay {
+                background: rgba(0, 0, 0, .6);
+              }
+
+              .title {
+                font-size: 2rem;
+                max-width: 700px;
+              }
+
+              .header-title {
+                top: 43%;
+              }
+
+              .header-post-date {
+                right: .5rem;
+                bottom: .5rem;
+                font-size: .8rem;
+              }
+            }
+          }
+
+          #post-content {
+            img {
+              width: 100%;
+              max-width: 700px;
+              display: block;
+              margin: 0 auto;
+            }
+          }
+        }
       }
     }
   }
