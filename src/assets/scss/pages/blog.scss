@@ -10,180 +10,193 @@
   height: 100vh;
   color: $brand-font-color;
 
-  & > .pageContent {
-    flex: 1;
-    overflow: auto;
-    padding-top: 10px;
-  }
+  .blog-wrapper {
+    & > .pageContent {
+      flex: 1;
+      overflow: auto;
+      padding-top: 10px;
+    }
 
-  .sidebar-wrapper {
-    top: 1.5rem;
-    bottom: 1.5rem;
+    .sidebar-wrapper {
+      top: 0;
+      bottom: 1.5rem;
+      padding-left: 1.5rem;
 
-    #sidebar {
-      color: $sidebar-color;
-      font-size: .9rem;
-      border-right: 1px solid $sidebar-border-color;
+      #sidebar {
+        padding-top: 1.5rem;
+        color: $sidebar-color;
+        font-size: .9rem;
+        border-right: 1px solid $sidebar-border-color;
 
-      a {
-        color: $sidebar-color !important;
+        a {
+          color: $sidebar-color !important;
 
-        &:hover {
-          color: $brand-font-color !important;
+          &:hover {
+            color: $brand-font-color !important;
+          }
         }
-      }
 
-      .sidebar-header {
-        .header-link {
-          .title {
-            .main-title {
-              font-size: 1.3rem;
-            }
+        .sidebar-header {
+          .header-link {
+            .title {
+              .main-title {
+                font-size: 1.3rem;
+              }
 
-            .subtitle {
-              font-size: .8rem;
-            }
+              .subtitle {
+                font-size: .8rem;
+              }
 
-            .networks {
-              .network {
-                .icon {
-                  width: 1.5rem;
+              .networks {
+                .network {
+                  .icon {
+                    width: 1.5rem;
 
-                  &:hover {
-                    color: $brand-font-color !important;
+                    &:hover {
+                      color: $brand-font-color !important;
+                    }
                   }
                 }
               }
             }
           }
         }
-      }
 
-      .sidebar-content {
-        margin-top: 2rem;
+        .sidebar-content {
+          margin-top: 2rem;
 
-        .sidebar-techs {
-          ul {
-            .item {
-              display: inline-block;
-              margin-right: 1rem;
+          .sidebar-techs {
+            ul {
+              .item {
+                display: inline-block;
+                margin-right: 1rem;
 
-              img {
-                width: 1rem;
+                img {
+                  width: 1rem;
+                }
               }
             }
           }
         }
       }
     }
-  }
 
-  .pageContent-wrapper {
-    position: absolute;
-    top: 1.5rem;
-    bottom: 1.5rem;
-    left: 0;
-    right: 0;
-    overflow-y: scroll;
+    .pageContent-wrapper {
+      position: absolute;
+      top: 1.5rem;
+      bottom: 1.5rem;
+      left: 0;
+      right: 0;
 
-    .pageContent {
-      position: initial;
-      .blog-post {
-        transition: all .3s;
-        border-radius: 0;
-        border: 1px solid $post-border-color;
-        cursor: pointer;
+      .pageContent {
+        position: initial;
 
-        .calendar {
-          font-size: .8rem;
-          background: $brand-primary-color;
-          color: $white;
+        .blog-post {
           transition: all .3s;
+          border-radius: 0;
+          border: 1px solid $post-border-color;
+          cursor: pointer;
 
-          .day {
-            font-size: 2rem;
-            line-height: 1.7rem;
-          }
-        }
-
-        .post-content {
-          border-right: 5px solid transparent;
-          transition: all .3s;
-
-          .post-title {
-            color: $brand-primary-color;
-            font-size: 1.4rem;
-            transition: all .3s;
-          }
-
-          .post-tags {
-            .badge {
-              color: $brand-font-color;
-            }
-          }
-
-          .post-excerpt {
-            font-size: .9rem;
-          }
-        }
-
-        &:hover {
           .calendar {
-            background: $brand-secondary-color;
+            font-size: .8rem;
+            background: $brand-primary-color;
+            color: $white;
             transition: all .3s;
+
+            .day {
+              font-size: 2rem;
+              line-height: 1.7rem;
+            }
           }
 
           .post-content {
+            border-right: 5px solid transparent;
             transition: all .3s;
-            border-right: 5px solid $brand-secondary-color;
 
             .post-title {
-              color: $brand-secondary-color;
+              color: $brand-primary-color;
+              font-size: 1.4rem;
               transition: all .3s;
             }
+
+            .post-tags {
+              .badge {
+                color: $brand-font-color;
+              }
+            }
+
+            .post-excerpt {
+              font-size: .9rem;
+            }
           }
+
+          &:hover {
+            .calendar {
+              background: $brand-secondary-color;
+              transition: all .3s;
+            }
+
+            .post-content {
+              transition: all .3s;
+              border-right: 5px solid $brand-secondary-color;
+
+              .post-title {
+                color: $brand-secondary-color;
+                transition: all .3s;
+              }
+            }
+          }
+          
         }
-        
       }
     }
   }
 
   &.post-page {
-    .pageContent-wrapper {
-      .pageContent {
-        max-width: 70%;
+    .blog-wrapper {
+      .pageContent-wrapper {
+        top: 0;
+        padding-right: 0 !important;
+        
+        .pageContent {
+          padding-left: 0 !important;
 
-        #post-wrapper {
-          #post-header {
-            .header-content {
-              color: $white;
+          #post-wrapper {
+            #post-header {
+              .header-content {
+                color: $white;
 
-              .overlay {
-                background: rgba(0, 0, 0, .7);
-              }
+                .overlay {
+                  background: rgba(0, 0, 0, .7);
+                }
 
-              .title {
-                font-size: 2rem;
-                max-width: 700px;
-              }
+                .title {
+                  font-size: 2.7rem;
+                  max-width: 700px;
+                }
 
-              .header-title {
-                top: 43%;
-              }
+                .header-title {
+                  top: 43%;
+                }
 
-              .header-post-date {
-                right: .5rem;
-                bottom: .5rem;
-                font-size: .8rem;
+                .header-post-date {
+                  right: .5rem;
+                  bottom: .5rem;
+                  font-size: .9rem;
+                }
               }
             }
-          }
 
-          #post-content {
-            img {
-              max-width: 500px;
-              display: block;
-              margin: 1rem auto;
+            .content {
+              max-width: 60%;
+            }
+
+            #post-content {
+              img {
+                max-width: 500px;
+                display: block;
+                margin: 1rem auto;
+              }
             }
           }
         }
