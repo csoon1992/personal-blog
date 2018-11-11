@@ -6,9 +6,6 @@ import Link from 'gatsby-link'
 import { graphql, withPrefix } from 'gatsby'
 import Layout from '../layouts/blog'
 
-// code syntax-highlighting theme
-// feel free to change it to another one
-import 'prismjs/themes/prism-twilight.css'
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
 
@@ -37,8 +34,6 @@ export default function Template ({ data }) {
       <div className="header-post-date position-absolute">{post.frontmatter.date}</div>
     </div>
   }
-
-  console.log(data)
 
   return (
     <Layout isPost>
