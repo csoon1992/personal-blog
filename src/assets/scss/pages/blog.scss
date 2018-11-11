@@ -104,6 +104,9 @@
         }
 
         .post-content {
+          border-right: 5px solid transparent;
+          transition: all .3s;
+
           .post-title {
             color: $brand-primary-color;
             font-size: 1.4rem;
@@ -122,15 +125,15 @@
         }
 
         &:hover {
-          transition: all .3s;
-          border-right: 5px solid $brand-secondary-color;
-
           .calendar {
             background: $brand-secondary-color;
             transition: all .3s;
           }
 
           .post-content {
+            transition: all .3s;
+            border-right: 5px solid $brand-secondary-color;
+
             .post-title {
               color: $brand-secondary-color;
               transition: all .3s;
