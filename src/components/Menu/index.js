@@ -19,12 +19,12 @@ class Menu extends React.Component {
                     const internal = /^\/(?!\/)/.test(item.link);
                    
                     let link = <Link to={item.link} title={item.label} rel={rel}>
-                        <img src={`../../../static/files/${item.icon}`} alt={item.label}/>
+                        <img src={withPrefix(`/files/${item.icon}`)} alt={item.label}/>
                     </Link>
 
                     if (!internal) {
                         link = <a href={item.link} title={item.label} rel={rel}>
-                            <img src={withPrefix(`/img/${item.icon}`)}  alt={item.label}/>
+                            <img src={withPrefix(`/files/${item.icon}`)}  alt={item.label}/>
                         </a> 
                     }
 
