@@ -3,10 +3,6 @@ import { Row, Col, Badge } from 'reactstrap'
 import { graphql, navigate } from 'gatsby'
 import Layout from '../layouts/blog'
 
-// code syntax-highlighting theme
-// feel free to change it to another one
-import 'prismjs/themes/prism-twilight.css'
-
 const BlogContent = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
   return (

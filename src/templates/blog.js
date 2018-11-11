@@ -6,6 +6,12 @@ import Link from 'gatsby-link'
 import { graphql, withPrefix } from 'gatsby'
 import Layout from '../layouts/blog'
 
+// code syntax-highlighting theme
+// feel free to change it to another one
+import 'prismjs/themes/prism-twilight.css'
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+
+
 // find a post title by path
 const findNode = (path, data) => data.allMarkdownRemark.edges
   .map(edge => edge.node.frontmatter)
