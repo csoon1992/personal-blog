@@ -57,7 +57,7 @@ class Sidebar extends React.Component {
 export default Sidebar;
 
 // GraphQL query component
-export const conponentQuery = graphql`
+export const componentQuery = graphql `
   fragment sidebarFragment on siteMetadata_2 {
     title
     subtitle
