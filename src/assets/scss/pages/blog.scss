@@ -14,56 +14,61 @@
     padding-top: 10px;
   }
 
-  #sidebar {
-    color: $sidebar-color;
-    font-size: .9rem;
-    border-right: 1px solid $sidebar-border-color;
+  .sidebar-wrapper {
+    top: 1.5rem;
+    bottom: 1.5rem;
 
-    a {
-      color: $sidebar-color !important;
+    #sidebar {
+      color: $sidebar-color;
+      font-size: .9rem;
+      border-right: 1px solid $sidebar-border-color;
 
-      &:hover {
-        color: $brand-font-color !important;
+      a {
+        color: $sidebar-color !important;
+
+        &:hover {
+          color: $brand-font-color !important;
+        }
       }
-    }
 
-    .sidebar-header {
-      .header-link {
-        .title {
-          .main-title {
-            font-size: 1.3rem;
-          }
+      .sidebar-header {
+        .header-link {
+          .title {
+            .main-title {
+              font-size: 1.3rem;
+            }
 
-          .subtitle {
-            font-size: .8rem;
-          }
+            .subtitle {
+              font-size: .8rem;
+            }
 
-          .networks {
-            .network {
-              .icon {
-                width: 1.5rem;
+            .networks {
+              .network {
+                .icon {
+                  width: 1.5rem;
 
-                &:hover {
-                  color: $brand-font-color !important;
+                  &:hover {
+                    color: $brand-font-color !important;
+                  }
                 }
               }
             }
           }
         }
       }
-    }
 
-    .sidebar-content {
-      margin-top: 2rem;
+      .sidebar-content {
+        margin-top: 2rem;
 
-      .sidebar-techs {
-        ul {
-          .item {
-            display: inline-block;
-            margin-right: 1rem;
+        .sidebar-techs {
+          ul {
+            .item {
+              display: inline-block;
+              margin-right: 1rem;
 
-            img {
-              width: 1rem;
+              img {
+                width: 1rem;
+              }
             }
           }
         }
@@ -71,60 +76,69 @@
     }
   }
 
-  .pageContent {
-    .blog-post {
-      transition: all .3s;
-      border-radius: 0;
-      border: 1px solid $post-border-color;
-      cursor: pointer;
+  .pageContent-wrapper {
+    position: absolute;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
 
-      .calendar {
-        font-size: .8rem;
-        background: $brand-primary-color;
-        color: $white;
+    .pageContent {
+      .blog-post {
         transition: all .3s;
-
-        .day {
-          font-size: 2rem;
-          line-height: 1.7rem;
-        }
-      }
-
-      .post-content {
-        .post-title {
-          color: $brand-primary-color;
-          font-size: 1.4rem;
-          transition: all .3s;
-        }
-
-        .post-tags {
-          .badge {
-            color: $brand-font-color;
-          }
-        }
-
-        .post-excerpt {
-          font-size: .9rem;
-        }
-      }
-
-      &:hover {
-        transition: all .3s;
-        border-right: 5px solid $brand-secondary-color;
+        border-radius: 0;
+        border: 1px solid $post-border-color;
+        cursor: pointer;
 
         .calendar {
-          background: $brand-secondary-color;
+          font-size: .8rem;
+          background: $brand-primary-color;
+          color: $white;
           transition: all .3s;
+
+          .day {
+            font-size: 2rem;
+            line-height: 1.7rem;
+          }
         }
 
         .post-content {
           .post-title {
-            color: $brand-secondary-color;
+            color: $brand-primary-color;
+            font-size: 1.4rem;
             transition: all .3s;
           }
+
+          .post-tags {
+            .badge {
+              color: $brand-font-color;
+            }
+          }
+
+          .post-excerpt {
+            font-size: .9rem;
+          }
         }
+
+        &:hover {
+          transition: all .3s;
+          border-right: 5px solid $brand-secondary-color;
+
+          .calendar {
+            background: $brand-secondary-color;
+            transition: all .3s;
+          }
+
+          .post-content {
+            .post-title {
+              color: $brand-secondary-color;
+              transition: all .3s;
+            }
+          }
+        }
+        
       }
-      
     }
   }
 }

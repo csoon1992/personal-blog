@@ -35,7 +35,7 @@ const BlogContent = ({ data }) => {
                 {tagContent}
               </div>
 
-              <div className="post-excerpt">{post.excerpt}</div>
+              <div className="post-excerpt pr-3">{post.excerpt}</div>
             </Col>
           </Row>
         )
