@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Sidebar from '../components/Sidebar';
+import MyCookieConsent from '../components/cookieConsent';
 
 import '../assets/scss/pages/blog.scss';
 
@@ -17,7 +18,8 @@ const TemplateWrapper = ({ children, isPost }) => {
   return (
     <StaticQuery query={pageQuery} render={data => (
       <div id="blog-page" className={pageClass}>
-      <Helmet
+      
+        <Helmet
           title="Blog"
           titleTemplate={`%s - ${data.site.siteMetadata.title}`}
           description={data.site.siteMetadata.subtitle}>
@@ -43,6 +45,8 @@ const TemplateWrapper = ({ children, isPost }) => {
             </div>
           </Col>
         </Row>
+
+        <MyCookieConsent />
 
       </div>
     )} />

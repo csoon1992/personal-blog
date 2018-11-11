@@ -10,6 +10,8 @@ import 'prismjs/themes/prism-twilight.css'
 
 import '../assets/scss/pages/index.scss';
 
+import MyCookieConsent from '../components/cookieConsent';
+
 const TemplateWrapper = ({children}) => {
   return (
     <StaticQuery query={pageQuery} render={data => (
@@ -41,6 +43,8 @@ const TemplateWrapper = ({children}) => {
         <div className='main-sections mx-auto d-flex h-100 w-100 align-items-center'>
           {children}
         </div>
+
+        <MyCookieConsent/>
 
       </div>
     )}/>
