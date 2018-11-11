@@ -97,16 +97,5 @@ export const pageQuery = graphql`
         }
       }
     }
-
-    allMarkdownRemark{
-      edges{
-        node{
-          frontmatter{
-            title
-            path
-          }
-        }
-      }
-    }
   }
 `
