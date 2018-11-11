@@ -56,9 +56,10 @@ export const pageQuery = graphql`
           frontmatter {
             title
             tags
+            image
             contentType
             day: date(formatString: "DD")
-            month: date(formatString: "MMMM")
+            month: date(formatString: "MMMM", locale: "es-ES")
             path
           }
         }
