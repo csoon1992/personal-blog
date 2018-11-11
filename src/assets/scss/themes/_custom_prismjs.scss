@@ -55,7 +55,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-    color: #3d5e76
+    color: $white;
 }
 
 .token.namespace {
@@ -81,7 +81,7 @@ pre[class*="language-"] {
 
 code.language-javascript,
 .token.attr-name {
-    color: #8dcefc
+    color: #98c3ae
 }
 
 code.language-css,
@@ -93,7 +93,6 @@ code.language-scss,
 .language-css .token.string,
 .language-scss .token.string,
 .style .token.string,
-.token.attr-value,
 .token.keyword,
 .token.control,
 .token.directive,
@@ -102,6 +101,10 @@ code.language-scss,
 .token.regex,
 .token.atrule {
     color: #8ca1ca
+}
+
+.token.attr-value {
+    color: #b8f99a;
 }
 
 .token.placeholder,
