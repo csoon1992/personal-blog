@@ -5,10 +5,6 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Sidebar from '../components/Sidebar';
 
-// code syntax-highlighting theme
-// feel free to change it to another one
-import 'prismjs/themes/prism-twilight.css'
-
 import '../assets/scss/pages/blog.scss';
 
 const TemplateWrapper = ({ children, isPost }) => {
