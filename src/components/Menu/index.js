@@ -12,9 +12,10 @@ class Menu extends React.Component {
     render() {
         const rel = this.props.rel || '';
         const classes = this.props.classes || 'item';
+        const menuClass = this.props.menuClass || '';
 
         const menu = (
-            <ul className='menu list-unstyled'>
+            <ul className={ `menu list-unstyled ${menuClass}` }>
                 {this.props.items.map((item, i) => { 
                     const internal = /^\/(?!\/)/.test(item.link);
                    
