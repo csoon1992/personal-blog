@@ -17,7 +17,20 @@ const TemplateWrapper = ({ children, isPost }) => {
   return (
     <StaticQuery query={pageQuery} render={data => (
       <div id="blog-page" className={pageClass}>
-        <Helmet title={data.site.siteMetadata.title} />
+      <Helmet
+          title="Blog"
+          titleTemplate={`%s - ${data.site.siteMetadata.title}`}
+          description={data.site.siteMetadata.subtitle}>
+          <meta name="description" content={ `Web personal de ${data.site.siteMetadata.title}` } />
+          <meta property="og:type" content="website"/>
+          <meta property="og:title" content={data.site.siteMetadata.title}/>
+          <meta property="og:site_name" content="CristinaSoler"/>
+          <meta property="og:url" content="https://cristinasoler.me/"/>
+          <meta property="og:description" content={ `Web personal de ${data.site.siteMetadata.title}` }/>
+          <meta property="og:type" content="website"/>
+          <meta name="og:locale" content="es_ES"/>
+          <link rel="canonical" href="https://cristinasoler.me/"/>
+        </Helmet>
 
         <Row className="p-4 mx-0 d-flex align-items-strech h-100">
           <Col md='2' className="sidebar-wrapper position-fixed px-0">
