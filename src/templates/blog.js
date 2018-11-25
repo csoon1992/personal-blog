@@ -40,7 +40,7 @@ export default function Template ({ data }) {
   let tagContent = null;
   if (post.frontmatter.tags) {
     tagContent = post.frontmatter.tags.map((tag, ndx) => (
-      <Badge href="#" color="light" className="mr-2 py-2 px-3" key={ndx}>{tag}</Badge>
+      <Badge href="#" color="light" className="mr-2 mb-1 py-2 px-3" key={ndx}>{tag}</Badge>
     ));
   }
 
@@ -92,11 +92,12 @@ export default function Template ({ data }) {
               ))}
             </CardGroup></Container>)}
 
-            <div className="post-tags border-bottom-light py-2">
+            <div className="post-tags border-bottom-light pt-2 pb-1">
               {tagContent}
             </div>
             
-            <h4 className="h4 mt-4 mb-2 font-weight-bold text-center">Comentarios</h4>
+            <h4 className="h4 mt-4 mb-1 text-center">Comentarios</h4>
+            <h5 className="h5 mb-2 text-center section-subtitle">Cualquier comentario o sugerencia es bienvenido</h5>
 
             {data.site.siteMetadata.disqus && (<Container>
               <div id='disqus_thread' />
