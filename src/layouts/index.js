@@ -5,9 +5,6 @@ import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import {StaticQuery, graphql} from 'gatsby'
 
-// code syntax-highlighting theme feel free to change it to another one
-import 'prismjs/themes/prism-twilight.css'
-
 import '../assets/scss/pages/index.scss';
 
 import MyCookieConsent from '../components/cookieConsent';
