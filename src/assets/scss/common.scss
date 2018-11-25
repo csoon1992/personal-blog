@@ -32,6 +32,16 @@ a {
     }
 }
 
+button {
+    outline: 0;
+    cursor: pointer;
+
+    &:focus,
+    &:active {
+        outline: 0;
+    }
+}
+
 .border-top-light {
     border-top: 1px solid $gray-light;
 }
