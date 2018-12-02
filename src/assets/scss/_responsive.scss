@@ -11,6 +11,14 @@
                     padding-top: 3rem;
                 }
             } 
+
+            &.post-page {
+                .blog-wrapper {
+                    .pageContent-wrapper {
+                        padding-top: 0;
+                    }
+                } 
+            }
         }
     }
 }

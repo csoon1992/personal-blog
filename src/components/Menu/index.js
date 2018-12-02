@@ -10,7 +10,6 @@ import { withPrefix } from 'gatsby'
  */
 class Menu extends React.Component {
     render() {
-        const rel = this.props.rel || '';
         const classes = this.props.classes || 'item';
         const menuClass = this.props.menuClass || '';
 
@@ -19,18 +18,18 @@ class Menu extends React.Component {
                 {this.props.items.map((item, i) => { 
                     const internal = /^\/(?!\/)/.test(item.link);
                    
-                    let link = <Link to={item.link} title={item.label} rel={rel}>
+                    let link = <Link to={item.link} title={item.label} activeClassName="active">
                         <img src={withPrefix(`/files/${item.icon}`)} alt={item.label}/>
                     </Link>
 
                     if (!internal) {
-                        link = <a href={item.link} title={item.label} rel={rel}>
-                            <img src={withPrefix(`/files/${item.icon}`)}  alt={item.label}/>
+                        link = <a href={item.link} title={item.label}>
+                            <img src={withPrefix(`/files/${item.icon}`)} alt={item.label}/>
                         </a> 
                     }
 
                     if(!this.props.onlyIcons) {
-                        link = <Link to={item.link} rel={rel}>{item.label}</Link> 
+                        link = <Link to={item.link}>{item.label}</Link> 
                     }
 
                     return (
