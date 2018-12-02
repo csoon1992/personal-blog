@@ -6,7 +6,7 @@ import Layout from '../layouts/blog'
 
 // Icons
 import { IconContext } from 'react-icons';
-import { GoTag } from 'react-icons/go';
+import { GoTag, GoBook } from 'react-icons/go';
 
 const BlogTagContent = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
@@ -33,12 +33,19 @@ const BlogTagContent = ({ data }) => {
             )
         })}
 
-        <div className="actions">
+        <div className="actions mt-4">
             <Link to="/tags" className="default-color">
                 <IconContext.Provider value={{ className: 'icon primary-color pr-1'}}>
                     <GoTag />
                 </IconContext.Provider>
                 Ver todas las etiquetas
+            </Link>
+
+            <Link to="/blog" className="default-color">
+                <IconContext.Provider value={{ className: 'icon primary-color pr-1'}}>
+                    <GoBook />
+                </IconContext.Provider>
+                Ver todos los posts
             </Link>
         </div>
     </Layout>
