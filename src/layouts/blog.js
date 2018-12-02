@@ -34,12 +34,12 @@ const TemplateWrapper = ({ children, isPost }) => {
           <link rel="canonical" href="https://cristinasoler.me/"/>
         </Helmet>
 
-        <Row className="blog-wrapper mx-0 d-flex align-items-strech h-100">
-          <Col md='2' className="sidebar-wrapper position-fixed pr-0">
+        <Row className="blog-wrapper mx-0 h-100">
+          <Col md="2" className="sidebar-wrapper px-0">
             <Sidebar siteMetadata={data.site.siteMetadata} isPost={isPost} />
           </Col>
 
-          <Col md={{ size: 10, offset: 2 }} xl={{ size: 9, offset: 3 }} className="pageContent-wrapper pl-0">
+          <Col md="10" className="pageContent-wrapper pl-0">
             <div className='pageContent pl-4 mx-auto'>
               {children}
             </div>
