@@ -39,7 +39,7 @@ const TemplateWrapper = ({ children, isPost }) => {
             <Sidebar siteMetadata={data.site.siteMetadata} isPost={isPost} />
           </Col>
 
-          <Col md={{ size: 10, offset: 3 }} className="pageContent-wrapper pl-0">
+          <Col md={{ size: 10, offset: 2 }} xl={{ size: 9, offset: 3 }} className="pageContent-wrapper pl-0">
             <div className='pageContent pl-4 mx-auto'>
               {children}
             </div>
