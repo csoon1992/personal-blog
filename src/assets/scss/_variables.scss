@@ -15,6 +15,11 @@ $white: #FFFFFF;
 $grayB: #BBBBBB;
 $gray-light: #f0f5f9;
 
+$light-badge-color: $brand-font-color;
+$light-badge-bg: #f8f9fa;
+$light-badge-color-hover: $brand-secondary-color;
+$light-badge-bg-hover: #dae0e5;
+
 
 // Fonts
 @import 'gatsby-plugin-google-fonts';

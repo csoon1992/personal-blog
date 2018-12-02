@@ -65,3 +65,12 @@ button {
     color: $grayB;
 }
 
+.light-badge {
+    color: $light-badge-color;
+    background: $light-badge-bg;
+
+    &:hover {
+        color: $light-badge-color-hover;
+        background: $light-badge-bg-hover;
+    }
+}

@@ -1,8 +1,9 @@
 import React from 'react'
-import { Container, Card, CardTitle, CardGroup, CardBody, Badge } from 'reactstrap'
+import { Container, Card, CardTitle, CardGroup, CardBody } from 'reactstrap'
 import Helmet from 'react-helmet'
 import { basename } from 'path'
 import Link from 'gatsby-link'
+import { kebabCase } from 'lodash';
 import { graphql, withPrefix } from 'gatsby'
 import Layout from '../layouts/blog'
 
@@ -38,9 +39,10 @@ export default function Template ({ data }) {
   }
 
   let tagContent = null;
+
   if (post.frontmatter.tags) {
-    tagContent = post.frontmatter.tags.map((tag, ndx) => (
-      <Badge href="#" color="light" className="mr-2 mb-1 py-2 px-3" key={ndx}>{tag}</Badge>
+    tagContent = post.frontmatter.tags.map((tag) => (
+      <Link to={`/tags/${kebabCase(tag)}/`} className="badge light-badge mr-2 mb-1 py-2 px-3" key={tag}>{tag}</Link>
     ));
   }
 

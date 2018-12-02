@@ -1,9 +1,10 @@
 import React from 'react'
 import { Row, Col } from 'reactstrap'
 import { graphql, navigate } from 'gatsby'
+import Link from 'gatsby-link'
 import Layout from '../layouts/blog'
 
-const BlogContent = ({ data }) => {
+const BlogTagContent = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
   return (
     <Layout>
@@ -27,15 +28,24 @@ const BlogContent = ({ data }) => {
           </Row>
         )
       })}
+
+      <Link to="/tags">All tags</Link>
+
     </Layout>
   )
 }
 
-export default BlogContent
+export default BlogTagContent
 
 export const pageQuery = graphql`
-  query PostsQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+  query PostsByTagQuery($tag: String) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: {
+        frontmatter: { tags: { in: [$tag] } }
+      }
+    ) {
+      totalCount
       edges {
         node {
           excerpt(pruneLength: 300)

@@ -146,7 +146,31 @@
               }
             }
           }
-          
+        }
+
+        #tags-content {
+          h1 {
+            font-size: 2.7rem;
+          }
+
+          .tag-list {
+            .tag {
+              border: 1px solid #dddfe6;
+              cursor: pointer;
+
+              .tag-content {
+                border-right: 5px solid transparent;
+                transition: all .3s;
+              }
+
+              &:hover {
+                .tag-content {
+                  border-right: 5px solid $brand-primary-color;
+                  transition: all .3s;
+                }
+              }
+            }
+          }
         }
       }
     }
