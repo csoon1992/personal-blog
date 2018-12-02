@@ -4,33 +4,43 @@ import { graphql, navigate } from 'gatsby'
 import Link from 'gatsby-link'
 import Layout from '../layouts/blog'
 
+// Icons
+import { IconContext } from 'react-icons';
+import { GoTag } from 'react-icons/go';
+
 const BlogTagContent = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
   return (
     <Layout>
-      {posts.map(({ node: post }) => { 
-        return (
-          <Row className="blog-post mx-0 d-flex align-items-stretch mb-3" key={post.id} onClick={ () => navigate(post.frontmatter.path)}>
-            <Col md="1" className="calendar d-flex align-items-center text-center">
-              <div className="w-100">
-                <span className="day d-block">{post.frontmatter.day}</span>
-                <span className="month text-uppercase d-block">{post.frontmatter.month}</span>
-              </div>
-            </Col>
+        {posts.map(({ node: post }) => { 
+            return (
+                <Row className="blog-post mx-0 d-flex align-items-stretch mb-3" key={post.id} onClick={ () => navigate(post.frontmatter.path)}>
+                    <Col md="1" className="calendar d-flex align-items-center text-center">
+                    <div className="w-100">
+                        <span className="day d-block">{post.frontmatter.day}</span>
+                        <span className="month text-uppercase d-block">{post.frontmatter.month}</span>
+                    </div>
+                    </Col>
 
-            <Col className="post-content py-2">
-              <h2 className="post-title mb-0">
-                {post.frontmatter.title}
-              </h2>
+                    <Col className="post-content py-2">
+                    <h2 className="post-title mb-0">
+                        {post.frontmatter.title}
+                    </h2>
 
-              <div className="post-excerpt pr-3">{post.excerpt}</div>
-            </Col>
-          </Row>
-        )
-      })}
+                    <div className="post-excerpt pr-3">{post.excerpt}</div>
+                    </Col>
+                </Row>
+            )
+        })}
 
-      <Link to="/tags">All tags</Link>
-
+        <div className="actions">
+            <Link to="/tags" className="default-color">
+                <IconContext.Provider value={{ className: 'icon primary-color pr-1'}}>
+                    <GoTag />
+                </IconContext.Provider>
+                Ver todas las etiquetas
+            </Link>
+        </div>
     </Layout>
   )
 }

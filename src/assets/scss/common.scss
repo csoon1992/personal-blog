@@ -42,6 +42,14 @@ button {
     }
 }
 
+.default-color {
+    color: $brand-font-color;
+}
+
+.primary-color {
+    color: $brand-primary-color;
+}
+
 .border-top-light {
     border-top: 1px solid $gray-light;
 }
