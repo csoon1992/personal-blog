@@ -1,0 +1,16 @@
+@include media-breakpoint-up(xl) {
+    .App {
+        &#blog-page {
+            display: block;
+            max-width: 1700px;
+            margin: 0 auto;
+
+            .blog-wrapper {
+                .pageContent-wrapper {
+                    position: initial;
+                    padding-top: 3rem;
+                }
+            } 
+        }
+    }
+}
