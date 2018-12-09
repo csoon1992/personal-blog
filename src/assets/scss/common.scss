@@ -2,6 +2,9 @@
 @import 'bootstrap';
 @import 'responsive';
 
+.App {
+    font-family: $montserrat; 
+}
 
 .shadow-light-hover {
     &:hover {

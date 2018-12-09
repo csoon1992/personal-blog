@@ -1,7 +1,9 @@
 @import '../common.scss';
 
 #index {
-    font-family: $montserrat; 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 
     .navbar {
         z-index: 99;
