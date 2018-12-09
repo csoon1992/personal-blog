@@ -7,6 +7,7 @@ const BlogContent = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog')
   return (
     <Layout>
+      <h1 className="title d-block w-100 text-center mb-3 primary-color">Mis artículos</h1>
       {posts.map(({ node: post }) => { 
         return (
           <Row className="blog-post mx-0 d-flex align-items-stretch mb-3" key={post.id} onClick={ () => navigate(post.frontmatter.path)}>
