@@ -23,7 +23,7 @@ class Sidebar extends React.Component {
                         height='90'
                     />
                     <div className="title px-2">
-                        <h1 className="main-title text-primary mb-1">{author.name}</h1>
+                        <h2 className="main-title text-primary mb-1">{author.name}</h2>
                         <div className="subtitle">{subtitle}</div>
                     </div>
                 </Link>
