@@ -11,7 +11,7 @@
                 }
 
                 .company {
-                    margin: 1rem 0;
+                    margin: 0 0 1rem;
 
                     .company-header {
                         .bg {
@@ -48,6 +48,7 @@
 
                     .separator {
                         height: 1px;
+                        margin: 3rem 0;
 
                         .w-200px {
                             width: 200px;

@@ -68,7 +68,7 @@ const MePage = () => {
                 </Col>
               </Row>
 
-              <Row className="separator mt-4 mx-0">
+              <Row className="separator">
                 <Col className="col-auto">
                   <div className="w-200px">&nbsp;</div>
                 </Col>
@@ -115,7 +115,7 @@ const MePage = () => {
                 </Col>
               </Row>
 
-              <Row className="separator mt-4 mx-0">
+              <Row className="separator">
                 <Col className="col-auto">
                   <div className="w-200px">&nbsp;</div>
                 </Col>
