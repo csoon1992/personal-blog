@@ -39,10 +39,6 @@ module.exports = {
       {
         label: 'Sobre mí',
         link: '/about/'
-      },
-      {
-        label: 'Contacto',
-        link: '/contact/'
       }
     ]
   },
