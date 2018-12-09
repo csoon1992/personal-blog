@@ -7,20 +7,25 @@ import Sidebar from '../components/Sidebar';
 import MyCookieConsent from '../components/cookieConsent';
 
 import '../assets/scss/pages/blog.scss';
+import '../assets/scss/pages/about.scss';
 
-const TemplateWrapper = ({ children, isPost }) => {
+const TemplateWrapper = ({ children, isPost, isAbout }) => {
   let pageClass = 'App';
+  let title = 'Blog';
 
   if (isPost) {
     pageClass += ' post-page';
+  } else if (isAbout) {
+    pageClass += ' about-page';
+    title = 'Sobre mí';
   }
 
   return (
     <StaticQuery query={pageQuery} render={data => (
-      <div id="blog-page" className={pageClass}>
+      <div id="blog-layout" className={pageClass}>
       
         <Helmet
-          title="Blog"
+          title={title}
           titleTemplate={`%s - ${data.site.siteMetadata.title}`}
           description={data.site.siteMetadata.subtitle}>
           <meta name="description" content={ `Web personal de ${data.site.siteMetadata.title}` } />
