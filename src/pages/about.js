@@ -24,6 +24,9 @@ const MePage = () => {
             <p>Soy Técnico Superior en Desarrollo de Aplicaciones Web, con 4+ años de experiencia.</p>
             <p>Finalicé mis estudios en junio de 2013, momento desde el cual empecé a aprender de forma autodidacta PHP, mi actual lenguaje de programación favorito.</p>
             <p>Durante mi trayectoria profesional, me he ido especializando en el mundo del e-commerce. Empecé con Magento 1.9 y luego me inicié en Prestashop 1.6 hasta su versión 1.7 actual.</p>
+
+            <p>Actualmente me encuentro trabajando en Redegal 100% remoto.</p>
+            
             <p>En mi tiempo libre, me dedico a aprender otras tecnologías totalmente ajenas al comercio electrónico, pues mi objetivo a medio-largo plazo es centrarme en proyectos a medida, especialmente con Laravel + React.js.</p>
           </section>
 
@@ -48,7 +51,7 @@ const MePage = () => {
                         </a>
                       </span>
                     </h4>
-                    <p className="position small grayb-color mb-0">Programadora Senior Prestashop - Desde abril de 2018 hasta la actualidad</p>
+                    <p className="position small graya-color mb-0">Programadora Senior Prestashop - Desde abril de 2018 hasta la actualidad</p>
 
                     <Card className="border-0">
                       <CardBody className="px-0 pb-0">
@@ -92,7 +95,7 @@ const MePage = () => {
                         </a>
                       </span>
                     </h4>
-                    <p className="position small grayb-color mb-0">Programadora Web - Desde noviembre de 2017 hasta abril de 2018</p>
+                    <p className="position small graya-color mb-0">Programadora Web - Desde noviembre de 2017 hasta abril de 2018</p>
 
                     <Card className="border-0">
                       <CardBody className="px-0 pb-0">
@@ -139,7 +142,7 @@ const MePage = () => {
                         </a>
                       </span>
                     </h4>
-                    <p className="position small grayb-color mb-0">Programadora Web - Desde octubre de 2014 hasta octubre de 2017</p>
+                    <p className="position small graya-color mb-0">Programadora Web - Desde octubre de 2014 hasta octubre de 2017</p>
 
                     <Card className="border-0">
                       <CardBody className="px-0 pb-0">

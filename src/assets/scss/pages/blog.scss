@@ -258,3 +258,45 @@
     }
   }
 }
+
+#footer {
+  color: $grayB;
+  background: $footer-bg;
+  padding: 4rem;
+
+  .big-icon {
+    font-size: 1.5rem;
+  }
+
+  a {
+    &[title="LinkedIn"] {
+      .icon {
+        color: $linkedin-color;
+      }
+    }
+
+    &[title="Github"] {
+      .icon {
+        color: $github-color;
+      }
+    }
+
+    &[title="Gitlab"] {
+      .icon {
+        color: $gitlab-color;
+      }
+    }
+
+    &[title="Twitter"] {
+      .icon {
+        color: $twitter-color;
+      }
+    }
+
+    &[title="Facebook"] {
+      .icon {
+        color: $facebook-color;
+      }
+    }
+  }
+}
