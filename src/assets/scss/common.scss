@@ -29,15 +29,48 @@ a {
         text-decoration: none;
         color: $brand-secondary-color !important;
     }
+
+    &.link-secondary-color {
+        color: $link-secondary-color;
+
+        &:hover {
+            color: $link-secondary-color-dark !important;
+        }
+    }
 }
 
 button {
     outline: 0;
     cursor: pointer;
-
+    
     &:focus,
     &:active {
-        outline: 0;
+        box-shadow: none !important;
+        outline: 0 !important;
+    }
+
+    &.unstyled-btn {
+        background: none;
+        color: $brand-primary-color;
+        border: 0;
+
+        &:hover {
+            background: $gray-light;
+            color: $brand-primary-color;
+            border: 0;
+        }
+    }
+}
+
+.toggler-btn {
+    font-size: 1rem;
+
+    .icon {
+        font-size: 2rem;
+    }
+
+    &:hover {
+        color: $brand-primary-color;
     }
 }
 
@@ -47,6 +80,10 @@ button {
 
 .primary-color {
     color: $brand-primary-color;
+}
+
+.grayb-color {
+    color: $grayB;
 }
 
 .border-top-light {
