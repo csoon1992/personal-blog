@@ -1,7 +1,5 @@
 import React from 'react'
-import {Container} from 'reactstrap'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import {StaticQuery, graphql} from 'gatsby'
 
@@ -29,15 +27,7 @@ const TemplateWrapper = ({children}) => {
           <link rel="canonical" href="https://cristinasoler.me/"/>
         </Helmet>
 
-        <div className='navbar navbar-expand-lg navbar-dark position-fixed w-100'>
-          <Container>
-            <Link to='/' className='navbar-brand'>
-              <h1>{data.site.siteMetadata.title}</h1>
-            </Link>
-          </Container>
-        </div>
-
-        <div className='main-sections mx-auto d-flex h-100 w-100 align-items-center'>
+        <div className='main-content mx-auto h-100 w-100'>
           {children}
         </div>
 

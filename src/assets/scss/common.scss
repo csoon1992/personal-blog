@@ -39,7 +39,7 @@ a {
     }
 }
 
-button {
+button, .btn {
     outline: 0;
     cursor: pointer;
     
@@ -58,6 +58,20 @@ button {
             background: $gray-light;
             color: $brand-primary-color;
             border: 0;
+        }
+    }
+
+    &.outline-btn {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: $white;
+        padding: .7rem 2rem;
+        transition: .3s;
+        border-radius: 10rem;
+        font-size: .9rem;
+
+        &:hover {
+            border-color: $white;
+            color: $white !important;
         }
     }
 }

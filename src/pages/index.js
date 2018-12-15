@@ -1,46 +1,34 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Layout from '../layouts/index'
-
-// Icons
-import { IconContext } from 'react-icons';
-import { MdChevronRight } from 'react-icons/md';
+import FooterLinks from '../components/Blog/FooterLinks';
 
 const IndexPage = () => {
   return (
     <Layout>
-      <div className='section blog px-0 h-100 shadow-light-hover shadow-right'>
-        <Link to='/blog' className='section-link no-underline d-block h-100 position-relative d-flex align-items-center'>
-            <div className='overlay h-100 w-100 position-absolute'></div>
+      <section className='section px-0 h-100 w-100 d-flex align-items-center'>
+        <div className='title mw-50 p-5'>
+          <h2 className='name'>Hola, soy Cristina Soler</h2>
+          <p className='description'>Programadora web, especializada en el mundo del comercio electrónico.</p>
 
-            <div className='content ml-auto mr-5 text-center position-relative'>
-                <h2 className='name'>Blog</h2>
-                <p className='description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, repudiandae molestiae, obcaecati, rem provident quis quae veritatis ut enim labore ipsum voluptatum sapiente totam alias officiis similique voluptas culpa error.</p>
-                <span className="section-icon material-icons text-center d-block mx-auto">
-                  <IconContext.Provider value={{ className: 'icon'}}>
-                    <MdChevronRight/>
-                  </IconContext.Provider>
-                </span>
-            </div>
-        </Link>
-      </div>
-  
+          <div className="navigation">
+            <Link to='/blog' className='btn outline-btn mr-4'>Blog</Link>
+            <Link to='/about' className='btn outline-btn'>Sobre mí</Link>
+          </div>
+        </div>
+      </section>
 
-      <div className='section portfolio px-0 h-100 shadow-light-hover shadow-left'>
-        <Link to='/about' className='section-link no-underline d-block h-100 position-relative d-flex align-items-center'>
-            <div className='overlay h-100 w-100 position-absolute'></div>
+      <footer className="fixed-bottom px-5 pb-2">
+        <div className="contact d-flex align-items-center justify-content-center">
+          <div className="made-by d-inline-block mr-4">
+            <small>Hecho por <span className="font-weight-bold">Cristina Soler</span></small>
+          </div>
 
-            <div className='content mr-auto ml-5 text-center position-relative'>
-                <h2 className='name'>Portfolio</h2>
-                <p className='description'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, repudiandae molestiae, obcaecati, rem provident quis quae veritatis ut enim labore ipsum voluptatum sapiente totam alias officiis similique voluptas culpa error.</p>
-                <span className="section-icon material-icons text-center d-block mx-auto">
-                  <IconContext.Provider value={{ className: 'icon'}}>
-                    <MdChevronRight/>
-                  </IconContext.Provider>
-                </span>
-            </div>
-        </Link>
-      </div>
+          <div className="links d-inline-block">
+            <FooterLinks/>
+          </div>
+        </div>
+      </footer>
     </Layout>
   )
 }
