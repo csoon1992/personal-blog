@@ -129,10 +129,7 @@ export const pageQuery = graphql`
         image
         tags
         date(formatString: "DD MMMM YYYY", locale: "es-ES")
-        title
-        attachments {
-          filename
-        }
+        title 
       }
     }
   }
