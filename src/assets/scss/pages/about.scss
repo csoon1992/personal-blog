@@ -63,14 +63,23 @@
                 &.public-works {
                     font-size: .8rem;
 
-                    .card-title {
-                        font-size: .9rem;
+                    .works {
+                        .card {
+                            flex: 1 0 25% !important;
+                            margin-bottom: 30px;
+                            
+                            .card-title {
+                                font-size: .9rem;
+                            }
+
+                            .card-subtitle {
+                                font-size: .8rem;
+                                color: $sidebar-color;
+                            }
+                        }
+
                     }
 
-                    .card-subtitle {
-                        font-size: .8rem;
-                        color: $sidebar-color;
-                    }
                 }
             }
         }
