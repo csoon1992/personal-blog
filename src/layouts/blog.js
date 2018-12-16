@@ -41,11 +41,11 @@ const TemplateWrapper = ({ children, isPost, isAbout }) => {
         </Helmet>
 
         <Row className="blog-wrapper mx-0 h-100">
-          <Col lg="4" xl="2" className="sidebar-wrapper px-0">
+          <Col lg="4" xl="3" className="sidebar-wrapper px-0">
             <Sidebar siteMetadata={data.site.siteMetadata} isPost={isPost} />
           </Col>
 
-          <Col lg="8" xl="10" className="pageContent-wrapper pl-0">
+          <Col lg="8" xl="9" className="pageContent-wrapper pl-0">
             <div className='pageContent pl-4 mx-auto'>
               {children}
             </div>

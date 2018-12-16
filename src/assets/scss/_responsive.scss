@@ -270,3 +270,19 @@
         }
     }
 }
+
+@media (min-width: 1900px) {
+    #blog-layout {
+        .blog-wrapper {
+            .sidebar-wrapper {
+                flex: 0 0 16.66666667%;
+                max-width: 16.66666667%;
+            }
+
+            .pageContent-wrapper {
+                flex: 0 0 83.33333333%;
+                max-width: 83.33333333%;
+            }
+        }
+    }
+}
