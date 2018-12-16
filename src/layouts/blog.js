@@ -7,8 +7,8 @@ import Sidebar from '../components/Sidebar';
 import Footer from '../components/Blog/Footer';
 import MyCookieConsent from '../components/cookieConsent';
 
-import '../assets/scss/pages/blog.scss';
 import '../assets/scss/pages/about.scss';
+import '../assets/scss/pages/blog.scss';
 
 const TemplateWrapper = ({ children, isPost, isAbout }) => {
   let pageClass = 'App';

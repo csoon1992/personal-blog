@@ -91,8 +91,11 @@
         font-size: $h3-down-md !important;
     }
 
-    .gatsby-highlight {
+    h4 {
+        font-size: $h4-down-md !important;
+    }
 
+    .gatsby-highlight {
         code[class*="language-"],
         pre[class*="language-"] {
             max-height: 350px;
@@ -116,8 +119,11 @@
     }
 
     #blog-layout {
+        display: block !important;
+
         .blog-wrapper {
-            min-height: 1px;
+            min-height: calc(100vh - 123px) !important;
+            display: block;
 
             .sidebar-wrapper {
                 #sidebar {
@@ -198,11 +204,25 @@
                             .bg {
                                 margin: 0 auto;
                             }
+
+                            .company-name {
+                                font-weight: bold;
+                                font-size: $h4-down-md;
+                            }
                         }
 
                         .separator {
                             .col-auto {
                                 display: none;
+                            }
+
+                            .line {
+                                width: 100%;
+                                padding: 0;
+
+                                .fill {
+                                    height: 1px !important;
+                                }
                             }
                         }
                     }
@@ -212,7 +232,8 @@
                             justify-content: center !important;
 
                             .card {
-                                flex: 1 0 50% !important;
+                                flex: 1 0 25% !important;
+                                max-width: 50%;
                             }
                         }
                     }

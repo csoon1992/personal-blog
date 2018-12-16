@@ -258,6 +258,8 @@
   color: $grayB;
   background: $footer-bg;
   padding: 4rem;
+  overflow: visible;
+  height: 100%;
 
   .big-icon {
     font-size: 1.5rem;
@@ -295,3 +297,5 @@
     }
   }
 }
+
+@import '../responsive';
