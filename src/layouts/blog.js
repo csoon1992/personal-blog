@@ -37,6 +37,7 @@ const TemplateWrapper = ({ children, isPost, isAbout }) => {
           <meta property="og:description" content={ `Web personal de ${data.site.siteMetadata.title}` }/>
           <meta property="og:type" content="website"/>
           <meta name="og:locale" content="es_ES"/>
+          <meta property="og:image" content="/files/index-bg.jpg" />
           <link rel="canonical" href="https://cristinasoler.me/"/>
         </Helmet>
 
