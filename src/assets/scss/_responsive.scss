@@ -130,7 +130,9 @@
                         #post-header {
                             .header-content {
                                 img {
-                                    max-height: 200px;
+                                    min-height: 200px;
+                                    max-width: 100%;
+                                    object-fit: cover;
                                 }
                             }
                         }
