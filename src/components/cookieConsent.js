@@ -5,7 +5,7 @@ class MyCookieConsent extends React.Component {
     render() {
         return (
             <CookieConsent
-                location="bottom"
+                location="top"
                 buttonText="OK"
                 cookieName="cookieConsent"
                 style={{ background: "rgba(1, 22, 39, .8)", fontSize: ".7rem" }}
