@@ -18,7 +18,7 @@ class Sidebar extends React.Component {
             .toggleNavbar
             .bind(this);
         this.state = {
-            collapsed: true
+            collapsed: false
         };
     }
 
@@ -47,7 +47,7 @@ class Sidebar extends React.Component {
                     </div>
                 </Link>
                 
-                <div className="toggle-menu" onClick={this.toggleNavbar}>
+                <div className="toggle-menu d-md-none" onClick={this.toggleNavbar}>
                     <IconContext.Provider
                         value={{
                         className: 'icon'

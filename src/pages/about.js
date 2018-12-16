@@ -1,33 +1,40 @@
 import React from 'react';
-import { Container, Row, Col, CardBody, Card } from 'reactstrap';
+import {Container, Row, Col, CardBody, Card, CardImg, CardTitle, CardSubtitle, CardText} from 'reactstrap';
 import Layout from '../layouts/blog';
 
 // Images
-import RedegalLogo from '../../public/files/redegal-logo.png';
-import WetacaLogo from '../../public/files/wetaca-logo.png';
-import CbiLogo from '../../public/files/cbi-logo.png';
+import RedegalLogo from '../assets/img/files/redegal-logo.png';
+import WetacaLogo from '../assets/img/files/wetaca-logo.png';
+import CbiLogo from '../assets/img/files/cbi-logo.png';
+import mpsc from '../assets/img/files/mispapissecasan.jpg';
 
 // Icons
-import { IconContext } from 'react-icons';
-import { FaExternalLinkAlt } from 'react-icons/fa';
-
+import {IconContext} from 'react-icons';
+import {FaExternalLinkAlt} from 'react-icons/fa';
 
 const MePage = () => {
   return (
     <Layout isAbout>
       <Container>
         <div className="about-content mx-0">
-          <h1 className="title d-block w-100 text-center mb-3 primary-color font-weight-bold">Sobre mí</h1>
+          <h1
+            className="title d-block w-100 text-center mb-3 primary-color font-weight-bold">Sobre mí</h1>
 
           <section className="presentation mb-5">
             <h3 className="section-title mb-4">Presentación</h3>
-            <p>Soy Técnico Superior en Desarrollo de Aplicaciones Web, con 4+ años de experiencia.</p>
-            <p>Finalicé mis estudios en junio de 2013, momento desde el cual empecé a aprender de forma autodidacta PHP, mi actual lenguaje de programación favorito.</p>
-            <p>Durante mi trayectoria profesional, me he ido especializando en el mundo del e-commerce. Empecé con Magento 1.9 y luego me inicié en Prestashop 1.6 hasta su versión 1.7 actual.</p>
+            <p>Soy Técnico Superior en Desarrollo de Aplicaciones Web, con 4+ años de
+              experiencia.</p>
+            <p>Finalicé mis estudios en junio de 2013, momento desde el cual empecé a
+              aprender de forma autodidacta PHP, mi actual lenguaje de programación favorito.</p>
+            <p>Durante mi trayectoria profesional, me he ido especializando en el mundo del
+              e-commerce. Empecé con Magento 1.9 y luego me inicié en Prestashop 1.6 hasta su
+              versión 1.7 actual.</p>
 
             <p>Actualmente me encuentro trabajando en Redegal 100% remoto.</p>
-            
-            <p>En mi tiempo libre, me dedico a aprender otras tecnologías totalmente ajenas al comercio electrónico, pues mi objetivo a medio-largo plazo es centrarme en proyectos a medida, especialmente con Laravel + React.js.</p>
+
+            <p>En mi tiempo libre, me dedico a aprender otras tecnologías totalmente ajenas
+              al comercio electrónico, pues mi objetivo a medio-largo plazo es centrarme en
+              proyectos a medida, especialmente con Laravel + React.js.</p>
           </section>
 
           <section className="professional-exp mb-5">
@@ -43,10 +50,16 @@ const MePage = () => {
                   <div className="py-1">
                     <h4 className="company-title mb-0">
                       <span className="company-name">
-                        <a href="https://www.redegal.com/es/" title="Redegal" className="link-secondary-color">
+                        <a
+                          href="https://www.redegal.com/es/"
+                          title="Redegal"
+                          className="link-secondary-color">
                           Redegal
-                          <IconContext.Provider value={{ className: 'icon external-link-icon align-bottom pl-1'}}>
-                            <FaExternalLinkAlt />
+                          <IconContext.Provider
+                            value={{
+                            className: 'icon external-link-icon align-bottom pl-1'
+                          }}>
+                            <FaExternalLinkAlt/>
                           </IconContext.Provider>
                         </a>
                       </span>
@@ -58,7 +71,8 @@ const MePage = () => {
                         <div className="tasks">
                           <p className="mb-0">Tareas:</p>
                           <ul className="mb-0">
-                            <li>Mantenimiento y mejora de funcionalidades y módulos ya desarrollados e implementados antes de mi incorporación.</li>
+                            <li>Mantenimiento y mejora de funcionalidades y módulos ya desarrollados e
+                              implementados antes de mi incorporación.</li>
                             <li>Desarrollo de proyectos Prestashop nuevos desde cero</li>
                           </ul>
                         </div>
@@ -72,10 +86,11 @@ const MePage = () => {
                 <Col className="col-auto">
                   <div className="w-200px">&nbsp;</div>
                 </Col>
-                <Col className="line"><div className="fill h-100">&nbsp;</div></Col>
+                <Col className="line">
+                  <div className="fill h-100">&nbsp;</div>
+                </Col>
               </Row>
             </div>
-
 
             <div className="company">
               <Row className="company-header d-flex align-items-strech mb-3 mx-0">
@@ -89,8 +104,11 @@ const MePage = () => {
                       <span className="company-name">
                         <a href="https://wetaca.com/" title="Wetaca" className="link-secondary-color">
                           Wetaca
-                          <IconContext.Provider value={{ className: 'icon external-link-icon align-bottom pl-1'}}>
-                            <FaExternalLinkAlt />
+                          <IconContext.Provider
+                            value={{
+                            className: 'icon external-link-icon align-bottom pl-1'
+                          }}>
+                            <FaExternalLinkAlt/>
                           </IconContext.Provider>
                         </a>
                       </span>
@@ -102,8 +120,10 @@ const MePage = () => {
                         <div className="tasks">
                           <p className="mb-0">Tareas:</p>
                           <ul className="mb-0">
-                            <li>Mantenimiento y mejora de funcionalidades y módulos ya instalados antes de mi incorporación.</li>
-                            <li>Análisis y migración de la tienda online de Wetaca de Prestashop 1.6 a Prestashop 1.7.</li>
+                            <li>Mantenimiento y mejora de funcionalidades y módulos ya instalados antes de
+                              mi incorporación.</li>
+                            <li>Análisis y migración de la tienda online de Wetaca de Prestashop 1.6 a
+                              Prestashop 1.7.</li>
                             <li>Creación de landings de menús semanales.</li>
                             <li>Modificación del Core de Prestashop para lograr las funcionalidades deseadas.</li>
                             <li>Creación de módulos para ofrecer nuevos servicios al cliente.</li>
@@ -119,10 +139,11 @@ const MePage = () => {
                 <Col className="col-auto">
                   <div className="w-200px">&nbsp;</div>
                 </Col>
-                <Col className="line"><div className="fill h-100">&nbsp;</div></Col>
+                <Col className="line">
+                  <div className="fill h-100">&nbsp;</div>
+                </Col>
               </Row>
             </div>
-
 
             <div className="company">
               <Row className="company-header d-flex align-items-strech mb-3 mx-0">
@@ -134,10 +155,16 @@ const MePage = () => {
                   <div className="py-1">
                     <h4 className="company-title mb-0">
                       <span className="company-name">
-                        <a href="https://cbiconsulting.es/" title="Cbi" className="link-secondary-color">
+                        <a
+                          href="https://cbiconsulting.es/"
+                          title="Cbi"
+                          className="link-secondary-color">
                           Cambridge Business Initiatives
-                          <IconContext.Provider value={{ className: 'icon external-link-icon align-bottom pl-1'}}>
-                            <FaExternalLinkAlt />
+                          <IconContext.Provider
+                            value={{
+                            className: 'icon external-link-icon align-bottom pl-1'
+                          }}>
+                            <FaExternalLinkAlt/>
                           </IconContext.Provider>
                         </a>
                       </span>
@@ -149,12 +176,20 @@ const MePage = () => {
                         <div className="tasks">
                           <p className="mb-0">Tareas:</p>
                           <ul className="mb-0">
-                            <li>Desarrollo y mantenimiento de <a href="http://elmercadodemaria.com/">El Mercado de María</a>, tienda online de muebles y decoración; desde la programación y la maquetación de la tienda hasta la gestión y atención al cliente.</li>
-                            <li>Colaboración en el desarrollo de algunos módulos de la plataforma <a href="https://cbiconsulting.es/sygris">Sygris</a>.</li>
-                            <li>Desarrollos completos a medida y encuestas online para grandes clientes corporativos como Mapfre, Repsol, Telefónica, etc.; incluyendo, además del desarrollo y maquetación, la atención y el soporte a estos clientes.</li>
+                            <li>Desarrollo y mantenimiento de
+                              <a href="http://elmercadodemaria.com/">El Mercado de María</a>, tienda online de
+                              muebles y decoración; desde la programación y la maquetación de la tienda hasta
+                              la gestión y atención al cliente.</li>
+                            <li>Colaboración en el desarrollo de algunos módulos de la plataforma
+                              <a href="https://cbiconsulting.es/sygris">Sygris</a>.</li>
+                            <li>Desarrollos completos a medida y encuestas online para grandes clientes
+                              corporativos como Mapfre, Repsol, Telefónica, etc.; incluyendo, además del
+                              desarrollo y maquetación, la atención y el soporte a estos clientes.</li>
                             <li>Gestión y desarrollo completo de varios proyectos Wordpress.</li>
                             <li>Realización de diversas "landings" y mails HTML para un cliente externo.</li>
-                            <li>Creación de "crawlers" para optimizar y automatizar la actualización de stocks según el stock de nuestros proveedores, scripts de importación/exportación de productos en el sistema, etc.</li>
+                            <li>Creación de "crawlers" para optimizar y automatizar la actualización de
+                              stocks según el stock de nuestros proveedores, scripts de
+                              importación/exportación de productos en el sistema, etc.</li>
                           </ul>
                         </div>
                       </CardBody>
@@ -164,7 +199,26 @@ const MePage = () => {
               </Row>
             </div>
           </section>
-          
+
+          <section className="public-works mb-5">
+            <h3 className="section-title mb-4">Mis trabajos públicos</h3>
+            <div className="works">
+              <Card className="w-25">
+                <CardImg
+                  top
+                  width="100%"
+                  src={mpsc}
+                  alt="Mis papis se casan"/>
+                <CardBody>
+                  <CardTitle>mispapissecasan.com</CardTitle>
+                  <CardSubtitle className="pb-2">Web personal - 2017</CardSubtitle>
+                  <CardText>Web-cuenta atrás para mi boda realizada en 2017 con Laravel, React.js y Firebase.</CardText>
+                  <a href="https://mispapissecasan.com/" className="btn outline-btn outline-primary float-right py-2">Visitar</a>
+                </CardBody>
+              </Card>
+            </div>
+          </section>
+
         </div>
       </Container>
     </Layout>

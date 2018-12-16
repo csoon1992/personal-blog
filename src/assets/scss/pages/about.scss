@@ -59,6 +59,19 @@
                         }
                     }
                 }
+
+                &.public-works {
+                    font-size: .8rem;
+
+                    .card-title {
+                        font-size: .9rem;
+                    }
+
+                    .card-subtitle {
+                        font-size: .8rem;
+                        color: $sidebar-color;
+                    }
+                }
             }
         }
     }

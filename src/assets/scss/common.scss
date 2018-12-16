@@ -73,6 +73,16 @@ button, .btn {
             border-color: $white;
             color: $white !important;
         }
+
+        &.outline-primary {
+            border-color: rgba(46, 196, 182, 0.2);
+            color: $brand-primary-color;
+
+            &:hover {
+                border-color: $brand-primary-color;
+                color: $brand-primary-color !important;
+            }
+        }
     }
 }
 
