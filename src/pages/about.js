@@ -176,12 +176,10 @@ const MePage = () => {
                         <div className="tasks">
                           <p className="mb-0">Tareas:</p>
                           <ul className="mb-0">
-                            <li>Desarrollo y mantenimiento de
-                              <a href="http://elmercadodemaria.com/">El Mercado de María</a>, tienda online de
+                            <li>Desarrollo y mantenimiento de <a href="http://elmercadodemaria.com/">El Mercado de María</a>, tienda online de
                               muebles y decoración; desde la programación y la maquetación de la tienda hasta
                               la gestión y atención al cliente.</li>
-                            <li>Colaboración en el desarrollo de algunos módulos de la plataforma
-                              <a href="https://cbiconsulting.es/sygris">Sygris</a>.</li>
+                            <li>Colaboración en el desarrollo de algunos módulos de la plataforma <a href="https://cbiconsulting.es/sygris">Sygris</a>.</li>
                             <li>Desarrollos completos a medida y encuestas online para grandes clientes
                               corporativos como Mapfre, Repsol, Telefónica, etc.; incluyendo, además del
                               desarrollo y maquetación, la atención y el soporte a estos clientes.</li>

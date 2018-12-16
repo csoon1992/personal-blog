@@ -6,8 +6,12 @@
 #blog-layout {
   font-family: $montserrat;
   color: $brand-font-color;
+  display: flex;
+  flex-direction: column;
 
   .blog-wrapper {
+    min-height: calc(100vh - 193px);
+
     & > .pageContent {
       flex: 1;
       overflow: auto;
