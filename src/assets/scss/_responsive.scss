@@ -1,24 +1,202 @@
-/*@include media-breakpoint-up(xl) {
-    .App {
-        &#blog-page {
-            display: block;
-            max-width: 1700px;
-            margin: 0 auto;
+@import './variables';
 
-            .blog-wrapper {
-                .pageContent-wrapper {
-                    position: initial;
-                    padding-top: 3rem;
-                }
-            } 
-
-            &.post-page {
-                .blog-wrapper {
-                    .pageContent-wrapper {
-                        padding-top: 0;
+@include media-breakpoint-down(xs) {
+    #index {
+        .main-content {
+            .section {
+                .title {
+                    .name {
+                        span {
+                            font-weight: bold;
+                        }
                     }
-                } 
+                    
+                    .description {
+                        font-size: .9rem;
+                    }
+                }
             }
         }
     }
-}*/
+
+    #blog-layout {
+        .blog-wrapper {
+            .sidebar-wrapper {
+                #sidebar {
+                    .sidebar-header {
+                        margin-bottom: 0;
+                        padding-bottom: 1rem;
+                        border-bottom: 1px solid $gray-light;
+                    }
+
+                    .sidebar-content {
+                        border-bottom: 1px solid $gray-light;
+
+                        .sidebar-menu {
+                            padding-top: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .pageContent-wrapper {
+                padding: 0 1rem 3rem;
+
+                .pageContent {
+                    .blog-post {
+                        .calendar {
+                            padding: .3rem 0;
+
+                            .day {
+                                font-size: $h2-down-md;
+                                font-weight: bold;
+                                padding-right: .4rem;
+                            }
+
+                            .month {
+                                vertical-align: text-bottom;
+                            }
+                        }
+
+                        .post-content {
+                            .post-title {
+                                padding: .5rem 0;
+                                font-size: $h2-down-md;
+                            }
+
+                            .post-excerpt {
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    h1 {
+        font-size: $h1-down-md;
+    }
+
+    h2 {
+        font-size: $h2-down-md;
+    }
+
+    .gatsby-highlight {
+
+        code[class*="language-"],
+        pre[class*="language-"] {
+            max-height: 350px;
+            font-size: .7rem;
+            line-height: 1rem;
+
+            &.line-numbers {
+                .line-numbers-rows {
+                    span {
+                        line-height: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .mdc {
+        &.subtitle {
+            font-size: $h2-down-md;
+        }
+    }
+
+    #blog-layout {
+        .blog-wrapper {
+            .sidebar-wrapper {
+                #sidebar {
+                    .sticky-top {
+                        padding: 1.5rem 1.5rem 0;
+                    }
+                }
+            }
+
+            .pageContent-wrapper {
+                padding-top: 1.5rem;
+
+                .pageContent {
+                    #post-wrapper {
+                        #post-header {
+                            .header-content {
+                                img {
+                                    max-height: 200px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.post-page {
+            .blog-wrapper {
+                .pageContent-wrapper {
+                    .pageContent {
+                        #post-wrapper {
+                            #post-header {
+                                .header-content {
+                                    .title {
+                                        max-width: 85%;
+                                        font-size: $h1-down-md;
+                                    }
+                                }
+                            }
+
+                            .content {
+                                max-width: 85%;
+                                padding: 0;
+
+                                #post-content {
+                                    img {
+                                        max-width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #footer {
+            font-size: .8rem;
+            padding: 2rem 4rem;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    #blog-layout {
+        .blog-wrapper {
+            .pageContent-wrapper {
+                .pageContent {
+                    .blog-post {
+                        &:hover {
+                            .calendar {
+                                background: $brand-secondary-color;
+                                transition: all .3s;
+                            }
+                
+                            .post-content {
+                                transition: all .3s;
+                                border-right: 5px solid $brand-secondary-color;
+                
+                                .post-title {
+                                    color: $brand-secondary-color;
+                                    transition: all .3s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

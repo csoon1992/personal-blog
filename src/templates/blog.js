@@ -32,7 +32,7 @@ export default function Template ({ data }) {
   if (post.frontmatter.image) {
     postHeader = <div className="header-content position-relative">
       <div className="overlay position-absolute w-100 h-100">&nbsp;</div>
-      <img src={withPrefix(`${post.frontmatter.image}`)} alt={post.frontmatter.title} className="w-100" />
+      <img src={withPrefix(`${post.frontmatter.image}`)} alt={post.frontmatter.title} className="w-md-100" />
       <div className="header-title position-absolute w-100">{headerTitle}</div>
       <div className="header-post-date position-absolute">{post.frontmatter.date}</div>
     </div>

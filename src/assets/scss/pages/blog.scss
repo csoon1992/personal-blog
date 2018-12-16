@@ -31,6 +31,8 @@
         }
 
         .sidebar-header {
+          margin-bottom: 2rem;
+
           .header-link {
             .title {
               .main-title {
@@ -54,11 +56,16 @@
               }
             }
           }
+
+          .toggle-menu {
+            .icon {
+              font-size: 2rem;
+              color: $grayA;
+            }
+          }
         }
 
         .sidebar-content {
-          margin-top: 2rem;
-
           .sidebar-techs {
             ul {
               .item {
@@ -118,23 +125,6 @@
               font-size: .9rem;
             }
           }
-
-          &:hover {
-            .calendar {
-              background: $brand-secondary-color;
-              transition: all .3s;
-            }
-
-            .post-content {
-              transition: all .3s;
-              border-right: 5px solid $brand-secondary-color;
-
-              .post-title {
-                color: $brand-secondary-color;
-                transition: all .3s;
-              }
-            }
-          }
         }
 
         .actions {
@@ -190,6 +180,7 @@
             #post-header {
               .header-content {
                 color: $white;
+                overflow: hidden;
 
                 .overlay {
                   background: rgba(0, 0, 0, .7);
