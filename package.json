@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-bootstrap-netlify",
-  "description": "Example Gatsby, Bootstrap, and Netlify CMS project",
+  "name": "cristinasoler-personal-site-blog",
+  "description": "Personal site make with Gatsby, Bootstrap4 and Netlify CMS",
   "version": "1.0.0",
-  "author": "David Konsumer <konsumer@jetboystudio.com>",
+  "author": "Cristina Soler <csoon1992@gmail.com>",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "bootswatch": "4.*",
