@@ -1,6 +1,10 @@
 @import '../variables';
 
 #blog-layout {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    
     &.about-page {
         .about-content {
             font-size: .9rem;
@@ -67,7 +71,7 @@
                         .card {
                             flex: 1 0 25% !important;
                             margin-bottom: 30px;
-                            
+
                             .card-title {
                                 font-size: .9rem;
                             }
