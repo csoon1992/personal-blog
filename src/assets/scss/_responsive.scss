@@ -21,24 +21,6 @@
 
     #blog-layout {
         .blog-wrapper {
-            .sidebar-wrapper {
-                #sidebar {
-                    .sidebar-header {
-                        margin-bottom: 0;
-                        padding-bottom: 1rem;
-                        border-bottom: 1px solid $gray-light;
-                    }
-
-                    .sidebar-content {
-                        border-bottom: 1px solid $gray-light;
-
-                        .sidebar-menu {
-                            padding-top: 1rem;
-                        }
-                    }
-                }
-            }
-
             .pageContent-wrapper {
                 padding: 0 1rem 3rem;
 
@@ -69,23 +51,44 @@
                             }
                         }
                     }
+
+                    .actions {
+                        a {
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.about-page {
+            .about-content {
+                section {
+                    .company {
+                        .company-header {
+                            .company-title,
+                            .position {
+                                text-align: center;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     h1 {
-        font-size: $h1-down-md;
+        font-size: $h1-down-md !important;
     }
 
     h2 {
-        font-size: $h2-down-md;
+        font-size: $h2-down-md !important;
     }
 
     h3 {
-        font-size: $h3-down-md;
+        font-size: $h3-down-md !important;
     }
 
     .gatsby-highlight {
@@ -114,10 +117,26 @@
 
     #blog-layout {
         .blog-wrapper {
+            min-height: 1px;
+
             .sidebar-wrapper {
                 #sidebar {
                     .sticky-top {
                         padding: 1.5rem 1.5rem 0;
+                    }
+
+                    .sidebar-header {
+                        margin-bottom: 0;
+                        padding-bottom: 1rem;
+                        border-bottom: 1px solid $gray-light;
+                    }
+
+                    .sidebar-content {
+                        border-bottom: 1px solid $gray-light;
+
+                        .sidebar-menu {
+                            padding-top: 1rem;
+                        }
                     }
                 }
             }
@@ -177,18 +196,23 @@
                     .company {
                         .company-header {
                             .bg {
-                                margin: 0 auto 1rem;
-                            }
-
-                            .company-title,
-                            .position {
-                                text-align: center;
+                                margin: 0 auto;
                             }
                         }
 
                         .separator {
                             .col-auto {
                                 display: none;
+                            }
+                        }
+                    }
+
+                    &.public-works {
+                        .works {
+                            justify-content: center !important;
+
+                            .card {
+                                flex: 1 0 50% !important;
                             }
                         }
                     }
@@ -225,6 +249,21 @@
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    #blog-layout {
+        .blog-wrapper {
+            .sidebar-wrapper {
+                #sidebar {
+                    .sidebar-header,
+                    .sidebar-content {
+                        border-bottom: 0;
                     }
                 }
             }

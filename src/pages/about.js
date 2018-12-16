@@ -201,14 +201,14 @@ const MePage = () => {
           <section className="public-works mb-5">
             <h3 className="section-title mb-4">Mis trabajos públicos</h3>
             <div className="works card-deck align-items-stretch">
-              <Card className="col-12 col-md-3 px-0">
+              <Card className="col-12 col-md-5 col-lg-3 px-0">
                 <CardImg
                   top
                   width="100%"
                   src={mpsc}
                   alt="Mis papis se casan"/>
                 <CardBody>
-                  <CardTitle>mispapissecasan.com</CardTitle>
+                  <CardTitle className="font-weight-bold">mispapissecasan.com</CardTitle>
                   <CardSubtitle className="pb-2">2017 - Web personal</CardSubtitle>
                   <CardText>Web-cuenta atrás para mi boda realizada en 2017 con Laravel, React.js y Firebase.</CardText>
                   <a href="https://mispapissecasan.com/" className="btn outline-btn outline-primary float-right py-2">Visitar</a>

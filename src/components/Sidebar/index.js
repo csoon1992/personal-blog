@@ -47,7 +47,7 @@ class Sidebar extends React.Component {
                     </div>
                 </Link>
                 
-                <div className="toggle-menu d-md-none" onClick={this.toggleNavbar}>
+                <div className="toggle-menu d-lg-none" onClick={this.toggleNavbar}>
                     <IconContext.Provider
                         value={{
                         className: 'icon'
@@ -60,7 +60,7 @@ class Sidebar extends React.Component {
 
         return (
             <div id="sidebar" className="h-100 w-100">
-                <div className="sticky-top p-md-4">
+                <div className="sticky-top p-lg-4">
                     {sidebarHeader}
 
                     <Collapse className="sidebar-content text-center letter-spacing-2" isOpen={!this.state.collapsed}>

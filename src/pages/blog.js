@@ -11,7 +11,7 @@ const BlogContent = ({ data }) => {
       {posts.map(({ node: post }) => { 
         return (
           <Row className="blog-post mx-0 d-flex align-items-stretch mb-3" key={post.id} onClick={ () => navigate(post.frontmatter.path)}>
-            <Col md="1" className="calendar d-flex align-items-center text-center">
+            <Col md="2" className="calendar d-flex align-items-center text-center">
               <div className="w-100">
                 <span className="day d-md-block">{post.frontmatter.day}</span>
                 <span className="month text-uppercase d-md-block">{post.frontmatter.month}</span>
