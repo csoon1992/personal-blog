@@ -14,7 +14,7 @@ class MyCookieConsent extends React.Component {
                 buttonClasses="my-1"
                 expires={150}
             >
-                Estoy obligada a molestarte con este mensaje. Para seguir navegando por mi sitio, acepta las cookies utilizadas en él para mejorar la experiencia de usuario.
+                Estoy obligada a molestarte con este mensaje. Para seguir navegando por mi sitio, acepta las cookies utilizadas en él con el fin de mejorar la experiencia de usuario.
             </CookieConsent>
         )
     }
