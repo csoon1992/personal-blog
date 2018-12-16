@@ -23,7 +23,7 @@ class Menu extends React.Component {
                     </Link>
 
                     if (!internal) {
-                        link = <a href={item.link} title={item.label}>
+                        link = <a href={item.link} title={item.label} target="_blank" rel="noopener noreferrer">
                             <img src={withPrefix(`/files/${item.icon}`)} alt={item.label}/>
                         </a> 
                     }

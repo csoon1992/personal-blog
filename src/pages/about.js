@@ -52,6 +52,7 @@ const MePage = () => {
                       <span className="company-name">
                         <a
                           href="https://www.redegal.com/es/"
+                          target="_blank" rel="noopener noreferrer"
                           title="Redegal"
                           className="link-secondary-color">
                           Redegal
@@ -102,7 +103,7 @@ const MePage = () => {
                   <div className="py-1">
                     <h4 className="company-title mb-0">
                       <span className="company-name">
-                        <a href="https://wetaca.com/" title="Wetaca" className="link-secondary-color">
+                        <a href="https://wetaca.com/" title="Wetaca" className="link-secondary-color" target="_blank" rel="noopener noreferrer">
                           Wetaca
                           <IconContext.Provider
                             value={{
@@ -157,6 +158,7 @@ const MePage = () => {
                       <span className="company-name">
                         <a
                           href="https://cbiconsulting.es/"
+                          target="_blank" rel="noopener noreferrer"
                           title="Cbi"
                           className="link-secondary-color">
                           Cambridge Business Initiatives
@@ -176,10 +178,10 @@ const MePage = () => {
                         <div className="tasks">
                           <p className="mb-0">Tareas:</p>
                           <ul className="mb-0">
-                            <li>Desarrollo y mantenimiento de <a href="http://elmercadodemaria.com/">El Mercado de María</a>, tienda online de
+                            <li>Desarrollo y mantenimiento de <a href="http://elmercadodemaria.com/" title="El Mercado de María" target="_blank" rel="noopener noreferrer">El Mercado de María</a>, tienda online de
                               muebles y decoración; desde la programación y la maquetación de la tienda hasta
                               la gestión y atención al cliente.</li>
-                            <li>Colaboración en el desarrollo de algunos módulos de la plataforma <a href="https://cbiconsulting.es/sygris">Sygris</a>.</li>
+                            <li>Colaboración en el desarrollo de algunos módulos de la plataforma <a href="https://cbiconsulting.es/sygris" title="Sygris" target="_blank" rel="noopener noreferrer">Sygris</a>.</li>
                             <li>Desarrollos completos a medida y encuestas online para grandes clientes
                               corporativos como Mapfre, Repsol, Telefónica, etc.; incluyendo, además del
                               desarrollo y maquetación, la atención y el soporte a estos clientes.</li>
@@ -211,7 +213,7 @@ const MePage = () => {
                   <CardTitle className="font-weight-bold">mispapissecasan.com</CardTitle>
                   <CardSubtitle className="pb-2">2017 - Web personal</CardSubtitle>
                   <CardText>Web-cuenta atrás para mi boda realizada en 2017 con Laravel, React.js y Firebase.</CardText>
-                  <a href="https://mispapissecasan.com/" className="btn outline-btn outline-primary float-right py-2">Visitar</a>
+                  <a href="https://mispapissecasan.com/" className="btn outline-btn outline-primary float-right py-2" target="_blank" rel="noopener noreferrer">Visitar</a>
                 </CardBody>
               </Card>
             </div>

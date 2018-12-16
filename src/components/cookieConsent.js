@@ -8,7 +8,7 @@ class MyCookieConsent extends React.Component {
                 location="top"
                 buttonText="OK"
                 cookieName="cookieConsent"
-                style={{ background: "rgba(1, 22, 39, .8)", fontSize: ".7rem" }}
+                style={{ background: "rgba(1, 22, 39, .8)", fontSize: ".7rem", zIndex: "9999" }}
                 contentClasses="content my-1 text-center"
                 buttonStyle={{ color: "#011627", background: "#2EC4B6" }}
                 buttonClasses="my-1"
