@@ -165,6 +165,31 @@
             }
         }
 
+        &.about-page {
+            .about-content {
+                section {
+                    .company {
+                        .company-header {
+                            .bg {
+                                margin: 0 auto 1rem;
+                            }
+
+                            .company-title,
+                            .position {
+                                text-align: center;
+                            }
+                        }
+
+                        .separator {
+                            .col-auto {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         #footer {
             font-size: .8rem;
             padding: 2rem 4rem;

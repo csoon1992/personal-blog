@@ -203,7 +203,7 @@ const MePage = () => {
           <section className="public-works mb-5">
             <h3 className="section-title mb-4">Mis trabajos públicos</h3>
             <div className="works">
-              <Card className="w-25">
+              <Card className="w-100 w-md-25">
                 <CardImg
                   top
                   width="100%"
