@@ -1,7 +1,7 @@
 import React from 'react';
 import { Collapse } from 'reactstrap'
 import Link from 'gatsby-link';
-import mePhoto from '../../../static/files/me.jpeg';
+import mePhoto from '../../assets/img/files/me-programming.png';
 import Menu from '../Menu';
 import {graphql} from 'gatsby'
 
@@ -38,9 +38,8 @@ class Sidebar extends React.Component {
                     <img
                         src={mePhoto}
                         alt={author.name}
-                        className='profile-photo rounded-circle'
-                        width='90'
-                        height='90'/>
+                        className='profile-photo'
+                        width='90'/>
                     <div className="title px-2">
                         <h2 className="main-title text-primary mb-1">{author.name}</h2>
                         <div className="subtitle">{subtitle}</div>
