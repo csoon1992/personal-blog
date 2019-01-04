@@ -15,7 +15,7 @@ class Content extends React.Component {
             components: {
                 blockquote: Blockquote,
                 p: Paragraph,
-                h3: Subtitle,
+                h2: Subtitle,
                 code: Code
             },
         }).Compiler;

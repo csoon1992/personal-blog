@@ -172,6 +172,11 @@
   }
 
   &.post-page {
+    h2, h3 {
+      color: $brand-primary-color;
+      margin: 2rem 0 .5rem;
+    }
+
     .blog-wrapper {
       .pageContent-wrapper {
         padding-right: 0 !important;
@@ -213,9 +218,16 @@
 
             #post-content {
               img {
-                max-width: 500px;
+                max-width: 90%;
                 display: block;
-                margin: 1rem auto;
+                margin: 1rem auto 2rem;
+              }
+
+              li {
+                code {
+                  margin: .5rem 0;
+                  display: inline-block;
+                }
               }
             }
           }
