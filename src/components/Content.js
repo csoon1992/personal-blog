@@ -4,6 +4,7 @@ import Blockquote from './Blog/Md/Blockquote';
 import Paragraph from './Blog/Md/Paragraph';
 import Subtitle from './Blog/Md/Subtitle';
 import Code from './Blog/Md/Code';
+import Link from './Blog/Md/Link';
 
 
 class Content extends React.Component {
@@ -16,7 +17,8 @@ class Content extends React.Component {
                 blockquote: Blockquote,
                 p: Paragraph,
                 h2: Subtitle,
-                code: Code
+                code: Code,
+                a: Link
             },
         }).Compiler;
 
