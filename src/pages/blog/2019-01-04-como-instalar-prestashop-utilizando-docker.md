@@ -17,29 +17,20 @@ Me centraré en la versión Prestashop 1.7.5.0 (así me servirá para cacharrear
 Yo no he hecho ninguna modificación en este fichero, ya que será un proyecto prueba nada más, pero podéis cambiarlo a vuestro gusto para adaptarlo a la configuración que deseéis.
 
 ## Preparar el entorno Docker
+
 Preparar nuestro entorno con Docker es muy sencillo y rápido. Lo único que tenemos que hacer es abrir una terminal y realizar los siguientes pasos:
 
 1. Clonar el repositorio git de Prestashop:
-
-    `$ git clone git@github.com:PrestaShop/PrestaShop.git`
-
+   `$ git clone git@github.com:PrestaShop/PrestaShop.git`
 2. Ir a la raíz del proyecto
-
-    `$ cd Prestashop`
-
+   `$ cd Prestashop`
 3. Hacer checkout a la rama Prestashop 1.7.5.x para trabajar con esta versión.
-
-    `$ git checkout 1.7.5.x`
-
+   `$ git checkout 1.7.5.x`
 4. Dar permisos de escritura a los directorios config/ y app/config/
-  
-    `$ sudo chmod a+rw -R config/ app/config/`
-
+   `$ sudo chmod a+rw -R config/ app/config/`
 5. Dando por hecho que se tiene instalado [Composer](https://getcomposer.org/doc/00-intro.md), levantamos nuestro Docker:
-
-    `$ docker-compose up`
-  
-    Este paso llevará algo de tiempo mientras instala todas las dependencias definidas en el fichero composer.json.
+   `$ docker-compose up`
+   Este paso llevará algo de tiempo mientras instala todas las dependencias definidas en el fichero composer.json.
 
 ¡Ya tenemos listo nuestro entorno!
 Ahora estamos listos para acceder a http://localhost:8001 en nuestro navegador para comenzar el proceso de instalación de Prestashop!
@@ -47,23 +38,26 @@ Ahora estamos listos para acceder a http://localhost:8001 en nuestro navegador p
 **Nota:** si queréis utilizar otro puerto distinto a 8001 debéis cambiarlo en el fichero _docker-compose.yml_.
 
 ## Realizar la instalación de Prestashop
+
 El proceso de instalación de compone de seis pasos súper sencillos:
 
 ### 1. Elección de lenguaje
 
-[01_install.png]
+![Instalación de Prestashop: Paso 1](/files/01_install.png)
 
 Este paso parece ser que no funciona del todo bien, pues aunque he seleccionado Español como lenguaje, veréis que el proceso de instalación sigue apareciendo en inglés, pero bueno, nada grave :)
 
 ### 2. Acuerdo de licencia
+
 Ya sabéis, nos leemos el acuerdo como siempre, aceptamos y listo.
 
-[02_install.png]
+![Instalación de Prestashop: Paso 2](/files/02_install.png)
 
-### 3. Compatibilidad del sistema. 
+### 3. Compatibilidad del sistema.
+
 En este paso, suele aparecer una serie de errores de permisos de escritura en algunos directorios:
 
-[03_install_a.png]
+![Instalación de Prestashop: Paso 3 error](/files/03_install_a.png)
 
 Para solucionarlos, volvemos a la terminal que teníamos abierta en la raíz del proyecto y damos permisos a estos directorios:
 
@@ -71,11 +65,11 @@ Para solucionarlos, volvemos a la terminal que teníamos abierta en la raíz del
 
 Tras esto, hacemos clic en el botón "Refresh" y veremos que los errores de permisos han desaparecido y podríamos continuar con la instalación. Yo de momento pasaré de la recomendación de Prestashop para obtener los datos de internacionalización más recientes, por lo que no actualizaré el **paquete de sistema ICU** ni la **extensión Intl PHP**. 
 
-[03_install_b.png]
+![Instalación de Prestashop: Paso 3 sin error](/files/03_install_b.png)
 
 ### 4. Información de la tienda
 
-[04_install.png]
+![Instalación de Prestashop: Paso 4](/files/04_install.png)
 
 ### 5. Configuración del sistema
 
@@ -84,7 +78,7 @@ Dado que estoy con Docker y en la configuración el puerto de mysql no está exp
 
 Tras esto, reiniciamos Docker y volvemos al asistente para configurar la conexión a la base de datos atendiendo a los valores de docker-compose.yml. Veremos que en el campo Servidor de Base de Datos tendremos que poner el nombre del servicio de Docker: "mysql".
 
-[05_install.png]
+![Instalación de Prestashop: Paso 5](/files/05_install.png)
 
 Si tras hacer clic al botón "Comprobar conexión a la base de datos ahora" nos aparece un maravilloso mensajito verde, ¡estamos de suerte!
 
@@ -92,7 +86,7 @@ Por último, damos al botón "Siguiente" y se comenzará a instalar Prestashop. 
 
 Finalmente, obtendremos una pantalla en la que se nos informa de que la instalación ha finalizado por completo.
 
-[06_install.png]
+![Instalación de Prestashop: Paso 6](/files/06_install.png)
 
 Acto seguido, hacemos lo que nos pide Prestashop: eliminamos la carpeta de instalación de nuestro proyecto, por motivos de seguridad.
 
@@ -100,14 +94,13 @@ Acto seguido, hacemos lo que nos pide Prestashop: eliminamos la carpeta de insta
 
 Ahora es el momento de comprobar que tanto el Backoffice como el Front funcionan correctamente. Normalmente, el Backoffice funcionará a la primera. Yo lo primero que hago es acceder a **Parámetros Avanzados > Información** para comprobar que no hay ningún error de configuración:
 
-[backoffice_info.png]
+![Backoffice](/files/backoffice_info.png)
 
 Sin embargo, el Front normalmente necesitará que demos permisos de escritura al directorio _assets/_ del tema para que pueda crear el directorio _cache/_ dentro de este.
 Por tanto, volvemos a la terminal y ejecutamos el siguiente comando:
 
 `$ sudo chmod a+rw -R themes/classic/assets/`
 
-
 Recargamos la página del front y veremos que ahora sí, todo está funcionando correctamente.
 
-[front.png]
+![Front](/files/front.png)
