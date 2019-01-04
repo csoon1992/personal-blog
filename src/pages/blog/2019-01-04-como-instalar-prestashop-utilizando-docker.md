@@ -1,7 +1,7 @@
 ---
 contentType: blog
 path: /como-instalar-prestashop-utilizando-docker
-image: /files/teclas_blog.jpg
+image: /files/docker-ps-header.jpg
 title: Cómo instalar Prestashop utilizando Docker
 date: '2019-01-04T16:00:00+01:00'
 tags:
@@ -21,25 +21,15 @@ Yo no he hecho ninguna modificación en este fichero, ya que será un proyecto p
 Preparar nuestro entorno con Docker es muy sencillo y rápido. Lo único que tenemos que hacer es abrir una terminal y realizar los siguientes pasos:
 
 1. Clonar el repositorio git de Prestashop:
-
    `$ git clone git@github.com:PrestaShop/PrestaShop.git`
-
 2. Ir a la raíz del proyecto
-
    `$ cd Prestashop`
-
 3. Hacer checkout a la rama Prestashop 1.7.5.x para trabajar con esta versión.
-
    `$ git checkout 1.7.5.x`
-  
 4. Dar permisos de escritura a los directorios config/ y app/config/
-
    `$ sudo chmod a+rw -R config/ app/config/`
-
 5. Dando por hecho que se tiene instalado [Composer](https://getcomposer.org/doc/00-intro.md), levantamos nuestro Docker:
-
-   `$ docker-compose up`  
-      
+   `$ docker-compose up`\
     Este paso llevará algo de tiempo mientras instala todas las dependencias definidas en el fichero composer.json.
 
 ¡Ya tenemos listo nuestro entorno!
