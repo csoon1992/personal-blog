@@ -1,6 +1,10 @@
 @import 'variables';
 @import 'bootstrap';
 
+body {
+    font-size: .9rem;
+}
+
 .App {
     font-family: $montserrat; 
 }

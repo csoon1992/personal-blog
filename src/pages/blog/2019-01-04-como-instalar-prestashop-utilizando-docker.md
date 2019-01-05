@@ -29,7 +29,7 @@ Preparar nuestro entorno con Docker es muy sencillo y rápido. Lo único que ten
 4. Dar permisos de escritura a los directorios config/ y app/config/
    `$ sudo chmod a+rw -R config/ app/config/`
 5. Dando por hecho que se tiene instalado [Composer](https://getcomposer.org/doc/00-intro.md), levantamos nuestro Docker:
-   `$ docker-compose up`\
+   `$ docker-compose up`
     Este paso llevará algo de tiempo mientras instala todas las dependencias definidas en el fichero composer.json.
 
 ¡Ya tenemos listo nuestro entorno!
@@ -53,7 +53,7 @@ Ya sabéis, nos leemos el acuerdo como siempre, aceptamos y listo.
 
 ![Instalación de Prestashop: Paso 2](/files/02_install.png)
 
-### 3. Compatibilidad del sistema.
+### 3. Compatibilidad del sistema
 
 En este paso, suele aparecer una serie de errores de permisos de escritura en algunos directorios:
 
