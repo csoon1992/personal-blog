@@ -79,15 +79,21 @@ module.exports = {
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
     {
-        resolve: 'gatsby-plugin-manifest',
-        options: {
-            name: 'Cristina Soler',
-            short_name: 'Cristina Soler',
-            start_url: '/',
-            background_color: '#EFFFE9',
-            theme_color: '#2EC4B6',
-            icon: 'static/files/me.jpeg',
-        },
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+          name: 'Cristina Soler',
+          short_name: 'Cristina Soler',
+          start_url: '/',
+          background_color: '#EFFFE9',
+          theme_color: '#2EC4B6',
+          icon: 'static/files/me.jpeg',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://cristinasoler.me/`,
+      },
     },
   ]
 }

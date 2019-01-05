@@ -25,7 +25,6 @@ const TemplateWrapper = ({children}) => {
           <meta property="og:type" content="website"/>
           <meta name="og:locale" content="es_ES"/>
           <meta property="og:image" content="/files/index-bg.jpg" />
-          <link rel="canonical" href="https://cristinasoler.me/"/>
         </Helmet>
 
         <div className='main-content mx-auto h-100 w-100'>

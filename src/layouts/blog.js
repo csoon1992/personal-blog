@@ -38,7 +38,6 @@ const TemplateWrapper = ({ children, isPost, isAbout }) => {
           <meta property="og:type" content="website"/>
           <meta name="og:locale" content="es_ES"/>
           <meta property="og:image" content="/files/index-bg.jpg" />
-          <link rel="canonical" href="https://cristinasoler.me/"/>
         </Helmet>
 
         <Row className="blog-wrapper mx-0 h-100">
