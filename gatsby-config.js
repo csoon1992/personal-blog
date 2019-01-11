@@ -43,6 +43,7 @@ module.exports = {
     ]
   },
   plugins: [
+    'gatsby-plugin-remove-serviceworker',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
