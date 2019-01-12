@@ -30,7 +30,6 @@
     "react-icons": "^3.2.1",
     "reactstrap": "^6.4.0",
     "rehype-react": "^3.0.3",
-    "slugify": "^1.3.4",
     "typeface-montserrat": "0.0.54"
   },
   "keywords": [
