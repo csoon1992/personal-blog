@@ -66,6 +66,7 @@ export default function Template ({ data }) {
           <meta property="og:image" content={post.frontmatter.image} />
           <meta name="description" content={post.excerpt} />
           <meta property="og:description" content={post.excerpt}/>
+          <meta property="og:type" content="article"/>
           
         </Helmet>
         

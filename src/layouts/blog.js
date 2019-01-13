@@ -31,11 +31,15 @@ const TemplateWrapper = ({ children, isPost, isAbout, location }) => {
               title={title}
               titleTemplate={`%s - ${data.site.siteMetadata.title}`}
               description={data.site.siteMetadata.subtitle}>
-              <meta property="og:type" content="website"/>
               <meta property="og:title" content={title}/>
-              <meta property="og:site_name" content={ `Web personal de ${data.site.siteMetadata.title}` }/>
+              <meta property="og:site_name" content="CristinaSoler"/>
               <meta property="og:url" content={location.href}/>
               <meta name="og:locale" content="es_ES"/>
+
+              <meta property="og:image" content="/files/index-bg.jpg" />
+              <meta name="description" content={ `Web personal de ${data.site.siteMetadata.title}` } />
+              <meta property="og:description" content={ `Web personal de ${data.site.siteMetadata.title}` }/>
+              <meta property="og:type" content="website"/>
             </Helmet>
           }
         </Location>
