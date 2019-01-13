@@ -37,6 +37,7 @@ Preparar nuestro entorno con Docker es muy sencillo y rápido. Lo único que ten
 8. Arrancar docker:
     `$ cd ..`
     `$ ./vessel start`
+  Tras esto, si todo ha ido correctamente, la carpeta de instalación install-dev pasará a llamarse, en este caso: adminps, tal y como he configurado en el .env.
 9. Instalar las dependencias de composer (esto llevará un rato):
     `$ ./vessel composer install`
 
