@@ -62,6 +62,11 @@ export default function Template ({ data }) {
               })();`}
             </script>
           )}
+            
+          <meta property="og:image" content={post.frontmatter.image} />
+          <meta name="description" content={post.excerpt} />
+          <meta property="og:description" content={post.excerpt}/>
+          
         </Helmet>
         
         <div id="post-wrapper">
@@ -124,6 +129,7 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       htmlAst
+      excerpt(pruneLength: 200)
       frontmatter {
         path
         image

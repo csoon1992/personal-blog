@@ -99,7 +99,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://cristinasoler.me/`,
+        siteUrl: `https://cristinasoler.me`,
       },
     },
   ]

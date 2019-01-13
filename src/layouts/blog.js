@@ -1,4 +1,5 @@
 import React from 'react'
+import { Location } from '@reach/router';
 import { Row, Col } from 'reactstrap'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
@@ -10,7 +11,7 @@ import MyCookieConsent from '../components/cookieConsent';
 import '../assets/scss/pages/about.scss';
 import '../assets/scss/pages/blog.scss';
 
-const TemplateWrapper = ({ children, isPost, isAbout }) => {
+const TemplateWrapper = ({ children, isPost, isAbout, location }) => {
   let pageClass = 'App';
   let title = 'Blog';
 
@@ -24,22 +25,21 @@ const TemplateWrapper = ({ children, isPost, isAbout }) => {
   return (
     <StaticQuery query={pageQuery} render={data => (
       <div id="blog-layout" className={pageClass}>
-      
-        <Helmet
-          title={title}
-          titleTemplate={`%s - ${data.site.siteMetadata.title}`}
-          description={data.site.siteMetadata.subtitle}>
-          <meta name="description" content={ `Web personal de ${data.site.siteMetadata.title}` } />
-          <meta property="og:type" content="website"/>
-          <meta property="og:title" content={data.site.siteMetadata.title}/>
-          <meta property="og:site_name" content="CristinaSoler"/>
-          <meta property="og:url" content="https://cristinasoler.me/"/>
-          <meta property="og:description" content={ `Web personal de ${data.site.siteMetadata.title}` }/>
-          <meta property="og:type" content="website"/>
-          <meta name="og:locale" content="es_ES"/>
-          <meta property="og:image" content="/files/index-bg.jpg" />
-        </Helmet>
 
+        <Location>
+          {({ location }) => <Helmet
+              title={title}
+              titleTemplate={`%s - ${data.site.siteMetadata.title}`}
+              description={data.site.siteMetadata.subtitle}>
+              <meta property="og:type" content="website"/>
+              <meta property="og:title" content={title}/>
+              <meta property="og:site_name" content={ `Web personal de ${data.site.siteMetadata.title}` }/>
+              <meta property="og:url" content={location.href}/>
+              <meta name="og:locale" content="es_ES"/>
+            </Helmet>
+          }
+        </Location>
+        
         <Row className="blog-wrapper mx-0 h-100">
           <Col lg="4" xl="3" className="sidebar-wrapper px-0">
             <Sidebar siteMetadata={data.site.siteMetadata} isPost={isPost} />
