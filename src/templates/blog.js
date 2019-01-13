@@ -70,7 +70,8 @@ export default function Template ({ data }) {
               <meta name="description" content={post.excerpt} />
               <meta property="og:description" content={post.excerpt}/>
               <meta property="og:type" content="article"/>
-
+              <meta property="og:url" content={location.href}/>
+              
               <link rel="canonical" href={location.href} />
             </Helmet>
           }

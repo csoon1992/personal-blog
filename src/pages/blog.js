@@ -10,7 +10,7 @@ const BlogContent = ({ data }) => {
       <h1 className="title d-block w-100 text-center mb-3 primary-color font-weight-bold">Mis artículos</h1>
       {posts.map(({ node: post }) => { 
         return (
-          <Row className="blog-post mx-0 d-flex align-items-stretch mb-3" key={post.id} onClick={ () => navigate(post.frontmatter.path)}>
+          <Row className="blog-post mx-0 d-flex align-items-stretch mb-3" key={post.id} onClick={ () => navigate(post.frontmatter.path + '/')}>
             <Col md="2" className="calendar d-flex align-items-center text-center">
               <div className="w-100">
                 <span className="day d-md-block">{post.frontmatter.day}</span>
