@@ -21,9 +21,13 @@ Tras realizar estos 9 pasos, ya estamos listos para comenzar la instalación de 
 ## Realizar la instalación de Prestashop
 
 Abrimos nuestra terminal y vamos a la carpeta instalación (en mi caso /adminps tal y como lo configuré como "adminps" en el .env) situada en la raíz de nuestro proyecto.
+
+
   `$ cd Prestashop/adminps/`
 
 En ese directorio veremos que existe un script llamado **index_cli.php**. Este es el script que nos permitirá realizar la instalación de Prestashop mediante comando. Para conocer las opciones que le podemos enviar, ponemos la siguiente línea en la terminal:
+
+
   `$ ./vessel install`
 
 ![Parámetros para el script index_cli](/files/posts/how-install-ps-via-cli/index_cli_params.png)
