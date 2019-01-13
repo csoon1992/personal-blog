@@ -3,7 +3,7 @@ contentType: blog
 path: /como-instalar-prestashop-utilizando-cli
 image: /files/docker-ps-header.jpg
 title: Cómo instalar Prestashop utilizando CLI
-date: '2019-01-12T16:00:00+01:00'
+date: '2019-01-13T20:00:00+01:00'
 tags:
   - prestashop
   - prestashop 1.7.x
