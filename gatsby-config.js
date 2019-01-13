@@ -95,12 +95,6 @@ module.exports = {
           theme_color: '#2EC4B6',
           icon: 'static/files/me.jpeg',
       },
-    },
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: `https://cristinasoler.me`,
-      },
-    },
+    }
   ]
 }

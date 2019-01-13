@@ -3,6 +3,7 @@ import { Location } from '@reach/router';
 import { Row, Col } from 'reactstrap'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import Link from 'gatsby-link'
 
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Blog/Footer';
@@ -40,6 +41,7 @@ const TemplateWrapper = ({ children, isPost, isAbout, location }) => {
               <meta name="description" content={ `Web personal de ${data.site.siteMetadata.title}` } />
               <meta property="og:description" content={ `Web personal de ${data.site.siteMetadata.title}` }/>
               <meta property="og:type" content="website"/>
+              <Link rel="canonical" href={location.href} data-baseprotocol="https:" data-basehost="cristinasoler.me"/>
             </Helmet>
           }
         </Location>

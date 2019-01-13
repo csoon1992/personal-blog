@@ -1,4 +1,5 @@
 import React from 'react'
+import { Location } from '@reach/router';
 import { Container, Card, CardTitle, CardGroup, CardBody } from 'reactstrap'
 import Helmet from 'react-helmet'
 import { basename } from 'path'
@@ -49,27 +50,31 @@ export default function Template ({ data }) {
   return (
     <Layout isPost>
       <div>
-        <Helmet title={`Blog | ${post.frontmatter.title}`}>
-          {data.site.siteMetadata.disqus && (
-            <script id='dsq-count-scr' src='//gatsby-starter-blog.disqus.com/count.js' async />
-          )}
-          {data.site.siteMetadata.disqus && (
-            <script>{`(function() {
-              var d = document, s = d.createElement('script');
-              s.src = 'https://${data.site.siteMetadata.disqus}.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-              })();`}
-            </script>
-          )}
-          
-          <meta property="og:title" content={post.frontmatter.title}/>
-          <meta property="og:image" content={post.frontmatter.image} />
-          <meta name="description" content={post.excerpt} />
-          <meta property="og:description" content={post.excerpt}/>
-          <meta property="og:type" content="article"/>
-          
-        </Helmet>
+        <Location>
+          {({ location }) => <Helmet title={`Blog | ${post.frontmatter.title}`}>
+              {data.site.siteMetadata.disqus && (
+                <script id='dsq-count-scr' src='//gatsby-starter-blog.disqus.com/count.js' async />
+              )}
+              {data.site.siteMetadata.disqus && (
+                <script>{`(function() {
+                  var d = document, s = d.createElement('script');
+                  s.src = 'https://${data.site.siteMetadata.disqus}.disqus.com/embed.js';
+                  s.setAttribute('data-timestamp', +new Date());
+                  (d.head || d.body).appendChild(s);
+                  })();`}
+                </script>
+              )}
+              
+              <meta property="og:title" content={post.frontmatter.title}/>
+              <meta property="og:image" content={post.frontmatter.image} />
+              <meta name="description" content={post.excerpt} />
+              <meta property="og:description" content={post.excerpt}/>
+              <meta property="og:type" content="article"/>
+              
+              <Link rel="canonical" href={location.href} data-baseprotocol="https:" data-basehost="cristinasoler.me"/>
+            </Helmet>
+          }
+        </Location>
         
         <div id="post-wrapper">
           <div id="post-header">
