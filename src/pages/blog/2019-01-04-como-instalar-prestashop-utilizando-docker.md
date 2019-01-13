@@ -24,18 +24,20 @@ Preparar nuestro entorno con Docker es muy sencillo y rápido. Lo único que ten
    `$ git clone git@github.com:csoon1992/prestashop-vessel.git`
 2. Ir a la carpeta prestashop de este repositorio:
    `$ cd prestashop-vessel`
-3. Clonar el repositorio git de Prestashop dentro de vessel:
+3. Crear una copia de .env.example llamada .env con la configuración deseada:
+   `$ cp .env.example .env`
+4. Clonar el repositorio git de Prestashop dentro de vessel:
    `$ git clone git@github.com:PrestaShop/PrestaShop.git prestashop` 
-4. Ir a la raíz del proyecto
+5. Ir a la raíz del proyecto
    `$ cd prestashop`
-5. Hacer checkout a la rama Prestashop 1.7.5.x para trabajar con esta versión.
+6. Hacer checkout a la rama Prestashop 1.7.5.x para trabajar con esta versión.
    `$ git checkout 1.7.5.x`
-6. Eliminar el directorio .git de prestashop de nuestro proyecto para no pushear al repositorio oficial de Prestashop que nos clonamos:
+7. Eliminar el directorio .git de prestashop de nuestro proyecto para no pushear al repositorio oficial de Prestashop que nos clonamos:
     `$ rm -Rvf ./.git`
-7. Arrancar docker:
+8. Arrancar docker:
     `$ cd ..`
     `$ ./vessel start`
-8. Instalar las dependencias de composer:
+9. Instalar las dependencias de composer (esto llevará un rato):
     `$ ./vessel composer install`
 
 ¡Ya tenemos listo nuestro entorno!
