@@ -20,13 +20,11 @@ Tras realizar estos 9 pasos, ya estamos listos para comenzar la instalación de 
 
 ## Realizar la instalación de Prestashop
 
-Abrimos nuestra terminal y vamos a la carpeta instalación (en mi caso /adminps tal y como lo configuré como "adminps" en el .env) situada en la raíz de nuestro proyecto.
+Abrimos nuestra terminal y vamos a la carpeta instalación install-dev/ situada en la raíz de nuestro proyecto.
 
-
-  `$ cd Prestashop/adminps/`
+  `$ cd prestashop/install-dev/`
 
 En ese directorio veremos que existe un script llamado **index_cli.php**. Este es el script que nos permitirá realizar la instalación de Prestashop mediante comando. Para conocer las opciones que le podemos enviar, ponemos la siguiente línea en la terminal:
-
 
   `$ ./vessel install`
 
@@ -34,13 +32,13 @@ En ese directorio veremos que existe un script llamado **index_cli.php**. Este e
 
 Ahora procedemos a crear el comando que nos realizará la instalación completa de nuestro Prestashop y lo dejará listo para comenzar a funcionar con nuestra tienda.
 
-
   `$ ./vessel install --db_server=mysql --db_user=basicusr --db_password=usersecret --db_create=1 --prefix=ps_ --name=Prestashop --firstname=Cristina --lastname=Soler --email=csoon1992@gmail.com --password=admin --language=es`
 
 Según la configuración deseada, le pasaremos unas opciones u otras. En mi caso me ha valido con las siguientes:
 
-* **db_server:** es muy importante que le especifiquemos el puerto, pues si no lo hacemos, no encontrará el servidor mysql.
-* **db_password:** contraseña para el usuario mysql, que en este caso lo he dejado por defecto (root).
+* **db_server:** si el puerto configurado en docker-compose.yml es distinto al puerto por defecto (3306) es muy importante que le especifiquemos el puerto ya que de otro modo no encontrará el servidor mysql.
+* **db_user: **usuario mysql.
+* **db_password:** contraseña para el usuario mysql.
 * **db_create:** forzamos que se cree la base de datos si no existe, ya que nosostros no hemos creado la base de datos previamente.
 * **prefix:** prefijo para las tablas creadas en esta base de datos.
 * **name:** nombre de la tienda.
@@ -50,10 +48,9 @@ Según la configuración deseada, le pasaremos unas opciones u otras. En mi caso
 * **password:** contraseña del usuario admin que se creará, necesaria para acceder al panel de administración (Backoffice).
 * **language:** idioma en el que queremos realizar la instalación.
 
-**Nota:** no te preocupes si olvidas alguno de ellos, pues la mayoría de estas opciones de configuración se pueden modificar desde el Backoffice una vez finalizada la instalación.
+**Nota:** no te preocupes si olvidas alguna de ellas, pues la mayoría de estas opciones de configuración se pueden modificar desde el Backoffice una vez finalizada la instalación.
 
-Si todo ha ido correctamente, aparecerá el mensaje "-- Installation successful! --".
+Si todo ha ido correctamente, aparecerá el mensaje "**\-- Installation successful! --**".
 Es el momento de navegar un poco tanto por el front como por el backoffice y si todo está OK, eliminamos la carpeta de instalación por motivos de seguridad:
-
 
 `$ sudo rm -R install-dev/`
