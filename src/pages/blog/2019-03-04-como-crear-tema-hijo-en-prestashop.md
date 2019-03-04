@@ -1,6 +1,6 @@
 ---
 contentType: blog
-path: como-crear-tema-hijo-en-prestashop
+path: /como-crear-tema-hijo-en-prestashop
 image: /files/chiltheme-header.jpg
 title: Cómo crear un tema hijo en Prestashop 1.7
 date: '2019-03-04T21:00:00+01:00'
