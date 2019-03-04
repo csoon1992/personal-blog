@@ -120,6 +120,10 @@ Por tanto, la plantilla product.tpl del tema hijo completa, con la referencia in
 {block name='product_description_short'}{/block}
 ```
 
+Y el front debería quedar tal que así:
+
+![Resultado final](/files/childtheme_product_page.png)
+
 Este asunto, aunque es sencillo, tiene varias vertientes, ya que al igual que se pueden crear plantillas en el tema hijo, se pueden crear nuevos CSS y JS que predominen frente a los existentes en el tema padre.
 
 Para no alargar demasiado el post, lo cortaré por aquí, totalmente dispuesta a hacer un nuevo post de creación de nuevos CSS y JS si así lo necesitáis.
