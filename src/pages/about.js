@@ -7,6 +7,7 @@ import RedegalLogo from '../assets/img/files/redegal-logo.png';
 import WetacaLogo from '../assets/img/files/wetaca-logo.png';
 import CbiLogo from '../assets/img/files/cbi-logo.png';
 import mpsc from '../assets/img/files/mispapissecasan.jpg';
+import loe from '../assets/img/files/leticiaortizescritora.png';
 
 // Icons
 import {IconContext} from 'react-icons';
@@ -203,7 +204,7 @@ const MePage = () => {
           <section className="public-works mb-5">
             <h3 className="section-title mb-4">Mis trabajos públicos</h3>
             <div className="works card-deck align-items-stretch">
-              <Card className="col-12 col-md-5 col-lg-3 px-0">
+              <Card className="col-12 col-md-5 col-lg-3 px-0 mt-1">
                 <CardImg
                   top
                   width="100%"
@@ -212,8 +213,28 @@ const MePage = () => {
                 <CardBody>
                   <CardTitle className="font-weight-bold">mispapissecasan.com</CardTitle>
                   <CardSubtitle className="pb-2">2017 - Web personal</CardSubtitle>
-                  <CardText>Web-cuenta atrás para mi boda realizada en 2017 con Laravel, React.js y Firebase.</CardText>
+                  <CardText>
+                    <p className="project-desc">Web-cuenta atrás para mi boda.</p>
+                    <p className="project-techs">Realizada con: <a href="https://laravel.com/" title="Laravel" target="_blank" rel="noopener noreferrer">Laravel</a>, <a href="https://reactjs.org/" title="React.js" target="_blank" rel="noopener noreferrer">React.js</a> y <a href="https://firebase.google.com/" title="Laravel" target="_blank" rel="noopener noreferrer">Firebase</a>.</p>
+                  </CardText>
                   <a href="https://mispapissecasan.com/" className="btn outline-btn outline-primary float-right py-2" target="_blank" rel="noopener noreferrer">Visitar</a>
+                </CardBody>
+              </Card>
+
+              <Card className="col-12 col-md-5 col-lg-3 px-0 mt-1">
+                <CardImg
+                  top
+                  width="100%"
+                  src={loe}
+                  alt="Leticia Ortiz escritora"/>
+                <CardBody>
+                  <CardTitle className="font-weight-bold">leticiaortizescritora.com</CardTitle>
+                  <CardSubtitle className="pb-2">2019 - Landing para venta de nuevo libro</CardSubtitle>
+                  <CardText>
+                    <p className="project-desc">Sencilla <em>landing</em> para la venta del nuevo libro de una buena escritora, Leticia Ortiz, y mejor aún amiga.</p>
+                    <p className="project-techs">Realizada con: <a href="https://www.gatsbyjs.org/" title="GatsbyJS" target="_blank" rel="noopener noreferrer">GatsbyJS</a> y <a href="https://tailwindcss.com/" title="Tailwind CSS" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.</p>
+                  </CardText>
+                  <a href="https://leticiaortizescritora.com/" className="btn outline-btn outline-primary float-right py-2" target="_blank" rel="noopener noreferrer">Visitar</a>
                 </CardBody>
               </Card>
             </div>
