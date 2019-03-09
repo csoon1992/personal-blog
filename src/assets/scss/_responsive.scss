@@ -1,76 +1,13 @@
 @import './variables';
 
-@include media-breakpoint-down(xs) {
-    #index {
-        .main-content {
-            .section {
-                .title {
-                    .name {
-                        span {
-                            font-weight: bold;
-                        }
-                    }
-                    
-                    .description {
-                        font-size: .9rem;
-                    }
-                }
-            }
-        }
-    }
-
+@include media-breakpoint-up(lg) {
     #blog-layout {
         .blog-wrapper {
-            .pageContent-wrapper {
-                padding: 0 1rem 3rem;
-
-                .pageContent {
-                    .blog-post {
-                        .calendar {
-                            padding: .3rem 0;
-
-                            .day {
-                                font-size: $h2-down-md;
-                                font-weight: bold;
-                                padding-right: .4rem;
-                            }
-
-                            .month {
-                                vertical-align: text-bottom;
-                            }
-                        }
-
-                        .post-content {
-                            .post-title {
-                                padding: .5rem 0;
-                                font-size: $h2-down-md;
-                            }
-
-                            .post-excerpt {
-                                font-size: .8rem;
-                            }
-                        }
-                    }
-
-                    .actions {
-                        a {
-                            font-size: .8rem;
-                        }
-                    }
-                }
-            }
-        }
-
-        &.about-page {
-            .about-content {
-                section {
-                    .company {
-                        .company-header {
-                            .company-title,
-                            .position {
-                                text-align: center;
-                            }
-                        }
+            .sidebar-wrapper {
+                #sidebar {
+                    .sidebar-header,
+                    .sidebar-content {
+                        border-bottom: 0;
                     }
                 }
             }
@@ -277,20 +214,7 @@
     }
 }
 
-@include media-breakpoint-up(lg) {
-    #blog-layout {
-        .blog-wrapper {
-            .sidebar-wrapper {
-                #sidebar {
-                    .sidebar-header,
-                    .sidebar-content {
-                        border-bottom: 0;
-                    }
-                }
-            }
-        }
-    }
-}
+
 
 @media (min-width: 1900px) {
     #blog-layout {
@@ -303,6 +227,93 @@
             .pageContent-wrapper {
                 flex: 0 0 83.33333333%;
                 max-width: 83.33333333%;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    #index {
+        .main-content {
+            .section {
+                .title {
+                    .name {
+                        span {
+                            font-weight: bold;
+                        }
+                    }
+                    
+                    .description {
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #blog-layout {
+        .blog-wrapper {
+            .pageContent-wrapper {
+                padding: 0 1rem 3rem;
+
+                .pageContent {
+                    .blog-post {
+                        .calendar {
+                            padding: .3rem 0;
+
+                            .day {
+                                font-size: $h2-down-md;
+                                font-weight: bold;
+                                padding-right: .4rem;
+                            }
+
+                            .month {
+                                vertical-align: text-bottom;
+                            }
+                        }
+
+                        .post-content {
+                            .post-title {
+                                padding: .5rem 0;
+                                font-size: $h2-down-md;
+                            }
+
+                            .post-excerpt {
+                                font-size: .8rem;
+                            }
+                        }
+                    }
+
+                    .actions {
+                        a {
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.about-page {
+            .about-content {
+                section {
+                    .company {
+                        .company-header {
+                            .company-title,
+                            .position {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    &.public-works {
+                        .works {
+                            .card {
+                                flex: 0 0 100% !important;
+                                max-width: 100%;
+                            }
+                        }
+                    } 
+                }
             }
         }
     }
