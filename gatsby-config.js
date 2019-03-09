@@ -43,6 +43,12 @@ module.exports = {
     ]
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-135936584-1",
+      },
+    },
     'gatsby-plugin-remove-serviceworker',
     {
       resolve: 'gatsby-source-filesystem',
