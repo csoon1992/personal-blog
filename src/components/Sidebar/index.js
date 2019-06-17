@@ -93,7 +93,7 @@ export default Sidebar;
 
 // GraphQL query component
 export const componentQuery = graphql `
-  fragment sidebarFragment on siteMetadata_2 {
+  fragment sidebarFragment on SiteSiteMetadata {
     title
     subtitle
     technologies {
