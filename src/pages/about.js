@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Row, Col, CardBody, Card, CardImg, CardTitle, CardSubtitle, CardText} from 'reactstrap';
+import {Container, Row, Col, CardBody, Card, CardImg, CardTitle, CardSubtitle, CardText, CardFooter} from 'reactstrap';
 import Layout from '../layouts/blog';
 
 // Images
@@ -8,6 +8,7 @@ import WetacaLogo from '../assets/img/files/wetaca-logo.png';
 import CbiLogo from '../assets/img/files/cbi-logo.png';
 import mpsc from '../assets/img/files/mispapissecasan.jpg';
 import loe from '../assets/img/files/leticiaortizescritora.png';
+import rya from '../assets/img/files/raquelyandrei.png';
 
 // Icons
 import {IconContext} from 'react-icons';
@@ -220,8 +221,11 @@ const MePage = () => {
                     <p className="project-desc">Web-cuenta atrás para mi boda.</p>
                     <p className="project-techs">Realizada con: <a href="https://laravel.com/" title="Laravel" target="_blank" rel="noopener noreferrer">Laravel</a>, <a href="https://reactjs.org/" title="React.js" target="_blank" rel="noopener noreferrer">React.js</a> y <a href="https://firebase.google.com/" title="Firebase" target="_blank" rel="noopener noreferrer">Firebase</a>.</p>
                   </CardText>
-                  <a href="https://mispapissecasan.com/" className="btn outline-btn outline-primary float-right py-2" target="_blank" rel="noopener noreferrer">Visitar</a>
                 </CardBody>
+
+                <CardFooter>
+                  <a href="https://mispapissecasan.com/" className="btn outline-btn outline-primary float-right py-2" target="_blank" rel="noopener noreferrer">Visitar</a>
+                </CardFooter>
               </Card>
 
               <Card className="col-12 col-md-5 col-lg-3 px-0 mt-1">
@@ -235,10 +239,32 @@ const MePage = () => {
                   <CardSubtitle className="pb-2">2019 - Landing para venta de nuevo libro</CardSubtitle>
                   <CardText>
                     <p className="project-desc">Sencilla <em>landing</em> para la venta del nuevo libro de una buena escritora, Leticia Ortiz, y mejor aún amiga.</p>
-                    <p className="project-techs">Realizada con: <a href="https://www.gatsbyjs.org/" title="GatsbyJS" target="_blank" rel="noopener noreferrer">GatsbyJS</a> y <a href="https://tailwindcss.com/" title="Tailwind CSS" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.</p>
+                    <p className="project-techs">Realizada con: <a href="https://www.gatsbyjs.org/" title="GatsbyJS" target="_blank" rel="noopener noreferrer">GatsbyJS</a>, <a href="https://www.netlify.com/" title="Netlify" target="_blank" rel="noopener noreferrer">Netlify</a> y <a href="https://tailwindcss.com/" title="Tailwind CSS" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.</p>
                   </CardText>
-                  <a href="https://leticiaortizescritora.com/" className="btn outline-btn outline-primary float-right py-2" target="_blank" rel="noopener noreferrer">Visitar</a>
                 </CardBody>
+
+                <CardFooter>
+                  <a href="https://leticiaortizescritora.com/" className="btn outline-btn outline-primary float-right py-2" target="_blank" rel="noopener noreferrer">Visitar</a>
+                </CardFooter>
+              </Card>
+
+              <Card className="col-12 col-md-5 col-lg-3 px-0 mt-1">
+                <CardImg
+                  top
+                  width="100%"
+                  src={rya}
+                  alt="Boda Raquel & Andrei"/>
+                <CardBody>
+                  <CardTitle className="font-weight-bold">raquelyandrei.com</CardTitle>
+                  <CardSubtitle className="pb-2">2019 - Web-cuenta atrás para la boda de mis primos</CardSubtitle>
+                  <CardText>
+                    <p className="project-techs">Realizada con: <a href="https://www.gatsbyjs.org/" title="GatsbyJS" target="_blank" rel="noopener noreferrer">GatsbyJS</a>, <a href="https://www.netlify.com/" title="Netlify" target="_blank" rel="noopener noreferrer">Netlify</a> y <a href="https://tailwindcss.com/" title="Tailwind CSS" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.</p>
+                  </CardText>
+                </CardBody>
+
+                <CardFooter>
+                  <a href="https://raquelyandrei.com/" className="btn outline-btn outline-primary float-right py-2" target="_blank" rel="noopener noreferrer">Visitar</a>
+                </CardFooter>
               </Card>
             </div>
           </section>
