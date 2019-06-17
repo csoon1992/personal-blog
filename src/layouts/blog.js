@@ -1,6 +1,6 @@
 import React from 'react'
 import { Location } from '@reach/router';
-import { Row, Col } from 'reactstrap'
+import { Row, Col, Container } from 'reactstrap'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
@@ -15,8 +15,18 @@ const TemplateWrapper = ({ children, isPost, isAbout, location }) => {
   let pageClass = 'App';
   let title = 'Blog';
 
+  let pageContent = <div className='pageContent pl-4 mx-auto'>
+    <Container>
+      {children}
+    </Container>
+  </div>;
+
   if (isPost) {
     pageClass += ' post-page';
+
+    pageContent = <div className='pageContent pl-4 mx-auto'>
+      {children}
+    </div>;
   } else if (isAbout) {
     pageClass += ' about-page';
     title = 'Sobre mí';
@@ -52,9 +62,7 @@ const TemplateWrapper = ({ children, isPost, isAbout, location }) => {
           </Col>
 
           <Col lg="8" xl="9" className="pageContent-wrapper pl-0">
-            <div className='pageContent pl-4 mx-auto'>
-              {children}
-            </div>
+            {pageContent}
           </Col>
         </Row>
 
