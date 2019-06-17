@@ -1,5 +1,19 @@
 @import './variables';
 
+@include media-breakpoint-up(xl) {
+    #blog-layout {
+        .blog-wrapper {
+            .pageContent-wrapper {
+                .pageContent {
+                    .container {
+                        max-width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @include media-breakpoint-up(lg) {
     #blog-layout {
         .blog-wrapper {
@@ -232,6 +246,24 @@
     }
 }
 
+@include media-breakpoint-down(md) {
+    #blog-layout {
+        .blog-wrapper {
+            .pageContent-wrapper {
+                .pageContent {
+                    .blog-post {
+                        width: 100% !important;
+                        
+                        .card {
+                            height: auto;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
 @include media-breakpoint-down(xs) {
     #index {
         .main-content {
@@ -257,29 +289,22 @@
                 padding: 1.5rem 1rem 3rem;
 
                 .pageContent {
+                    .container {
+                        max-width: 100%;
+                    }
+
                     .blog-post {
-                        .calendar {
-                            padding: .3rem 0;
+                        .post-wrapper {
+                            .card {
+                                .card-body {
+                                    .card-title {
+                                        font-size: 1rem;
+                                    }
+                                }
 
-                            .day {
-                                font-size: $h2-down-md;
-                                font-weight: bold;
-                                padding-right: .4rem;
-                            }
-
-                            .month {
-                                vertical-align: text-bottom;
-                            }
-                        }
-
-                        .post-content {
-                            .post-title {
-                                padding: .5rem 0;
-                                font-size: $h2-down-md;
-                            }
-
-                            .post-excerpt {
-                                font-size: .8rem;
+                                .card-footer {
+                                    font-size: .7rem;
+                                }
                             }
                         }
                     }

@@ -93,38 +93,13 @@
 
       .pageContent {
         .container {
-          max-width: 60%;
+          max-width: 80%;
         }
 
         .blog-post {
           transition: all .3s;
           border-radius: 0;
           cursor: pointer;
-
-          .card {
-            height: 290px;
-
-            .post-content {
-              border-right: 5px solid transparent;
-              transition: all .3s;
-
-              .post-title {
-                color: $brand-primary-color;
-                font-size: 1.4rem;
-                transition: all .3s;
-              }
-
-              .post-tags {
-                .badge {
-                  color: $brand-font-color;
-                }
-              }
-
-              .post-excerpt {
-                font-size: .9rem;
-              }
-            }
-          }
         }
 
         .actions {
