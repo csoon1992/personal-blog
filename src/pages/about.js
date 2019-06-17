@@ -31,11 +31,11 @@ const MePage = () => {
               e-commerce. Empecé con Magento 1.9 y luego me inicié en Prestashop 1.6 hasta su
               versión 1.7 actual.</p>
 
-            <p>Actualmente me encuentro trabajando en Redegal 100% remoto.</p>
+            <p>Actualmente me encuentro buscando nuevas oportunidades profesionales en remoto.</p>
 
             <p>En mi tiempo libre, me dedico a aprender otras tecnologías totalmente ajenas
               al comercio electrónico, pues mi objetivo a medio-largo plazo es centrarme en
-              proyectos a medida, especialmente con Laravel + React.js.</p>
+              proyectos a medida, especialmente con <a href="https://laravel.com/" title="Laravel" target="_blank" rel="noopener noreferrer">Laravel</a> y <a href="https://reactjs.org/" title="React.js" target="_blank" rel="noopener noreferrer">React.js</a>.</p>
           </section>
 
           <section className="professional-exp mb-5">
@@ -66,7 +66,7 @@ const MePage = () => {
                         </a>
                       </span>
                     </h4>
-                    <p className="position small graya-color mb-0">Programadora Senior Prestashop - Desde abril de 2018 hasta la actualidad</p>
+                    <p className="position small graya-color mb-0">Programadora Senior Prestashop - Remoto 100% - Desde abril de 2018 hasta junio de 2019</p>
 
                     <Card className="border-0">
                       <CardBody className="px-0 pb-0">
@@ -75,7 +75,10 @@ const MePage = () => {
                           <ul className="mb-0">
                             <li>Mantenimiento y mejora de funcionalidades y módulos ya desarrollados e
                               implementados antes de mi incorporación.</li>
-                            <li>Desarrollo de proyectos Prestashop nuevos desde cero</li>
+                            <li>Desarrollo de proyectos Prestashop 1.7.x nuevos desde cero, implementando git flow y deployer php.</li>
+                            <li>Desarrollo de módulos personalizados a medida para cumplir las necesidades específicas de cada cliente.</li>
+                            <li>Desarrollo y mejora de módulos de conexión con ERPs (concretamente con Microsoft Dynamics Navs) tanto para tiendas B2C como B2B.</li>
+                            <li>Soporte directo a clientes</li>
                           </ul>
                         </div>
                       </CardBody>
@@ -85,10 +88,10 @@ const MePage = () => {
               </Row>
 
               <Row className="separator">
-                <Col className="col-auto">
+                <Col className="col-auto h-100">
                   <div className="w-200px">&nbsp;</div>
                 </Col>
-                <Col className="line">
+                <Col className="line h-100">
                   <div className="fill h-100">&nbsp;</div>
                 </Col>
               </Row>
@@ -115,7 +118,7 @@ const MePage = () => {
                         </a>
                       </span>
                     </h4>
-                    <p className="position small graya-color mb-0">Programadora Web - Desde noviembre de 2017 hasta abril de 2018</p>
+                    <p className="position small graya-color mb-0">Programadora Web - Remoto 2 días a la semana - Desde noviembre de 2017 hasta abril de 2018</p>
 
                     <Card className="border-0">
                       <CardBody className="px-0 pb-0">
@@ -138,10 +141,10 @@ const MePage = () => {
               </Row>
 
               <Row className="separator">
-                <Col className="col-auto">
+                <Col className="col-auto h-100">
                   <div className="w-200px">&nbsp;</div>
                 </Col>
-                <Col className="line">
+                <Col className="line h-100">
                   <div className="fill h-100">&nbsp;</div>
                 </Col>
               </Row>
@@ -172,7 +175,7 @@ const MePage = () => {
                         </a>
                       </span>
                     </h4>
-                    <p className="position small graya-color mb-0">Programadora Web - Desde octubre de 2014 hasta octubre de 2017</p>
+                    <p className="position small graya-color mb-0">Programadora Web - Presencial - Desde octubre de 2014 hasta octubre de 2017</p>
 
                     <Card className="border-0">
                       <CardBody className="px-0 pb-0">
@@ -215,7 +218,7 @@ const MePage = () => {
                   <CardSubtitle className="pb-2">2017 - Web personal</CardSubtitle>
                   <CardText>
                     <p className="project-desc">Web-cuenta atrás para mi boda.</p>
-                    <p className="project-techs">Realizada con: <a href="https://laravel.com/" title="Laravel" target="_blank" rel="noopener noreferrer">Laravel</a>, <a href="https://reactjs.org/" title="React.js" target="_blank" rel="noopener noreferrer">React.js</a> y <a href="https://firebase.google.com/" title="Laravel" target="_blank" rel="noopener noreferrer">Firebase</a>.</p>
+                    <p className="project-techs">Realizada con: <a href="https://laravel.com/" title="Laravel" target="_blank" rel="noopener noreferrer">Laravel</a>, <a href="https://reactjs.org/" title="React.js" target="_blank" rel="noopener noreferrer">React.js</a> y <a href="https://firebase.google.com/" title="Firebase" target="_blank" rel="noopener noreferrer">Firebase</a>.</p>
                   </CardText>
                   <a href="https://mispapissecasan.com/" className="btn outline-btn outline-primary float-right py-2" target="_blank" rel="noopener noreferrer">Visitar</a>
                 </CardBody>
