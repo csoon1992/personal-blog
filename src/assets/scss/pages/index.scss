@@ -1,42 +1,5 @@
 @import '../common.scss';
 
-#index {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-image: url('../../../../static/files/index-bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: $white;
 
-    .main-content {
-        background: transparent;
-        background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, transparent 60%);
-        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(60%, transparent));
-        background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, transparent 60%);
-        background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, transparent 60%);
-        background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, transparent 60%);
-        background: linear-gradient(to right, rgba(0,0,0,1) 0%, transparent 60%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=1 );
-
-        footer {
-            .contact {
-                .links {
-                    .networks {
-                        .icon {
-                            font-size: 1.5rem;
-                            color: $grayA;
-
-                            &:hover {
-                                color: $white;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 
 @import '../responsive';

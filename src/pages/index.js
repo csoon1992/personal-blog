@@ -7,9 +7,9 @@ import mePhoto from '../assets/img/files/me.png';
 const IndexPage = () => {
   return (
     <Layout>
-      <section className='section px-0 h-100 w-100 d-flex align-items-center'>
-        <div className='title mw-50 p-5 d-flex align-items-center'>
-          <div className='title-ilu mr-4 d-none d-md-block'>
+      <section className='section px-0 h-full w-full flex items-center'>
+        <div className='title mw-50 p-5 flex items-center'>
+          <div className='title-ilu mr-4 hidden d-md-block'>
             <img
               src={mePhoto}
               alt='Cristina Soler'

@@ -1,6 +1,4 @@
 @import 'variables';
-@import 'bootstrap';
-//@import 'bg-colors';
 
 body {
     font-size: .9rem;
@@ -26,20 +24,9 @@ body {
     }
 }
 
-a {
-    color: $brand-primary-color;
-    
+a { 
     &:hover {
         text-decoration: none;
-        color: $brand-secondary-color !important;
-    }
-
-    &.link-secondary-color {
-        color: $link-secondary-color;
-
-        &:hover {
-            color: $link-secondary-color-dark !important;
-        }
     }
 }
 
@@ -53,103 +40,6 @@ button, .btn {
         outline: 0 !important;
     }
 
-    &.unstyled-btn {
-        background: none;
-        color: $brand-primary-color;
-        border: 0;
-
-        &:hover {
-            background: $gray-light;
-            color: $brand-primary-color;
-            border: 0;
-        }
-    }
-
-    &.outline-btn {
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        color: $white;
-        padding: .7rem 2rem;
-        transition: .3s;
-        border-radius: 10rem;
-        font-size: .9rem;
-
-        &:hover {
-            border-color: $white;
-            color: $white !important;
-        }
-
-        &.outline-primary {
-            border-color: rgba(46, 196, 182, 0.2);
-            color: $brand-primary-color;
-
-            &:hover {
-                border-color: $brand-primary-color;
-                color: $brand-primary-color !important;
-            }
-        }
-    }
+    
 }
 
-.toggler-btn {
-    font-size: 1rem;
-
-    .icon {
-        font-size: 2rem;
-    }
-
-    &:hover {
-        color: $brand-primary-color;
-    }
-}
-
-.default-color {
-    color: $brand-font-color;
-}
-
-.primary-color {
-    color: $brand-primary-color;
-}
-
-.graya-color {
-    color: $grayA;
-}
-
-.grayb-color {
-    color: $grayB;
-}
-
-.border-top-light {
-    border-top: 1px solid $gray-light;
-}
-
-.border-bottom-light {
-    border-bottom: 1px solid $gray-light;
-}
-
-.letter-spacing-2 {
-    letter-spacing: 2px;
-}
-
-h3 {
-    font-size: 1.2rem;
-}
-
-.h4 {
-    font-size: 1.2rem;
-    color: $brand-primary-color;
-}
-
-.h5 {
-    font-size: .9rem;
-    color: $grayB;
-}
-
-.light-badge {
-    color: $light-badge-color;
-    background: $light-badge-bg;
-
-    &:hover {
-        color: $light-badge-color-hover;
-        background: $light-badge-bg-hover;
-    }
-}

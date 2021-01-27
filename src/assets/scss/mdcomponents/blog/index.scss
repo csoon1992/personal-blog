@@ -1,8 +1,8 @@
 /* Blockquote */
 .mdc {
     &.blockquote {
-        border-left: 4px solid $brand-primary-color;
-        background: $gray-light;
+        border-left: 4px solid #555;
+        background: gray;
 
         p {
             font-size: .8rem;
@@ -16,11 +16,11 @@
 
     &.subtitle {
         font-size: 1.5rem;
-        color: $brand-primary-color;
+        color: black;
     }
 
     &.code {
-        background: $gray-light;
+        background: gray;
         border-radius: 3px;
         padding: .2em .4em;
     }
