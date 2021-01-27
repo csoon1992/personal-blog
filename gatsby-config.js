@@ -110,5 +110,6 @@ module.exports = {
         icon: "static/files/me.jpeg",
       },
     },
+    `gatsby-plugin-postcss`,
   ],
 };
