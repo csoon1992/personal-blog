@@ -1,6 +1,5 @@
 import React from 'react'
 import { Location } from '@reach/router';
-import { Row, Col, Container } from 'reactstrap'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
@@ -16,9 +15,9 @@ const TemplateWrapper = ({ children, isPost, isAbout, location }) => {
   let title = 'Blog';
 
   let pageContent = <div className='pageContent pl-4 mx-auto'>
-    <Container>
+    <div>
       {children}
-    </Container>
+    </div>
   </div>;
 
   if (isPost) {
@@ -56,15 +55,15 @@ const TemplateWrapper = ({ children, isPost, isAbout, location }) => {
           }
         </Location>
         
-        <Row className="blog-wrapper mx-0 h-100">
-          <Col lg="4" xl="3" className="sidebar-wrapper px-0">
+        <div className="blog-wrapper mx-0 h-100">
+          <div lg="4" xl="3" className="sidebar-wrapper px-0">
             <Sidebar siteMetadata={data.site.siteMetadata} isPost={isPost} />
-          </Col>
+          </div>
 
-          <Col lg="8" xl="9" className="pageContent-wrapper pl-0">
+          <div lg="8" xl="9" className="pageContent-wrapper pl-0">
             {pageContent}
-          </Col>
-        </Row>
+          </div>
+        </div>
 
         <Footer/>
 

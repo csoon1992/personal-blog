@@ -1,14 +1,13 @@
 import React from 'react'
-import { Container } from 'reactstrap'
 import Layout from '../layouts/blog'
 
 const NotFoundPage = () => (
-  <Container>
+  <div>
     <Layout>
       <h1>NOT FOUND</h1>
       <p>You just hit a route that doesn't exist... the sadness.</p>
     </Layout>
-  </Container>
+  </div>
 )
 
 export default NotFoundPage

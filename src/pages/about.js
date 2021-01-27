@@ -1,5 +1,4 @@
 import React from 'react';
-import {Row, Col, CardBody, Card, CardImg, CardTitle, CardSubtitle, CardText, CardFooter} from 'reactstrap';
 import Layout from '../layouts/blog';
 
 // Images
@@ -42,12 +41,12 @@ const MePage = () => {
           <h3 className="section-title mb-4">Experiencia profesional</h3>
 
           <div className="company">
-            <Row className="company-header d-flex align-items-strech mb-3 mx-0">
-              <Col className="col-auto bg redegal d-flex align-items-center">
+            <div className="company-header d-flex align-items-strech mb-3 mx-0">
+              <div className="col-auto bg redegal d-flex align-items-center">
                 <img className="company-logo mw-100" src={RedegalLogo} alt="Logo Redegal"/>
-              </Col>
+              </div>
 
-              <Col className="d-flex align-items-center">
+              <div className="d-flex align-items-center">
                 <div className="py-1">
                   <h4 className="company-title mb-0">
                     <span className="company-name">
@@ -68,8 +67,8 @@ const MePage = () => {
                   </h4>
                   <p className="position small graya-color mb-0">Programadora Senior Prestashop - Remoto 100% - Desde abril de 2018 hasta junio de 2019</p>
 
-                  <Card className="border-0">
-                    <CardBody className="px-0 pb-0">
+                  <div className="border-0">
+                    <div className="px-0 pb-0">
                       <div className="tasks">
                         <p className="mb-0">Tareas:</p>
                         <ul className="mb-0">
@@ -81,29 +80,29 @@ const MePage = () => {
                           <li>Soporte directo a clientes</li>
                         </ul>
                       </div>
-                    </CardBody>
-                  </Card>
+                    </div>
+                  </div>
                 </div>
-              </Col>
-            </Row>
+              </div>
+            </div>
 
-            <Row className="separator">
-              <Col className="col-auto h-100">
+            <div className="separator">
+              <div className="col-auto h-100">
                 <div className="w-200px">&nbsp;</div>
-              </Col>
-              <Col className="line h-100">
+              </div>
+              <div className="line h-100">
                 <div className="fill h-100">&nbsp;</div>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </div>
 
           <div className="company">
-            <Row className="company-header d-flex align-items-strech mb-3 mx-0">
-              <Col className="col-auto bg wetaca d-flex align-items-center">
+            <div className="company-header d-flex align-items-strech mb-3 mx-0">
+              <div className="col-auto bg wetaca d-flex align-items-center">
                 <img className="company-logo mw-100" src={WetacaLogo} alt="Logo Wetaca"/>
-              </Col>
+              </div>
 
-              <Col className="d-flex align-items-center">
+              <div className="d-flex align-items-center">
                 <div className="py-1">
                   <h4 className="company-title mb-0">
                     <span className="company-name">
@@ -120,8 +119,8 @@ const MePage = () => {
                   </h4>
                   <p className="position small graya-color mb-0">Programadora Web - Remoto 2 días a la semana - Desde noviembre de 2017 hasta abril de 2018</p>
 
-                  <Card className="border-0">
-                    <CardBody className="px-0 pb-0">
+                  <div className="border-0">
+                    <div className="px-0 pb-0">
                       <div className="tasks">
                         <p className="mb-0">Tareas:</p>
                         <ul className="mb-0">
@@ -134,29 +133,29 @@ const MePage = () => {
                           <li>Creación de módulos para ofrecer nuevos servicios al cliente.</li>
                         </ul>
                       </div>
-                    </CardBody>
-                  </Card>
+                    </div>
+                  </div>
                 </div>
-              </Col>
-            </Row>
+              </div>
+            </div>
 
-            <Row className="separator">
-              <Col className="col-auto h-100">
+            <div className="separator">
+              <div className="col-auto h-100">
                 <div className="w-200px">&nbsp;</div>
-              </Col>
-              <Col className="line h-100">
+              </div>
+              <div className="line h-100">
                 <div className="fill h-100">&nbsp;</div>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </div>
 
           <div className="company">
-            <Row className="company-header d-flex align-items-strech mb-3 mx-0">
-              <Col className="col-auto bg cbi d-flex align-items-center">
+            <div className="company-header d-flex align-items-strech mb-3 mx-0">
+              <div className="col-auto bg cbi d-flex align-items-center">
                 <img className="company-logo mw-100" src={CbiLogo} alt="Logo Cbi"/>
-              </Col>
+              </div>
 
-              <Col className="d-flex align-items-center">
+              <div className="d-flex align-items-center">
                 <div className="py-1">
                   <h4 className="company-title mb-0">
                     <span className="company-name">
@@ -177,8 +176,8 @@ const MePage = () => {
                   </h4>
                   <p className="position small graya-color mb-0">Programadora Web - Presencial - Desde octubre de 2014 hasta octubre de 2017</p>
 
-                  <Card className="border-0">
-                    <CardBody className="px-0 pb-0">
+                  <div className="border-0">
+                    <div className="px-0 pb-0">
                       <div className="tasks">
                         <p className="mb-0">Tareas:</p>
                         <ul className="mb-0">
@@ -196,75 +195,75 @@ const MePage = () => {
                             importación/exportación de productos en el sistema, etc.</li>
                         </ul>
                       </div>
-                    </CardBody>
-                  </Card>
+                    </div>
+                  </div>
                 </div>
-              </Col>
-            </Row>
+              </div>
+            </div>
           </div>
         </section>
 
         <section className="public-works mb-5">
           <h3 className="section-title mb-4">Mis trabajos públicos</h3>
           <div className="works card-deck align-items-stretch">
-            <Card className="col-12 col-md-5 col-lg-3 px-0 mt-1">
-              <CardImg
+            <div className="col-12 col-md-5 col-lg-3 px-0 mt-1">
+              <div
                 top
                 width="100%"
                 src={mpsc}
                 alt="Mis papis se casan"/>
-              <CardBody>
-                <CardTitle className="font-weight-bold">mispapissecasan.com</CardTitle>
-                <CardSubtitle className="pb-2">2017 - Web personal</CardSubtitle>
-                <CardText tag="div">
+              <div>
+                <div className="font-weight-bold">mispapissecasan.com</div>
+                <div className="pb-2">2017 - Web personal</div>
+                <div tag="div">
                   <p className="project-desc">Web-cuenta atrás para mi boda.</p>
                   <p className="project-techs">Realizada con: <a href="https://laravel.com/" title="Laravel" target="_blank" rel="noopener noreferrer">Laravel</a>, <a href="https://reactjs.org/" title="React.js" target="_blank" rel="noopener noreferrer">React.js</a> y <a href="https://firebase.google.com/" title="Firebase" target="_blank" rel="noopener noreferrer">Firebase</a>.</p>
-                </CardText>
-              </CardBody>
+                </div>
+              </div>
 
-              <CardFooter>
+              <div>
                 <a href="https://mispapissecasan.com/" className="btn outline-btn outline-primary float-right py-2" target="_blank" rel="noopener noreferrer">Visitar</a>
-              </CardFooter>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="col-12 col-md-5 col-lg-3 px-0 mt-1">
-              <CardImg
+            <div className="col-12 col-md-5 col-lg-3 px-0 mt-1">
+              <div
                 top
                 width="100%"
                 src={loe}
                 alt="Leticia Ortiz escritora"/>
-              <CardBody>
-                <CardTitle className="font-weight-bold">leticiaortizescritora.com</CardTitle>
-                <CardSubtitle className="pb-2">2019 - Landing para venta de nuevo libro</CardSubtitle>
-                <CardText>
+              <div>
+                <div className="font-weight-bold">leticiaortizescritora.com</div>
+                <div className="pb-2">2019 - Landing para venta de nuevo libro</div>
+                <div>
                   <p className="project-desc">Sencilla <em>landing</em> para la venta del nuevo libro de una buena escritora, Leticia Ortiz, y mejor aún amiga.</p>
                   <p className="project-techs">Realizada con: <a href="https://www.gatsbyjs.org/" title="GatsbyJS" target="_blank" rel="noopener noreferrer">GatsbyJS</a>, <a href="https://www.netlify.com/" title="Netlify" target="_blank" rel="noopener noreferrer">Netlify</a> y <a href="https://tailwindcss.com/" title="Tailwind CSS" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.</p>
-                </CardText>
-              </CardBody>
+                </div>
+              </div>
 
-              <CardFooter>
+              <div>
                 <a href="https://leticiaortizescritora.com/" className="btn outline-btn outline-primary float-right py-2" target="_blank" rel="noopener noreferrer">Visitar</a>
-              </CardFooter>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="col-12 col-md-5 col-lg-3 px-0 mt-1">
-              <CardImg
+            <div className="col-12 col-md-5 col-lg-3 px-0 mt-1">
+              <div
                 top
                 width="100%"
                 src={rya}
                 alt="Boda Raquel & Andrei"/>
-              <CardBody>
-                <CardTitle className="font-weight-bold">raquelyandrei.com</CardTitle>
-                <CardSubtitle className="pb-2">2019 - Web-cuenta atrás para la boda de mis primos</CardSubtitle>
-                <CardText>
+              <div>
+                <div className="font-weight-bold">raquelyandrei.com</div>
+                <div className="pb-2">2019 - Web-cuenta atrás para la boda de mis primos</div>
+                <div>
                   <p className="project-techs">Realizada con: <a href="https://www.gatsbyjs.org/" title="GatsbyJS" target="_blank" rel="noopener noreferrer">GatsbyJS</a>, <a href="https://www.netlify.com/" title="Netlify" target="_blank" rel="noopener noreferrer">Netlify</a> y <a href="https://tailwindcss.com/" title="Tailwind CSS" target="_blank" rel="noopener noreferrer">Tailwind CSS</a>.</p>
-                </CardText>
-              </CardBody>
+                </div>
+              </div>
 
-              <CardFooter>
+              <div>
                 <a href="https://raquelyandrei.com/" className="btn outline-btn outline-primary float-right py-2" target="_blank" rel="noopener noreferrer">Visitar</a>
-              </CardFooter>
-            </Card>
+              </div>
+            </div>
           </div>
         </section>
 

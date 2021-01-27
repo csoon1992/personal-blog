@@ -1,5 +1,4 @@
 import React from 'react';
-import { Collapse } from 'reactstrap'
 import Link from 'gatsby-link';
 import mePhoto from '../../assets/img/files/me-programming.png';
 import Menu from '../Menu';
@@ -62,7 +61,7 @@ class Sidebar extends React.Component {
                 <div className="sticky-top p-lg-4">
                     {sidebarHeader}
 
-                    <Collapse className="sidebar-content text-center letter-spacing-2" isOpen={!this.state.collapsed}>
+                    <div className="sidebar-content text-center letter-spacing-2" isOpen={!this.state.collapsed}>
                         <div className="sidebar-menu mb-4">
                             <Menu items={blogMenu} classes='text-uppercase pb-2'/>
                         </div>
@@ -82,7 +81,7 @@ class Sidebar extends React.Component {
                                 onlyIcons={true}
                                 rel='noopener noreferrer'/>
                         </div>
-                    </Collapse>
+                    </div>
                 </div>
             </div>
         );

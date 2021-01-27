@@ -1,5 +1,4 @@
 import React from 'react'
-import { Card, CardImg, CardBody, CardTitle, CardFooter } from 'reactstrap'
 import { graphql, navigate, withPrefix } from 'gatsby'
 import Layout from '../layouts/blog'
 
@@ -18,15 +17,15 @@ const BlogContent = ({ data }) => {
           return (
             <div className="blog-post w-50 px-3 mb-4" key={post.id} onClick={ () => navigate(post.frontmatter.path + '/')}>
               <div className="post-wrapper">
-                <Card tag="a">
-                  <CardImg width="100%" src={withPrefix(`${post.frontmatter.image}`)} alt={post.frontmatter.title} />
-                  <CardBody>
-                    <CardTitle>{post.frontmatter.title}</CardTitle>
-                  </CardBody>
-                  <CardFooter className="border-0 text-right">
+                <div tag="a">
+                  <div width="100%" src={withPrefix(`${post.frontmatter.image}`)} alt={post.frontmatter.title} />
+                  <div>
+                    <div>{post.frontmatter.title}</div>
+                  </div>
+                  <div className="border-0 text-right">
                     <span className="publish-date">Publicado el {post.frontmatter.publishDate}</span>
-                  </CardFooter>
-                </Card>
+                  </div>
+                </div>
               </div>
             </div>
 

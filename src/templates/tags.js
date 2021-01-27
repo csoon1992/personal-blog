@@ -1,5 +1,4 @@
 import React from 'react'
-import { Row, Col } from 'reactstrap'
 import { graphql, navigate } from 'gatsby'
 import Link from 'gatsby-link'
 import Layout from '../layouts/blog'
@@ -14,22 +13,22 @@ const BlogTagContent = ({ data }) => {
     <Layout>
         {posts.map(({ node: post }) => { 
             return (
-                <Row className="blog-post mx-0 d-flex align-items-stretch mb-3" key={post.id} onClick={ () => navigate(post.frontmatter.path)}>
-                    <Col md="1" className="calendar d-flex align-items-center text-center">
+                <div className="blog-post mx-0 d-flex align-items-stretch mb-3" key={post.id} onClick={ () => navigate(post.frontmatter.path)}>
+                    <div md="1" className="calendar d-flex align-items-center text-center">
                     <div className="w-100">
                         <span className="day d-block">{post.frontmatter.day}</span>
                         <span className="month text-uppercase d-block">{post.frontmatter.month}</span>
                     </div>
-                    </Col>
+                    </div>
 
-                    <Col className="post-content py-2">
+                    <div className="post-content py-2">
                     <h2 className="post-title mb-0">
                         {post.frontmatter.title}
                     </h2>
 
                     <div className="post-excerpt pr-3">{post.excerpt}</div>
-                    </Col>
-                </Row>
+                    </div>
+                </div>
             )
         })}
 

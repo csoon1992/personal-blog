@@ -1,6 +1,5 @@
 import React from 'react'
 import { Location } from '@reach/router';
-import { Container, Card, CardTitle, CardGroup, CardBody } from 'reactstrap'
 import Helmet from 'react-helmet'
 import { basename } from 'path'
 import Link from 'gatsby-link'
@@ -82,30 +81,30 @@ export default function Template ({ data }) {
             {postHeader}
           </div>
 
-          <Container className="content">
+          <div className="content">
             <Content id="post-content" className="mw-100 px-0 mt-4 pb-3 border-bottom-light" content={post.htmlAst}/>
             
-            {post.frontmatter.attachments && (<Container><h4>Attachments</h4><CardGroup>
+            {post.frontmatter.attachments && (<div><h4>Attachments</h4><div>
               {post.frontmatter.attachments.map((attachment, i) => (
-                <Card key={i}>
-                  <CardBody>
-                    <CardTitle><a href={attachment.filename}>{basename(attachment.filename)}</a></CardTitle>
-                  </CardBody>
-                </Card>
+                <div key={i}>
+                  <div>
+                    <div><a href={attachment.filename}>{basename(attachment.filename)}</a></div>
+                  </div>
+                </div>
               ))}
-            </CardGroup></Container>)}
+            </div></div>)}
 
-            {post.frontmatter.related && (<Container><h4>Related</h4><CardGroup>
+            {post.frontmatter.related && (<div><h4>Related</h4><div>
               {related.map((r, i) => (
-                <Card key={i}>
-                  <CardBody>
-                    <CardTitle>
+                <div key={i}>
+                  <div>
+                    <div>
                       <Link to={r.path}>{r.title}</Link>
-                    </CardTitle>
-                  </CardBody>
-                </Card>
+                    </div>
+                  </div>
+                </div>
               ))}
-            </CardGroup></Container>)}
+            </div></div>)}
 
             <div className="post-tags border-bottom-light pt-2 pb-1">
               {tagContent}
@@ -114,10 +113,10 @@ export default function Template ({ data }) {
             <h4 className="h4 mt-4 mb-1 text-center">Comentarios</h4>
             <h5 className="h5 mb-2 text-center section-subtitle">Cualquier comentario o sugerencia es bienvenido</h5>
 
-            {data.site.siteMetadata.disqus && (<Container>
+            {data.site.siteMetadata.disqus && (<div>
               <div id='disqus_thread' />
-            </Container>)}
-          </Container>
+            </div>)}
+          </div>
         </div>
 
       </div>
