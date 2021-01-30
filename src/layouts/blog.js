@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Sidebar from '../components/Sidebar';
-import Footer from '../components/Blog/Footer';
 import MyCookieConsent from '../components/cookieConsent';
 
 import '../assets/scss/pages/about.scss';
@@ -64,8 +63,6 @@ const TemplateWrapper = ({ children, isPost, isAbout, location }) => {
             {pageContent}
           </div>
         </div>
-
-        <Footer/>
 
         <MyCookieConsent />
 

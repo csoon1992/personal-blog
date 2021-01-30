@@ -6,6 +6,7 @@ import {StaticQuery, graphql} from 'gatsby'
 import '../assets/scss/pages/index.scss';
 
 import MyCookieConsent from '../components/cookieConsent';
+import Footer from '../components/Footer'
 
 const TemplateWrapper = ({children}) => {
   return (
@@ -13,7 +14,7 @@ const TemplateWrapper = ({children}) => {
 
       <div id='index' className='App'>
         <Helmet
-          title="Home"
+          title="Cristina Soler"
           titleTemplate={`%s - ${data.site.siteMetadata.title}`}
           description={data.site.siteMetadata.subtitle}>
           <meta name="description" content={ `Web personal de ${data.site.siteMetadata.title}` } />
@@ -27,10 +28,11 @@ const TemplateWrapper = ({children}) => {
           <meta property="og:image" content="/files/index-bg.jpg" />
         </Helmet>
 
-        <div className='main-content mx-auto h-100 w-100'>
+        <div className='main-content'>
           {children}
         </div>
 
+        <Footer/>
         <MyCookieConsent/>
 
       </div>
