@@ -14,6 +14,7 @@ function MainMenu() {
 
             <div className="space-x-6">
                 <MenuLink to="/#about" title="Sobre mí" active="false" anchor="true" />
+                <MenuLink to="/#experiences" title="Experiencias" active="false" anchor="true" />
                 <MenuLink to="/#portfolio" title="Portfolio" active="false" anchor="true" />
                 <MenuLink to="/#references" title="Referencias" active="false" anchor="true" />
                 <MenuLink to="/#referents" title="Referentes" active="false" anchor="true" />
