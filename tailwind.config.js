@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#3AAFA9",
+        secondary: "#e83e8c",
         'magister-color': "#013A81",
         'cbi-color': "#2F7198",
         'wetaca-color': "#E2655E",
@@ -57,7 +58,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      borderStyle: ['hover', 'focus'],
+    },
   },
   plugins: [],
 }

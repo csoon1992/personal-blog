@@ -5,21 +5,25 @@ module.exports = {
     subtitle: "Desarrolladora web",
     technologies: [
       {
+        id: "gatsby",
         label: "Gatsby",
         icon: "techs/gatsby.svg",
         link: "https://www.gatsbyjs.org",
       },
       {
+        id: "netlify",
         label: "Netlify",
         icon: "techs/netlify.svg",
         link: "https://www.netlify.com/",
       },
       {
+        id: "reactjs",
         label: "React.js",
         icon: "techs/reactjs.svg",
         link: "https://reactjs.org/",
       },
       {
+        id: "graphql",
         label: "GraphQL",
         icon: "techs/graphql.svg",
         link: "https://graphql.org/",

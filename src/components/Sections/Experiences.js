@@ -1,12 +1,12 @@
 import React from 'react'
-import { SectionTitle, SectionSubtitle } from '../SectionUtilities'
+import { SectionTitle } from '../SectionUtilities'
 import ExperienceItem from './ExperienceItem'
 import ExperienceTimeline from './ExperienceTimeline'
 
 function Experiences() {
     return (
         <div id="experiences" className="section">
-            <div className="container mx-auto ">
+            <div className="container mx-auto py-12">
                 <SectionTitle title="Experiencia profesional" />
 
                 <ExperienceTimeline />

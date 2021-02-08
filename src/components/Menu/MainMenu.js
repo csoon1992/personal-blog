@@ -16,12 +16,8 @@ function MainMenu() {
                 <MenuLink to="/#about" title="Sobre mí" active="false" anchor="true" />
                 <MenuLink to="/#experiences" title="Experiencias" active="false" anchor="true" />
                 <MenuLink to="/#portfolio" title="Portfolio" active="false" anchor="true" />
-                <MenuLink to="/#references" title="Referencias" active="false" anchor="true" />
-                <MenuLink to="/#referents" title="Referentes" active="false" anchor="true" />
                 <MenuLink to="/blog" title="Blog" active="false" />
             </div>
-
-            <div>Botón menu</div>
             
         </div>
     )
