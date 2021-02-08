@@ -3,7 +3,7 @@ import Layout from '../layouts/index'
 import Hero from '../components/Sections/Hero'
 import About from '../components/Sections/About'
 import Experiences from '../components/Sections/Experiences'
-import ExperienceTimeline from '../components/Sections/ExperienceTimeline'
+import Portfolio from '../components/Sections/Portfolio'
 
 const IndexPage = () => {
   return (
@@ -12,7 +12,7 @@ const IndexPage = () => {
       <Hero />
       <About />
       <Experiences />
-      <ExperienceTimeline />
+      <Portfolio />
       
     </Layout>
   )
