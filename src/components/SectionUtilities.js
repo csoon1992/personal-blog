@@ -17,4 +17,16 @@ function SectionSubtitle({ title }) {
   );
 }
 
-export { SectionTitle, SectionSubtitle };
+function GradientPrimaryRoundedLink({ url, children, ...props }) {
+  return (
+    <a
+      href={url}
+      {...props}
+      className="inline-block py-4 px-8 rounded-full border border-solid border-primary text-primary bg-gradient-to-r hover:from-green-400 hover:to-primary hover:text-white hover:border-transparent"
+    >
+      {children}
+    </a>
+  );
+}
+
+export { SectionTitle, SectionSubtitle, GradientPrimaryRoundedLink };
