@@ -1,17 +1,10 @@
 import React from 'react'
-import Menu from '../Menu/MainMenu'
 import mePhoto from '../../assets/img/files/intro-me.png';
 
 function Hero() {
     return (
-        <div id="hero" className="section w-full h-screen flex flex-col">
-            <div className="menu sticky top-0 z-10 py-8 bg-white">
-                <div className="container mx-auto">
-                    <Menu/>
-                </div>
-            </div>
-            
-            <div className="container flex-1 grid grid-cols-5 gap-20 justify-end items-center pt-8 mx-auto">
+        <div id="hero" className="section -mt-14 w-full h-screen flex flex-col">
+            <div className="container flex-1 grid grid-cols-5 gap-20 justify-end items-center mx-auto">
               
                 <div className="col-span-2 h-full relative">
                     <img

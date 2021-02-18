@@ -1,22 +1,21 @@
-import React from 'react'
-import FooterLinks from './FooterLinks';
+import React from "react";
+import FooterLinks from "./FooterLinks";
 
 function Footer() {
-    return (
-        <footer className="fixed-bottom px-4 px-sm-5 pb-2">
-            <div className="contact d-flex align-items-center justify-content-center">
-                <div className="made-by d-inline-block mr-4">
-                    <small>Hecho por&nbsp;
-                        <span className="font-weight-bold">Cristina Soler</span>
-                    </small>
-                </div>
+  return (
+    <footer className="fixed-bottom bg-gray-600 text-white px-8 px-sm-5 py-16">
+      <div className="contact flex flex-col items-center content-center">
+        <div className="made-by mb-4">
+          Hecho por&nbsp;
+          <span className="font-bold">Cristina Soler</span>
+        </div>
 
-                <div className="links d-inline-block">
-                    <FooterLinks/>
-                </div>
-            </div>
-        </footer>
-    )
+        <div className="links">
+          <FooterLinks />
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

@@ -5,7 +5,7 @@ function ExperienceTimeline() {
     const experienceYears = [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021];
 
     return (
-        <div className="container mx-auto grid grid-cols-8 gap-x-4 gap-y-0">
+        <div className="container mx-auto grid grid-cols-8 gap-x-4 gap-y-0 my-12">
 
             <div className="top-fill-wrapper col-span-8">
                 <div className="grid grid-cols-8">
