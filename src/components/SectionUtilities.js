@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 function SectionTitle({ title }) {
   return (
@@ -17,16 +18,30 @@ function SectionSubtitle({ title }) {
   );
 }
 
-function GradientPrimaryRoundedLink({ url, children, ...props }) {
-  return (
-    <a
-      href={url}
-      {...props}
-      className="inline-block py-4 px-8 rounded-full border border-solid border-primary text-primary bg-gradient-to-r hover:from-green-400 hover:to-primary hover:text-white hover:border-transparent"
-    >
+function GradientPrimaryRoundedLink({
+  url,
+  isInternalLink = false,
+  children,
+  ...props
+}) {
+  const linkClass =
+    "inline-block py-4 px-8 rounded-full border border-solid border-primary text-primary bg-gradient-to-r hover:from-green-400 hover:to-primary hover:text-white hover:border-transparent";
+
+  let linkElement = (
+    <a href={url} {...props} className={linkClass}>
       {children}
     </a>
   );
+
+  if (isInternalLink) {
+    linkElement = (
+      <Link to={url} {...props} className={linkClass}>
+        {children}
+      </Link>
+    );
+  }
+
+  return linkElement;
 }
 
 export { SectionTitle, SectionSubtitle, GradientPrimaryRoundedLink };
