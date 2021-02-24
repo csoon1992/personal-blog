@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { GradientPrimaryRoundedLink } from "./SectionUtilities";
 
 function Card({ data }) {
@@ -13,7 +12,7 @@ function Card({ data }) {
         <div className="flex flex-1 flex-col">
           <div className="font-bold text-lg text-primary">{data.name}</div>
           <div className="pb-2 text-gray-400">{data.subtitle}</div>
-          <div className="pb-2">{data.description}</div>
+          <div className="pb-2">{data.description || ""}</div>
           <div className="project-techs"></div>
         </div>
 
