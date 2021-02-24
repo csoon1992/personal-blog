@@ -1,29 +1,48 @@
-import React from 'react'
-import { graphql, navigate, withPrefix } from 'gatsby'
-import Layout from '../layouts/blog'
+import React from "react";
+import { graphql, navigate, withPrefix } from "gatsby";
+import Layout from "../layouts/blog";
+import StickyMenu from "../components/Menu/StickyMenu";
 
 const BlogContent = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.filter(post => !post.node.frontmatter.hidden && post.node.frontmatter.contentType === 'blog');
+  const posts = data.allMarkdownRemark.edges.filter(
+    (post) =>
+      !post.node.frontmatter.hidden &&
+      post.node.frontmatter.contentType === "blog"
+  );
   //const bgColors = 5;
 
   return (
     <Layout>
-      <h1 className="title d-block w-100 text-center mb-3 primary-color font-weight-bold">Mis artículos</h1>
-      
+      <StickyMenu />
+
+      <h1 className="title d-block w-100 text-center mb-3 primary-color font-weight-bold">
+        Mis artículos
+      </h1>
+
       <div className="d-flex align-items-center justify-content-center flex-wrap">
         {posts.map(({ node: post }) => {
           //let randomBgColor = 'bg-color-' + Math.floor(Math.random() * bgColors);
 
           return (
-            <div className="blog-post w-50 px-3 mb-4" key={post.id} onClick={ () => navigate(post.frontmatter.path + '/')}>
+            <div
+              className="blog-post w-50 px-3 mb-4"
+              key={post.id}
+              onClick={() => navigate(post.frontmatter.path + "/")}
+            >
               <div className="post-wrapper">
                 <div tag="a">
-                  <div width="100%" src={withPrefix(`${post.frontmatter.image}`)} alt={post.frontmatter.title} />
+                  <div
+                    width="100%"
+                    src={withPrefix(`${post.frontmatter.image}`)}
+                    alt={post.frontmatter.title}
+                  />
                   <div>
                     <div>{post.frontmatter.title}</div>
                   </div>
                   <div className="border-0 text-right">
-                    <span className="publish-date">Publicado el {post.frontmatter.publishDate}</span>
+                    <span className="publish-date">
+                      Publicado el {post.frontmatter.publishDate}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -44,14 +63,14 @@ const BlogContent = ({ data }) => {
                 <div className="post-excerpt pr-3">{post.excerpt}</div>
               </Col>
             </Row>*/
-          )
+          );
         })}
-        </div>
+      </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogContent
+export default BlogContent;
 
 export const pageQuery = graphql`
   query PostsQuery {
@@ -71,4 +90,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

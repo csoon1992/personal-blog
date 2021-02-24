@@ -3,7 +3,6 @@ import { Location } from "@reach/router";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-import Sidebar from "../components/Sidebar";
 import Footer from "../components/Footer";
 import MyCookieConsent from "../components/cookieConsent";
 
@@ -24,9 +23,6 @@ const TemplateWrapper = ({ children, isPost, isAbout, location }) => {
     pageClass += " post-page";
 
     pageContent = <div className="pageContent pl-4 mx-auto">{children}</div>;
-  } else if (isAbout) {
-    pageClass += " about-page";
-    title = "Sobre mí";
   }
 
   return (
@@ -62,15 +58,7 @@ const TemplateWrapper = ({ children, isPost, isAbout, location }) => {
             )}
           </Location>
 
-          <div className="blog-wrapper mx-0 h-100">
-            <div lg="4" xl="3" className="sidebar-wrapper px-0">
-              <Sidebar siteMetadata={data.site.siteMetadata} isPost={isPost} />
-            </div>
-
-            <div lg="8" xl="9" className="pageContent-wrapper pl-0">
-              {pageContent}
-            </div>
-          </div>
+          <div className="blog-wrapper mx-0 h-100">{pageContent}</div>
 
           <Footer />
           <MyCookieConsent />
@@ -84,7 +72,15 @@ const pageQuery = graphql`
   query LayoutBlogQuery {
     site {
       siteMetadata {
-        ...sidebarFragment
+        title
+        subtitle
+        blogMenu {
+          label
+          link
+        }
+        author {
+          name
+        }
       }
     }
   }
