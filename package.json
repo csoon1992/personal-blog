@@ -25,6 +25,7 @@
     "gatsby-remark-prismjs": "^3.12.0",
     "gatsby-source-filesystem": "^2.10.0",
     "gatsby-transformer-remark": "^2.15.0",
+    "gatsby-transformer-sharp": "^2.12.0",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.4",
     "prismjs": "^1.23.0",
@@ -48,5 +49,6 @@
     "build": "gatsby build",
     "start": "gatsby develop",
     "test": "gatsby build"
-  }
+  },
+  "devDependencies": {}
 }

@@ -6,6 +6,8 @@ module.exports = {
       colors: {
         primary: "#3AAFA9",
         "primary-light": "#f5fbfa",
+        secondary: "#f35b8e",
+        "canary-color": "#E6D72A",
         "magister-color": "#013A81",
         "cbi-color": "#2F7198",
         "wetaca-color": "#E2655E",
