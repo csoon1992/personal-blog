@@ -1,12 +1,12 @@
 import React from "react";
-import { graphql } from "gatsby";
 import Layout from "../layouts/blog";
 import StickyMenu from "../components/Menu/StickyMenu";
 import { SectionTitle } from "../components/SectionUtilities";
 import Card from "../components/Blog/Card";
 
 const BlogContent = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.filter(
+  return <div>blogcontent here</div>;
+  /*const posts = data.allMarkdownRemark.edges.filter(
     (post) =>
       !post.node.frontmatter.hidden &&
       post.node.frontmatter.contentType === "blog"
@@ -26,27 +26,7 @@ const BlogContent = ({ data }) => {
         </div>
       </div>
     </Layout>
-  );
+  );*/
 };
 
 export default BlogContent;
-
-export const pageQuery = graphql`
-  query PostsQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            tags
-            image
-            contentType
-            publishDate: date(formatString: "DD MMMM YYYY", locale: "es-ES")
-            path
-          }
-        }
-      }
-    }
-  }
-`;

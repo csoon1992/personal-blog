@@ -33,8 +33,8 @@ function Portfolio() {
       <div className="container mx-auto py-12">
         <SectionTitle title="Mis trabajos públicos" />
         <div className="grid grid-cols-3 gap-12 lg:max-w-6xl mx-auto">
-          {publicsWorks.map((work) => (
-            <Card data={work} />
+          {publicsWorks.map((work, index) => (
+            <Card key={index} data={work} />
           ))}
         </div>
       </div>
