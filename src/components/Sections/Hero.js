@@ -1,16 +1,18 @@
 import React from "react";
-import mePhoto from "../../assets/img/files/intro-me.png";
-import CV from "../../assets/files/CV_Cristina.pdf";
+//import mePhoto from "../../assets/img/files/intro-me.png";
+//import CV from "../../assets/files/CV_Cristina.pdf";
 import { GradientPrimaryRoundedLink } from "../SectionUtilities";
+import Image from "next/image";
 
 function Hero() {
   return (
     <div id="hero" className="section -mt-14 w-full h-screen flex flex-col">
       <div className="container flex-1 grid grid-cols-5 gap-20 justify-end items-center mx-auto">
         <div className="col-span-2 h-full relative">
-          <img
-            src={mePhoto}
+          <Image
+            src="/img/intro-me.png"
             alt="Cristina Soler"
+            layout="fill"
             className="profile-photo absolute bottom-0 z-0"
           />
         </div>
@@ -27,7 +29,10 @@ function Hero() {
             </div>
 
             <div className="mt-8">
-              <GradientPrimaryRoundedLink url={CV} download={true}>
+              <GradientPrimaryRoundedLink
+                url={"/files/CV_Cristina.pdf"}
+                download={true}
+              >
                 Descargar CV
               </GradientPrimaryRoundedLink>
             </div>

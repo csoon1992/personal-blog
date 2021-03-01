@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/link;
+import Link from "next/link";
 
 // Icons
 import { IconContext } from "react-icons";
@@ -22,10 +22,10 @@ class FooterLinks extends React.Component {
           rel="noopener noreferrer"
         >
           <a>
-          <IconContext.Provider value={{ size: "34px" }}>
-            <FaLinkedin />
+            <IconContext.Provider value={{ size: "34px" }}>
+              <FaLinkedin />
             </IconContext.Provider>
-            </a>
+          </a>
         </Link>
 
         <Link
@@ -34,9 +34,12 @@ class FooterLinks extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-         <a> <IconContext.Provider value={{ size: "34px" }}>
-            <FaGithubAlt />
-          </IconContext.Provider></a>
+          <a>
+            {" "}
+            <IconContext.Provider value={{ size: "34px" }}>
+              <FaGithubAlt />
+            </IconContext.Provider>
+          </a>
         </Link>
 
         <Link
@@ -45,9 +48,12 @@ class FooterLinks extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-         <a> <IconContext.Provider value={{ size: "34px" }}>
-            <FaGitlab />
-          </IconContext.Provider></a>
+          <a>
+            {" "}
+            <IconContext.Provider value={{ size: "34px" }}>
+              <FaGitlab />
+            </IconContext.Provider>
+          </a>
         </Link>
 
         <Link
@@ -56,9 +62,12 @@ class FooterLinks extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-         <a> <IconContext.Provider value={{ size: "34px" }}>
-            <FaTwitter />
-          </IconContext.Provider></a>
+          <a>
+            {" "}
+            <IconContext.Provider value={{ size: "34px" }}>
+              <FaTwitter />
+            </IconContext.Provider>
+          </a>
         </Link>
 
         <Link
@@ -67,9 +76,12 @@ class FooterLinks extends React.Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-         <a> <IconContext.Provider value={{ size: "34px" }}>
-            <FaFacebook />
-          </IconContext.Provider></a>
+          <a>
+            {" "}
+            <IconContext.Provider value={{ size: "34px" }}>
+              <FaFacebook />
+            </IconContext.Provider>
+          </a>
         </Link>
       </div>
     );

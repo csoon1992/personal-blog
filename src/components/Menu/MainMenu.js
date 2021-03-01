@@ -1,6 +1,6 @@
 import React from "react";
 import MenuLink from "./MenuLink";
-import Link from "next/link;
+import Link from "next/link";
 
 function MainMenu() {
   return (
@@ -8,8 +8,9 @@ function MainMenu() {
       <div>
         <Link href="/" active="false" className="font-black text-2xl">
           <a>
-          <span>Cristina</span>
-          <span className="text-primary">Soler</span></a>
+            <span>Cristina</span>
+            <span className="text-primary">Soler</span>
+          </a>
         </Link>
       </div>
 

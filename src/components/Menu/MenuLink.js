@@ -1,6 +1,5 @@
 import React from "react";
-import { AnchorLink } from "gatsby-plugin-anchor-links";
-import { Link } from "gatsby";
+import Link from "next/link";
 
 function MenuLink({ to, title, active, anchor, className = "" }) {
   let linkClass = "menu-item uppercase font-black " + className;
@@ -17,9 +16,9 @@ function MenuLink({ to, title, active, anchor, className = "" }) {
 
   if (anchor) {
     link = (
-      <AnchorLink to={to} className={`string ${linkClass}`}>
+      <a href={to} className={`string ${linkClass}`}>
         {title}
-      </AnchorLink>
+      </a>
     );
   }
 

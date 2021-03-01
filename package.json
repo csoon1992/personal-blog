@@ -5,6 +5,7 @@
   "author": "Cristina Soler <csoon1992@gmail.com>",
   "dependencies": {
     "autoprefixer": "^10.2.3",
+    "next": "^10.0.7",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.4",
     "prismjs": "^1.23.0",
@@ -14,6 +15,8 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
     "rehype-react": "^6.2.0",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1",
     "tailwindcss": "^2.0.2",
     "typeface-montserrat": "^1.1.13"
   },
@@ -25,9 +28,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "next build",
-    "start": "next start",
-    "dev": "next dev"
+    "build": "npx next build",
+    "start": "npx next start",
+    "dev": "npx next dev"
   },
   "devDependencies": {}
 }
