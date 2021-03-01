@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import Link from "next/link;
 
 function SectionTitle({ title }) {
   return (
@@ -35,8 +35,8 @@ function GradientPrimaryRoundedLink({
 
   if (isInternalLink) {
     linkElement = (
-      <Link to={url} {...props} className={linkClass}>
-        {children}
+      <Link href={url} {...props} className={linkClass}>
+        <a>{children}</a>
       </Link>
     );
   }

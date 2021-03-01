@@ -27,9 +27,11 @@ function Card({ post }) {
             title={`Ver ${post.title}`}
             className="block rounded-full bg-primary text-white p-2 transition-colors duration-300 hover:bg-secondary"
           >
-            <IconContext.Provider value={{ size: "20px" }}>
-              <IoArrowForward />
-            </IconContext.Provider>
+            <a>
+              <IconContext.Provider value={{ size: "20px" }}>
+                <IoArrowForward />
+              </IconContext.Provider>
+            </a>
           </Link>
         </div>
       </div>

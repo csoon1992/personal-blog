@@ -1,13 +1,13 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
 // Utilities
-import kebabCase from "lodash/kebabCase"
+import kebabCase from "lodash/kebabCase";
 
 // Components
-import Helmet from "react-helmet"
-import { Link, graphql } from "gatsby"
-import Layout from '../layouts/blog'
+import Helmet from "react-helmet";
+import { Link, graphql } from "gatsby";
+import Layout from "../layouts/blog";
 
 const AllTagsPage = ({
   data: {
@@ -17,25 +17,30 @@ const AllTagsPage = ({
     },
   },
 }) => (
-    <Layout>
-        <div id="tags-content">
-            <Helmet title={title} />
-            <h1 className="mb-4">Todas las etiquetas</h1>
+  <Layout>
+    <div id="tags-content">
+      <Helmet title={title} />
+      <h1 className="mb-4">Todas las etiquetas</h1>
 
-            <div className="tag-list">
-                {group.map(tag => (
-                    <div className="tag mb-3">
-                        <div className="tag-content py-2 px-4" key={tag.fieldValue}>
-                            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`} className="d-block">
-                                {tag.fieldValue} ({tag.totalCount})
-                            </Link>
-                        </div>
-                    </div> 
-                ))}
+      <div className="tag-list">
+        {group.map((tag) => (
+          <div className="tag mb-3">
+            <div className="tag-content py-2 px-4" key={tag.fieldValue}>
+              <Link
+                href={`/tags/${kebabCase(tag.fieldValue)}/`}
+                className="d-block"
+              >
+                <a>
+                  {tag.fieldValue} ({tag.totalCount})
+                </a>
+              </Link>
             </div>
-        </div>
-    </Layout>
-)
+          </div>
+        ))}
+      </div>
+    </div>
+  </Layout>
+);
 
 AllTagsPage.propTypes = {
   data: PropTypes.shape({
@@ -53,7 +58,7 @@ AllTagsPage.propTypes = {
       }),
     }),
   }),
-}
+};
 
 export default AllTagsPage;
 
@@ -64,13 +69,11 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
-      limit: 2000
-    ) {
+    allMarkdownRemark(limit: 2000) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount
       }
     }
   }
-`
+`;

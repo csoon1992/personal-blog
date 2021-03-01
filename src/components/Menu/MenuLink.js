@@ -1,23 +1,29 @@
-import React from 'react'
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import { Link } from 'gatsby'
+import React from "react";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { Link } from "gatsby";
 
 function MenuLink({ to, title, active, anchor, className = "" }) {
-    let linkClass = "menu-item uppercase font-black " + className;
+  let linkClass = "menu-item uppercase font-black " + className;
 
-    if (active == "true") {
-        linkClass+=" underline text-primary"
-    }
+  if (active == "true") {
+    linkClass += " underline text-primary";
+  }
 
-    let link = <Link to={to} className={linkClass}>{title}</Link>
+  let link = (
+    <Link href={to} className={linkClass}>
+      <a>{title}</a>
+    </Link>
+  );
 
-    if (anchor) {
-        link = <AnchorLink to={to} className={`string ${linkClass}`}>
-            {title}
-        </AnchorLink>
-    }
-    
-    return link;
+  if (anchor) {
+    link = (
+      <AnchorLink to={to} className={`string ${linkClass}`}>
+        {title}
+      </AnchorLink>
+    );
+  }
+
+  return link;
 }
 
 export default MenuLink;

@@ -1,14 +1,15 @@
 import React from "react";
 import MenuLink from "./MenuLink";
-import { Link } from "gatsby";
+import Link from "next/link;
 
 function MainMenu() {
   return (
     <div id="menu-items" className="flex justify-between items-center">
       <div>
-        <Link to="/" active="false" className="font-black text-2xl">
+        <Link href="/" active="false" className="font-black text-2xl">
+          <a>
           <span>Cristina</span>
-          <span className="text-primary">Soler</span>
+          <span className="text-primary">Soler</span></a>
         </Link>
       </div>
 
