@@ -1,13 +1,22 @@
 import React from "react";
 import { IconContext } from "react-icons";
 import { IoTime, IoArrowForward } from "react-icons/io5";
-import Link from "gatsby-link";
+import Link from "next/link";
+import PostDate from "./PostDate";
+import Image from "next/image";
 
 function Card({ post }) {
   return (
-    <div className="card flex flex-col bg-white border border-solid border-gray-200 rounded-xl shadow-xl">
-      <div className="bg-gray-400 h-56 rounded-t-xl"></div>
-      <div className="bg-white rounded-tl-xl rounded-br-xl ml-10 -mt-20 p-8 space-y-6 flex flex-col flex-1">
+    <div className="card flex flex-col bg-white border border-solid border-gray-200 rounded-xl shadow-xl relative">
+      <div className="bg-gray-400 h-56 rounded-t-xl relative">
+        <Image
+          className="object-cover rounded-t-xl"
+          layout="fill"
+          src={post.image}
+          alt={post.title}
+        />
+      </div>
+      <div className="bg-white rounded-tl-xl rounded-br-xl ml-10 -mt-20 p-8 space-y-6 flex flex-col flex-1 relative">
         <h2 className="flex-1 font-bold text-2xl">{post.title}</h2>
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row align-items-center space-x-2">
@@ -19,15 +28,16 @@ function Card({ post }) {
               </IconContext.Provider>
             </div>
 
-            <div className="text-gray-500">{post.publishDate}</div>
+            <div className="text-gray-500">
+              <PostDate date={post.date} />
+            </div>
           </div>
 
-          <Link
-            to={post.path}
-            title={`Ver ${post.title}`}
-            className="block rounded-full bg-primary text-white p-2 transition-colors duration-300 hover:bg-secondary"
-          >
-            <a>
+          <Link href={post.path}>
+            <a
+              title={`Ver ${post.title}`}
+              className="block rounded-full bg-primary text-white p-2 transition-colors duration-300 hover:bg-secondary"
+            >
               <IconContext.Provider value={{ size: "20px" }}>
                 <IoArrowForward />
               </IconContext.Provider>

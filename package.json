@@ -5,6 +5,7 @@
   "author": "Cristina Soler <csoon1992@gmail.com>",
   "dependencies": {
     "autoprefixer": "^10.2.3",
+    "date-fns": "^2.19.0",
     "next": "^10.0.7",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.4",
@@ -32,5 +33,9 @@
     "start": "npx next start",
     "dev": "npx next dev"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "fs": "^0.0.1-security",
+    "gray-matter": "^4.0.2",
+    "path": "^0.12.7"
+  }
 }

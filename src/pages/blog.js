@@ -4,14 +4,9 @@ import StickyMenu from "../components/Menu/StickyMenu";
 import { SectionTitle } from "../components/SectionUtilities";
 import Card from "../components/Blog/Card";
 
-const BlogContent = ({ data }) => {
-  return <div>blogcontent here</div>;
-  /*const posts = data.allMarkdownRemark.edges.filter(
-    (post) =>
-      !post.node.frontmatter.hidden &&
-      post.node.frontmatter.contentType === "blog"
-  );
+import { getAllPosts } from "../lib/api";
 
+const BlogContent = ({ posts }) => {
   return (
     <Layout>
       <StickyMenu />
@@ -20,13 +15,21 @@ const BlogContent = ({ data }) => {
         <SectionTitle title="Mis artículos" />
 
         <div className="grid grid-cols-3 gap-12">
-          {posts.map(({ node: post }) => {
-            return <Card post={post.frontmatter} />;
-          })}
+          {posts.map((post) => (
+            <Card key={post.path} post={post} />
+          ))}
         </div>
       </div>
     </Layout>
-  );*/
+  );
 };
 
 export default BlogContent;
+
+export async function getStaticProps() {
+  const posts = getAllPosts();
+
+  return {
+    props: { posts },
+  };
+}
