@@ -1,15 +1,16 @@
 ---
 contentType: blog
-path: /como-crear-tema-hijo-en-prestashop
+slug: /como-crear-tema-hijo-en-prestashop
 image: /files/chiltheme-header.jpg
 title: Cómo crear un tema hijo en Prestashop 1.7
-date: '2019-03-04T21:00:00+01:00'
+date: "2019-03-04T21:00:00+01:00"
 tags:
   - prestashop
   - prestashop 1.7.x
   - temas Prestashop
   - childtheme
 ---
+
 A petición de un buen compañero de trabajo, hoy os voy a contar cómo crear un tema hijo (_childtheme_) en Prestashop 1.7.x.
 
 Antes de comenzar, pongámonos con la parte teórica para responder a dos preguntas clave:
@@ -79,29 +80,31 @@ Ahora, para añadir la referencia justo debajo del nombre del producto modificar
 Así está este bloque en el padre:
 
 ```html
-{block name='page_header_container'}
-  {block name='page_header'}
-    <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
-  {/block}
-{/block}
+{block name='page_header_container'} {block name='page_header'}
+<h1 class="h1" itemprop="name">
+  {block name='page_title'}{$product.name}{/block}
+</h1>
+{/block} {/block}
 ```
 
 Así quedará este bloque en el tema hijo:
 
 ```html
-{block name='page_header_container'}
-  {block name='page_header'}
-    <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
-    <p class="product-reference">{$product.reference}</p>
-  {/block}
-{/block}
+{block name='page_header_container'} {block name='page_header'}
+<h1 class="h1" itemprop="name">
+  {block name='page_title'}{$product.name}{/block}
+</h1>
+<p class="product-reference">{$product.reference}</p>
+{/block} {/block}
 ```
 
 Para tener algún cambio más de ejemplo, eliminaremos la descripción de la página de producto, lo cual se encuentra en el bloque _product_description_short_ del tema padre:
 
 ```html
 {block name='product_description_short'}
-  <div id="product-description-short-{$product.id}" itemprop="description">{$product.description_short nofilter}</div>
+<div id="product-description-short-{$product.id}" itemprop="description">
+  {$product.description_short nofilter}
+</div>
 {/block}
 ```
 
@@ -114,16 +117,13 @@ Lo modificamos y quedará así:
 Por tanto, la plantilla product.tpl del tema hijo completa, con la referencia incluida y la descripción corta eliminada, quedará así:
 
 ```html
-{extends file='parent:catalog/product.tpl'}
-
-{block name='page_header_container'}
-  {block name='page_header'}
-      <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
-      <p class="product-reference">{$product.reference}</p>
-  {/block}
-{/block}
-
-{block name='product_description_short'}{/block}
+{extends file='parent:catalog/product.tpl'} {block name='page_header_container'}
+{block name='page_header'}
+<h1 class="h1" itemprop="name">
+  {block name='page_title'}{$product.name}{/block}
+</h1>
+<p class="product-reference">{$product.reference}</p>
+{/block} {/block} {block name='product_description_short'}{/block}
 ```
 
 Este asunto, aunque es sencillo, tiene varias vertientes, ya que al igual que se pueden crear plantillas en el tema hijo, se pueden crear nuevos CSS y JS que predominen frente a los existentes en el tema padre.

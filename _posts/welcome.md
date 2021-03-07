@@ -1,6 +1,6 @@
 ---
 contentType: blog
-path: /bienvenida
+slug: /bienvenida
 image: /files/teclas_blog.jpg
 title: Welcome!
 date: "2018-12-16T14:00:00+01:00"

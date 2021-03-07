@@ -16,7 +16,7 @@ function Card({ post }) {
           alt={post.title}
         />
       </div>
-      <div className="bg-white rounded-tl-xl rounded-br-xl ml-10 -mt-20 p-8 space-y-6 flex flex-col flex-1 relative">
+      <div className="bg-white rounded-tl-xl rounded-br-xl ml-10 -mt-20 p-8 space-y-6 flex flex-col flex-1 relative shadow-lg">
         <h2 className="flex-1 font-bold text-2xl">{post.title}</h2>
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row align-items-center space-x-2">
@@ -33,7 +33,7 @@ function Card({ post }) {
             </div>
           </div>
 
-          <Link href={post.path}>
+          <Link href="/posts/[slug]" as={`/posts${post.slug}`}>
             <a
               title={`Ver ${post.title}`}
               className="block rounded-full bg-primary text-white p-2 transition-colors duration-300 hover:bg-secondary"

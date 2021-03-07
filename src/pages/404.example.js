@@ -1,5 +1,8 @@
-import React from 'react'
-import Layout from '../layouts/blog'
+/**
+ * Create 404.js file to show a custom 404 page
+ */
+import React from "react";
+import Layout from "../layouts/blog";
 
 const NotFoundPage = () => (
   <div>
@@ -8,6 +11,6 @@ const NotFoundPage = () => (
       <p>You just hit a route that doesn't exist... the sadness.</p>
     </Layout>
   </div>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

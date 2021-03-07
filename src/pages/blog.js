@@ -16,7 +16,7 @@ const BlogContent = ({ posts }) => {
 
         <div className="grid grid-cols-3 gap-12">
           {posts.map((post) => (
-            <Card key={post.path} post={post} />
+            <Card key={post.slug} post={post} />
           ))}
         </div>
       </div>

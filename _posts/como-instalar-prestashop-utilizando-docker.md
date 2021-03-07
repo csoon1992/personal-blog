@@ -1,15 +1,16 @@
 ---
 contentType: blog
-path: /como-instalar-prestashop-utilizando-docker
+slug: /como-instalar-prestashop-utilizando-docker
 image: /files/docker-ps-header.jpg
 title: Cómo instalar Prestashop utilizando Docker
-date: '2019-01-04T16:00:00+01:00'
+date: "2019-01-04T16:00:00+01:00"
 tags:
   - prestashop
   - prestashop 1.7.x
   - docker
   - composer
 ---
+
 En este post voy a contar cómo instalar Prestashop utilizando [Docker](https://docs.docker.com/get-started/). Es un post muy básico y sencillo que espero que ayude, especialmente, a los que se estén inicializando en el mundo de Prestashop.
 
 Me centraré en la versión Prestashop 1.7.5.0 (así me servirá para cacharrear y ver las novedades de esta versión que, si son interesantes, os las contaré más adelante) y, en lugar de utilizar el docker-compose.yml que trae Prestashop por defecto, he utilizado un repositorio [prestashop-vessel](https://github.com/csoon1992/prestashop-vessel) que he creado anteriormente con la colaboración de mi programador friki favorito: [Antonio Gázquez](https://antoniogazquez.me/).
@@ -27,19 +28,19 @@ Preparar nuestro entorno con Docker es muy sencillo y rápido. Lo único que ten
 3. Crear una copia de .env.example llamada .env con la configuración deseada:
    `$ cp .env.example .env`
 4. Clonar el repositorio git de Prestashop dentro de vessel:
-   `$ git clone git@github.com:PrestaShop/PrestaShop.git prestashop` 
+   `$ git clone git@github.com:PrestaShop/PrestaShop.git prestashop`
 5. Ir a la raíz del proyecto
    `$ cd prestashop`
 6. Hacer checkout a la rama Prestashop 1.7.5.x para trabajar con esta versión.
    `$ git checkout 1.7.5.x`
 7. Eliminar el directorio .git de prestashop de nuestro proyecto para no pushear al repositorio oficial de Prestashop que nos clonamos:
-    `$ rm -Rvf ./.git`
+   `$ rm -Rvf ./.git`
 8. Arrancar docker:
-    `$ cd ..`
-    `$ ./vessel start`
-  Tras esto, si todo ha ido correctamente, la carpeta de instalación install-dev pasará a llamarse, en este caso: adminps, tal y como he configurado en el .env.
+   `$ cd ..`
+   `$ ./vessel start`
+   Tras esto, si todo ha ido correctamente, la carpeta de instalación install-dev pasará a llamarse, en este caso: adminps, tal y como he configurado en el .env.
 9. Instalar las dependencias de composer (esto llevará un rato):
-    `$ ./vessel composer install`
+   `$ ./vessel composer install`
 
 ¡Ya tenemos listo nuestro entorno!
 Ahora estamos listos para acceder a http://localhost en nuestro navegador para comenzar el proceso de instalación de Prestashop!
@@ -62,7 +63,7 @@ Ya sabéis, nos leemos el acuerdo como siempre, aceptamos y listo.
 
 ### 3. Compatibilidad del sistema
 
-Yo de momento pasaré de la recomendación de Prestashop para obtener los datos de internacionalización más recientes, por lo que no actualizaré el **paquete de sistema ICU** ni la **extensión Intl PHP**. 
+Yo de momento pasaré de la recomendación de Prestashop para obtener los datos de internacionalización más recientes, por lo que no actualizaré el **paquete de sistema ICU** ni la **extensión Intl PHP**.
 
 ![Instalación de Prestashop: Paso 3 sin error](/files/03_install_b.png)
 
