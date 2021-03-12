@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "gatsby-link";
-import { withPrefix } from "gatsby";
+import Link from "next/link";
+import Image from "next/image";
 
 /**
  * Menu Component
@@ -21,7 +21,12 @@ class Menu extends React.Component {
           let link = (
             <Link href={item.link} title={item.label} activeClassName="active">
               <a>
-                <img src={withPrefix(`/files/${item.icon}`)} alt={item.label} />
+                <Image
+                  className="object-cover rounded-t-xl"
+                  layout="fill"
+                  src={`/files/${item.icon}`}
+                  alt={post.item.label}
+                />
               </a>
             </Link>
           );
@@ -34,7 +39,12 @@ class Menu extends React.Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={withPrefix(`/files/${item.icon}`)} alt={item.label} />
+                <Image
+                  className="object-cover rounded-t-xl"
+                  layout="fill"
+                  src={`/files/${item.icon}`}
+                  alt={post.item.label}
+                />
               </a>
             );
           }

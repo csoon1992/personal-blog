@@ -1,3 +1,5 @@
+const { FaBorderNone } = require("react-icons/fa");
+
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: false, // or 'media' or 'class'
@@ -6,6 +8,7 @@ module.exports = {
       colors: {
         primary: "#3AAFA9",
         "primary-light": "#f5fbfa",
+        "primary-dark": "#379392",
         secondary: "#f35b8e",
         "canary-color": "#E6D72A",
         "magister-color": "#013A81",
@@ -57,6 +60,40 @@ module.exports = {
         26: "26",
         47: "47",
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            "h1, h2, h3, h4, h5, h6": {
+              color: theme("colors.primary"),
+              fontWeight: "normal",
+            },
+            a: {
+              color: theme("colors.primary"),
+              textDecoration: "none",
+              "&:hover": {
+                color: theme("colors.primary.darker"),
+              },
+            },
+            code: {
+              color: theme("colors.secondary"),
+              backgroundColor: theme("colors.gray.100"),
+              padding: theme("spacing.1"),
+              display: "block",
+              fontWeight: "normal",
+              borderRadius: ".125rem",
+              marginTop: ".5rem",
+            },
+            "code::before": false,
+            "code::after": false,
+            "ol > li > *:first-child": {
+              marginTop: "0",
+            },
+            "ol > li > *:last-child": {
+              marginBottom: "0",
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
@@ -64,5 +101,5 @@ module.exports = {
       borderStyle: ["hover", "focus"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

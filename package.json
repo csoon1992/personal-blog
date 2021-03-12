@@ -1,14 +1,15 @@
 {
   "name": "cristinasoler-personal-site-blog",
-  "description": "Personal site make with Gatsby, Bootstrap4 and Netlify CMS",
-  "version": "1.0.0",
+  "description": "Personal site make with Next.js, TailwindCSS 2.0 and Netlify CMS",
+  "version": "2.0.0",
   "author": "Cristina Soler <csoon1992@gmail.com>",
   "dependencies": {
-    "autoprefixer": "^10.2.3",
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^10.2.5",
     "date-fns": "^2.19.0",
-    "next": "^10.0.7",
+    "next": "^10.0.8",
     "node-sass": "^5.0.0",
-    "postcss": "^8.2.4",
+    "postcss": "^8.2.8",
     "prismjs": "^1.23.0",
     "react": "^17.0.1",
     "react-cookie-consent": "^6.2.1",
@@ -22,9 +23,8 @@
     "typeface-montserrat": "^1.1.13"
   },
   "keywords": [
-    "gatsby",
-    "bootstrap",
-    "bootswatch",
+    "nextjs",
+    "tailwindcss",
     "netlify"
   ],
   "license": "MIT",

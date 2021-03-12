@@ -33,7 +33,7 @@ function ExperienceItem({
         <p className="text-gray-400 text-sm">
           {position} - Desde {fromDate} hasta {toDate}
         </p>
-        <p className="resume mb-0">{children}</p>
+        <div className="resume mb-0">{children}</div>
       </div>
     </div>
   );

@@ -25,7 +25,7 @@ En la terminal, vamos a la carpeta raíz de nuestro proyecto y ejecutamos el sig
 
 `$ ./vessel install`
 
-![Parámetros para el script index_cli](/files/posts/how-install-ps-via-cli/index_cli_params.png)
+![Parámetros para el script index_cli](/files/how-install-ps-via-cli/index_cli_params.png)
 
 Nota: mediante este comando se ejecuta el script **index_cli.php** que hay en la carpeta de instalación de Prestashop (install-dev/) que es el script que nos permitirá realizar la instalación de Prestashop mediante comando.
 
@@ -36,7 +36,7 @@ Ahora procedemos a crear el comando que nos realizará la instalación completa 
 Según la configuración deseada, le pasaremos unas opciones u otras. En mi caso me ha valido con las siguientes:
 
 - **db_server:** si el puerto configurado en docker-compose.yml es distinto al puerto por defecto (3306) es muy importante que le especifiquemos el puerto ya que de otro modo no encontrará el servidor mysql.
-- **db_user: **usuario mysql.
+- **db_user:** usuario mysql.
 - **db_password:** contraseña para el usuario mysql.
 - **db_create:** forzamos que se cree la base de datos si no existe, ya que nosostros no hemos creado la base de datos previamente.
 - **prefix:** prefijo para las tablas creadas en esta base de datos.

@@ -1,6 +1,9 @@
 import React from "react";
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
+import { SectionTitle } from "../../components/SectionUtilities";
+import Layout from "../../layouts/blog";
+import StickyMenu from "../../components/Menu/StickyMenu";
 
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import markdownToHtml from "../../lib/markdownToHtml";
@@ -11,7 +14,19 @@ function BlogPost({ post }) {
     return <ErrorPage statusCode={404} />;
   }
 
-  return <div>{post.title}</div>;
+  return (
+    <Layout>
+      <StickyMenu />
+      <article className="container mx-auto py-12">
+        <SectionTitle title={post.title} />
+
+        <div
+          className="prose mx-auto xl:max-w-4xl"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        ></div>
+      </article>
+    </Layout>
+  );
 }
 
 export default BlogPost;

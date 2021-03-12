@@ -6,7 +6,8 @@ import kebabCase from "lodash/kebabCase";
 
 // Components
 import Helmet from "react-helmet";
-import { Link, graphql } from "gatsby";
+import Link from "next/link";
+//import { graphql } from "gatsby";
 import Layout from "../layouts/blog";
 
 const AllTagsPage = ({
@@ -62,7 +63,7 @@ AllTagsPage.propTypes = {
 
 export default AllTagsPage;
 
-export const pageQuery = graphql`
+/*export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
@@ -76,4 +77,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`;*/
