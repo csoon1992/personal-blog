@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql, navigate } from "gatsby";
 import Link from "gatsby-link";
-import Layout from "../layouts/blog";
+import Layout from "../layouts/index";
 
 // Icons
 import { IconContext } from "react-icons";

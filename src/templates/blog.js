@@ -5,7 +5,7 @@ import { basename } from "path";
 import Link from "gatsby-link";
 import { kebabCase } from "lodash";
 import { graphql, withPrefix } from "gatsby";
-import Layout from "../layouts/blog";
+import Layout from "../layouts/index";
 
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 

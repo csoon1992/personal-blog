@@ -66,6 +66,7 @@ module.exports = {
             "h1, h2, h3, h4, h5, h6": {
               color: theme("colors.primary"),
               fontWeight: "normal",
+              margin: "1.5rem 0 0",
             },
             a: {
               color: theme("colors.primary"),
@@ -73,6 +74,9 @@ module.exports = {
               "&:hover": {
                 color: theme("colors.primary.darker"),
               },
+            },
+            p: {
+              margin: "0",
             },
             code: {
               color: theme("colors.secondary"),

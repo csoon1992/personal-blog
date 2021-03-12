@@ -2,8 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import { SectionTitle } from "../../components/SectionUtilities";
-import Layout from "../../layouts/blog";
-import StickyMenu from "../../components/Menu/StickyMenu";
+import Layout from "../../layouts/index";
 
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import markdownToHtml from "../../lib/markdownToHtml";
@@ -16,7 +15,6 @@ function BlogPost({ post }) {
 
   return (
     <Layout>
-      <StickyMenu />
       <article className="container mx-auto py-12">
         <SectionTitle title={post.title} />
 

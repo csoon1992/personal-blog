@@ -2,7 +2,7 @@
  * Create 404.js file to show a custom 404 page
  */
 import React from "react";
-import Layout from "../layouts/blog";
+import Layout from "../layouts/index";
 
 const NotFoundPage = () => (
   <div>

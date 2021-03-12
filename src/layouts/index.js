@@ -1,12 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 //import Helmet from "react-helmet";
+import StickyMenu from "../components/Menu/StickyMenu";
 import MyCookieConsent from "../components/cookieConsent";
 import Footer from "../components/Footer";
 
 const TemplateWrapper = ({ children }) => {
   return (
-    <div id="index" className="App">
+    <div>
       {/*<Helmet
         title="Cristina Soler"
         titleTemplate={`%s - ${data.site.siteMetadata.title}`}
@@ -28,8 +29,8 @@ const TemplateWrapper = ({ children }) => {
         <meta name="og:locale" content="es_ES" />
         <meta property="og:image" content="/files/index-bg.jpg" />
       </Helmet>*/}
-
-      <div className="main-content">{children}</div>
+      <StickyMenu />
+      <div className="main-content pt-12">{children}</div>
 
       <Footer />
       <MyCookieConsent />

@@ -8,7 +8,7 @@ import kebabCase from "lodash/kebabCase";
 import Helmet from "react-helmet";
 import Link from "next/link";
 //import { graphql } from "gatsby";
-import Layout from "../layouts/blog";
+import Layout from "../layouts/index";
 
 const AllTagsPage = ({
   data: {

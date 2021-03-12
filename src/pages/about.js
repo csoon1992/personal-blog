@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../layouts/blog";
+import Layout from "../layouts/index";
 import Image from "next/image";
 
 // Icons
