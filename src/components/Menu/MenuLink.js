@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 function MenuLink({ to, title, active, anchor, className = "" }) {
-  let linkClass = "menu-item uppercase font-black " + className;
+  let linkClass = "menu-item uppercase " + className;
 
   if (active == "true") {
     linkClass += " underline text-primary";
