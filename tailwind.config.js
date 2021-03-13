@@ -1,5 +1,3 @@
-const { FaBorderNone } = require("react-icons/fa");
-
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: false, // or 'media' or 'class'
