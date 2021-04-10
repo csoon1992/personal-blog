@@ -6,15 +6,27 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <div id="hero" className="section -mt-14 w-full h-screen flex flex-col">
+    <div
+      id="hero"
+      className="border border-red-600 section -mt-14 w-full h-screen flex flex-col"
+    >
       <div className="container flex-1 grid grid-cols-5 gap-20 justify-end items-center mx-auto">
-        <div className="col-span-2 h-full relative">
-          <Image
-            src="/img/intro-me.png"
-            alt="Cristina Soler"
-            layout="fill"
-            className="profile-photo absolute bottom-0 z-0"
-          />
+        <div className="col-span-2 h-full">
+          <div className="p-8 w-full h-full relative">
+            <Image
+              src="/img/intro-me.png"
+              alt="Cristina Soler"
+              layout="fill"
+              objectFit="contain"
+              className="profile-photo absolute bottom-0 z-0 h-full"
+              style={{ minHeight: "0" }}
+            />
+            <style jsx>{`
+              .profile-photo {
+                height: 100%;
+              }
+            `}</style>
+          </div>
         </div>
 
         <div className="content col-span-3 col-start-3 col-end-5">
