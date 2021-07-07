@@ -34,7 +34,6 @@ function Hero() {
           </div>
 
           <div>
-            <div className="text-gray-600 text-lg">Hola, </div>
             <h2 className="text-5xl font-bold my-4">
               Soy <span className="text-primary">Cristina</span> Soler
             </h2>
