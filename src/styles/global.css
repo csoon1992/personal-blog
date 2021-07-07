@@ -5,3 +5,11 @@
 p {
     margin-bottom: 1rem;
 }
+
+.section:nth-child(even) {
+    @apply bg-dark-high;
+}
+
+.section:nth-child(odd) {
+    @apply bg-dark-low;
+}

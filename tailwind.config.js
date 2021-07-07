@@ -19,6 +19,8 @@ module.exports = {
         "redegal-color": "#318DCC",
         "baby-color": "#E0008A",
         "trevenque-color": "#1EBD00",
+        "dark-high": "#1F2235",
+        "dark-low": "#23263A",
       },
       gridTemplateColumns: {
         // Simple 24 column grid
@@ -108,5 +110,8 @@ module.exports = {
       borderStyle: ["hover", "focus"],
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };

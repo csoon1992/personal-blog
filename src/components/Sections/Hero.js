@@ -5,10 +5,7 @@ import SocialLinks from "../SocialLinks";
 
 function Hero() {
   return (
-    <div
-      id="hero"
-      className="border border-red-600 section -mt-14 w-full h-screen flex flex-col"
-    >
+    <div id="hero" className="section w-full h-screen flex flex-col">
       <div className="container flex-1 grid grid-cols-5 gap-20 justify-end items-center mx-auto">
         <div className="col-span-2 h-full">
           <div className="p-8 w-full h-full relative">
@@ -29,7 +26,7 @@ function Hero() {
         </div>
 
         <div className="content col-span-3 col-start-3 col-end-5">
-          <div className="links text-primary">
+          <div className="links">
             <SocialLinks />
           </div>
 
@@ -37,7 +34,7 @@ function Hero() {
             <h2 className="text-5xl font-bold my-4">
               Soy <span className="text-primary">Cristina</span> Soler
             </h2>
-            <div className="text-gray-600 text-lg">
+            <div className="text-lg">
               Programadora web especializada en el mundo del comercio
               electrónico con muchas inquietudes sobre el desarrollo a medida.
             </div>

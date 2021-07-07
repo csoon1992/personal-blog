@@ -6,7 +6,7 @@ import LayoutHead from "../components/Sections/LayoutHead";
 
 const TemplateWrapper = ({ children }) => {
   return (
-    <div>
+    <div className="bg-dark-high text-white">
       <LayoutHead />
       <StickyMenu />
       <div className="main-content">{children}</div>

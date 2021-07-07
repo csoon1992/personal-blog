@@ -3,7 +3,7 @@ import { SectionTitle, SectionSubtitle } from "../SectionUtilities";
 
 function About() {
   return (
-    <div id="about" className="section bg-primary-light">
+    <div id="about" className="section">
       <div className="container mx-auto py-12">
         <SectionTitle title="Sobre mí" />
 
