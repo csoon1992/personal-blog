@@ -9,7 +9,7 @@ const TemplateWrapper = ({ children }) => {
     <div>
       <LayoutHead />
       <StickyMenu />
-      <div className="main-content pt-12">{children}</div>
+      <div className="main-content">{children}</div>
 
       <Footer />
       <MyCookieConsent />

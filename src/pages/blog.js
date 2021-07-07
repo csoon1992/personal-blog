@@ -2,9 +2,6 @@ import React from "react";
 import Layout from "../layouts/index";
 import { SectionTitle } from "../components/SectionUtilities";
 import Card from "../components/Blog/Card";
-
-import { getAllPosts } from "../lib/api";
-
 const BlogContent = ({ posts }) => {
   return (
     <Layout>
@@ -24,7 +21,8 @@ const BlogContent = ({ posts }) => {
 export default BlogContent;
 
 export async function getStaticProps() {
-  const posts = getAllPosts();
+  const { allPosts } = require("../lib/api");
+  const posts = await allPosts();
 
   return {
     props: { posts },

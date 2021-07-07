@@ -1,5 +1,5 @@
 import React from "react";
-import FooterLinks from "./FooterLinks";
+import SocialLinks from "./SocialLinks";
 
 function Footer() {
   return (
@@ -11,7 +11,7 @@ function Footer() {
         </div>
 
         <div className="links">
-          <FooterLinks />
+          <SocialLinks />
         </div>
       </div>
     </footer>

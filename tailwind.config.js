@@ -1,6 +1,7 @@
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: false, // or 'media' or 'class'
+  mode: "jit",
   theme: {
     extend: {
       fontFamily: {
@@ -17,6 +18,7 @@ module.exports = {
         "wetaca-color": "#E2655E",
         "redegal-color": "#318DCC",
         "baby-color": "#E0008A",
+        "trevenque-color": "#1EBD00",
       },
       gridTemplateColumns: {
         // Simple 24 column grid

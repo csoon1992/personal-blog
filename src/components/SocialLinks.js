@@ -11,7 +11,7 @@ import {
   FaFacebook,
 } from "react-icons/fa";
 
-class FooterLinks extends React.Component {
+class SocialLinks extends React.Component {
   render() {
     return (
       <div className="networks py-2 flex space-x-6">
@@ -88,4 +88,4 @@ class FooterLinks extends React.Component {
   }
 }
 
-export default FooterLinks;
+export default SocialLinks;

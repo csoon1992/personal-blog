@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import { SectionTitle } from "../../components/SectionUtilities";
 import Layout from "../../layouts/index";
-import { getPostBySlug, getAllPosts } from "../../lib/api";
 import markdownToHtml from "../../lib/markdownToHtml";
 
 function BlogPost({ post }) {
@@ -30,7 +29,8 @@ function BlogPost({ post }) {
 export default BlogPost;
 
 export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug);
+  const { findPostBySlug } = require("../../lib/api");
+  const post = await findPostBySlug(params.slug);
   const content = await markdownToHtml(post.content || "");
   return {
     props: {
@@ -43,7 +43,8 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts();
+  const { allPosts } = require("../../lib/api");
+  const posts = await allPosts();
 
   return {
     paths: posts.map((post) => {

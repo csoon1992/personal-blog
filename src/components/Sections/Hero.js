@@ -31,13 +31,13 @@ function Hero() {
 
         <div className="content col-span-3 col-start-3 col-end-5">
           <div>
-            <div className="text-gray-400 text-lg">Hola, </div>
+            <div className="text-gray-600 text-lg">Hola, </div>
             <h2 className="text-5xl font-bold my-4">
               Soy <span className="text-primary">Cristina</span> Soler
             </h2>
-            <div className="text-gray-400 text-lg">
+            <div className="text-gray-600 text-lg">
               Programadora web especializada en el mundo del comercio
-              electrónico cuyo objetivo es convertirme en FullStack.
+              electrónico con muchas inquietudes sobre el desarrollo a medida.
             </div>
 
             <div className="mt-8">
