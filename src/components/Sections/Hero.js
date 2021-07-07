@@ -1,8 +1,7 @@
 import React from "react";
-//import mePhoto from "../../assets/img/files/intro-me.png";
-//import CV from "../../assets/files/CV_Cristina.pdf";
 import { GradientPrimaryRoundedLink } from "../SectionUtilities";
 import Image from "next/image";
+import SocialLinks from "../SocialLinks";
 
 function Hero() {
   return (
@@ -30,6 +29,10 @@ function Hero() {
         </div>
 
         <div className="content col-span-3 col-start-3 col-end-5">
+          <div className="links text-primary">
+            <SocialLinks />
+          </div>
+
           <div>
             <div className="text-gray-600 text-lg">Hola, </div>
             <h2 className="text-5xl font-bold my-4">

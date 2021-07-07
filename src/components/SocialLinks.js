@@ -5,10 +5,10 @@ import Link from "next/link";
 import { IconContext } from "react-icons";
 import {
   FaGithubAlt,
-  FaLinkedin,
+  FaLinkedinIn,
   FaGitlab,
   FaTwitter,
-  FaFacebook,
+  FaFacebookF,
 } from "react-icons/fa";
 
 class SocialLinks extends React.Component {
@@ -23,7 +23,7 @@ class SocialLinks extends React.Component {
         >
           <a>
             <IconContext.Provider value={{ size: "34px" }}>
-              <FaLinkedin />
+              <FaLinkedinIn />
             </IconContext.Provider>
           </a>
         </Link>
@@ -79,7 +79,7 @@ class SocialLinks extends React.Component {
           <a>
             {" "}
             <IconContext.Provider value={{ size: "34px" }}>
-              <FaFacebook />
+              <FaFacebookF />
             </IconContext.Provider>
           </a>
         </Link>
