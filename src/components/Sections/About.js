@@ -24,11 +24,10 @@ function About() {
               momento hasta junio de 2019 he estado trabajando continuamente,
               aunque en distintas empresas, todas ellas enfocadas al mundo
               e-commerce: comencé con{" "}
-              <span className="font-bold">Magento 1.9</span> en CBI/El Mercado
-              de María y después estuve con{" "}
-              <span className="font-bold">Prestashop</span>
-              (versiones 1.6 y 1.7), plataforma e-commerce en la que mejor me
-              desempeño actualmente.
+              <span className="font-bold">Magento 1.9</span> y después estuve
+              con <span className="font-bold">Prestashop</span> (versiones 1.6 y
+              1.7), plataforma e-commerce en la que mejor me desempeño
+              actualmente.
             </p>
 
             <p>
@@ -36,7 +35,9 @@ function About() {
               sola, incluyendo, además de la programación (tanto front como
               back), la atención y el soporte al cliente final, tal y como he
               hecho con proyectos realizados a grandes clientes corporativos
-              como Mapfre, Telefónica y Repsol, entre otros.
+              como <span className="italic">Mapfre</span>,{" "}
+              <span className="italic">Telefónica</span> y{" "}
+              <span className="italic">Repsol</span>, entre otros.
             </p>
           </div>
 
