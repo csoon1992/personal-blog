@@ -34,7 +34,7 @@ function Hero() {
             <h2 className="text-5xl font-bold my-4">
               Soy <span className="text-primary">Cristina</span> Soler
             </h2>
-            <div className="text-lg">
+            <div className="text-2xl">
               Programadora web especializada en el mundo del comercio
               electrónico con muchas inquietudes sobre el desarrollo a medida.
             </div>
