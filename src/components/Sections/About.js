@@ -1,5 +1,6 @@
 import React from "react";
 import { SectionTitle, SectionSubtitle } from "../SectionUtilities";
+import Tabs from "../Tabs";
 
 function About() {
   return (
@@ -7,9 +8,8 @@ function About() {
       <div className="container mx-auto py-12">
         <SectionTitle title="Sobre mí" />
 
-        <div className="container mx-auto grid grid-cols-2 gap-32">
-          <div className="about-intro">
-            <SectionSubtitle title="Intro" />
+        <Tabs>
+          <div label="Intro">
             <p>
               Técnico Superior en Desarrollo de Aplicaciones Web desde 2013.
             </p>
@@ -23,29 +23,31 @@ function About() {
               En 2014 conseguí mi primer trabajo como programadora y desde ese
               momento hasta junio de 2019 he estado trabajando continuamente,
               aunque en distintas empresas, todas ellas enfocadas al mundo
-              e-commerce: comencé con Magento 1.9 en CBI/El Mercado de María y
-              después estuve con Prestashop (versiones 1.6 y 1.7), plataforma
-              e-commerce en la que me encuentro más cómoda trabajando.
+              e-commerce: comencé con{" "}
+              <span className="font-bold">Magento 1.9</span> en CBI/El Mercado
+              de María y después estuve con{" "}
+              <span className="font-bold">Prestashop</span>
+              (versiones 1.6 y 1.7), plataforma e-commerce en la que mejor me
+              desempeño actualmente.
             </p>
 
             <p>
               Soy capaz de llevar a cabo proyectos web de principio a fin yo
-              sola, incluyendo, además de la programación, la atención y el
-              soporte al cliente final, tal y como he hecho con proyectos
-              realizados a grandes clientes corporativos como Mapfre, Telefónica
-              y Repsol, entre otros.
+              sola, incluyendo, además de la programación (tanto front como
+              back), la atención y el soporte al cliente final, tal y como he
+              hecho con proyectos realizados a grandes clientes corporativos
+              como Mapfre, Telefónica y Repsol, entre otros.
             </p>
           </div>
 
-          <div className="about-objetives">
-            <SectionSubtitle title="Objetivos profesionales" />
-
+          <div label="Objetivos profesionales">
             <p>
               Aunque en todas las empresas en las que he estado me he dedicado a
               tiendas online la mayor parte del tiempo, no me gustaría quedarme
               “estancada” en el mundo e-commerce. Es por ello por lo que en mi
               tiempo libre intento conocer nuevas tecnologías y herramientas ya
-              que mi objetivo es conseguir un perfil fullstack.
+              que mi objetivo es conseguir un perfil más enfocado al desarrollo
+              a medida.
             </p>
 
             <p>
@@ -67,7 +69,7 @@ function About() {
               transparencia, la igualdad y la humildad.
             </p>
           </div>
-        </div>
+        </Tabs>
       </div>
     </div>
   );
