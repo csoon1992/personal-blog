@@ -74,13 +74,6 @@ module.exports = {
               fontWeight: "normal",
               margin: "1.5rem 0 0",
             },
-            a: {
-              color: theme("colors.primary"),
-              textDecoration: "none",
-              "&:hover": {
-                color: theme("colors.primary.darker"),
-              },
-            },
             p: {
               margin: "0",
             },

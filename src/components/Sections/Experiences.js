@@ -85,6 +85,7 @@ function Experiences() {
               <a
                 href="https://dynamics.microsoft.com/es-es/"
                 title="Microsoft Dynamics 365"
+                className="underline text-primary hover:text-primary-dark"
               >
                 Microsoft Dynamics 365
               </a>{" "}
@@ -126,7 +127,11 @@ function Experiences() {
               PrestaShop 1.6. Desarrollo de nuevos módulos a medida para
               distintos clientes y funcionalidades, incluído uno para conectar
               con{" "}
-              <a href="https://www.galdon.com/" title="ERP Galdón">
+              <a
+                href="https://www.galdon.com/"
+                title="ERP Galdón"
+                className="underline text-primary hover:text-primary-dark"
+              >
                 Galdón
               </a>
               . También me encargo de algunos mantenimientos de WordPress pero
