@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Montserrat", "Helvetica", "sans-serif"],
+        titles: ["Raleway", "Helvetica", "sans-serif"],
       },
       colors: {
         primary: "#3AAFA9",

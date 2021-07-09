@@ -6,8 +6,8 @@ function MainMenu() {
   return (
     <div id="menu-items" className="flex justify-between items-center">
       <div>
-        <Link href="/" active="false" className="font-black text-2xl">
-          <a>
+        <Link href="/" active="false">
+          <a className="text-2xl">
             <span>Cristina</span>
             <span className="text-primary">Soler</span>
           </a>

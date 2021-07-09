@@ -2,6 +2,7 @@ import React from "react";
 import { GradientPrimaryRoundedLink } from "../SectionUtilities";
 import Image from "next/image";
 import SocialLinks from "../SocialLinks";
+import "@fontsource/montserrat/300.css";
 
 function Hero() {
   return (
@@ -30,11 +31,11 @@ function Hero() {
             <SocialLinks />
           </div>
 
-          <div>
-            <h2 className="text-5xl font-bold my-4">
+          <div className="mt-8">
+            <h2 className="text-5xl font-medium my-4">
               Soy <span className="text-primary">Cristina</span> Soler
             </h2>
-            <div className="text-2xl">
+            <div className="text-2xl font-light">
               Programadora web especializada en el mundo del comercio
               electrónico con PrestaShop y con muchas inquietudes sobre el
               desarrollo a medida.
