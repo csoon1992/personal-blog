@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import "@fontsource/montserrat/500.css";
 
 function ExperienceItem({
   children,
@@ -31,7 +32,7 @@ function ExperienceItem({
         <div className="num transform -rotate-45 text-3xl">{num}</div>
       </div>
       <div className="py-4 px-8 flex-1">
-        <h3 className="text-primary text-lg font-bold">{itemTitle}</h3>
+        <h3 className="text-primary text-lg font-medium">{itemTitle}</h3>
         <p className="text-gray-300 text-sm">
           {position} - Desde {fromDate} hasta {toDate}
         </p>
