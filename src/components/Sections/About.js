@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionTitle, SectionSubtitle } from "../SectionUtilities";
+import { SectionTitle } from "../SectionUtilities";
 import Tabs from "../Tabs";
 
 function About() {
@@ -8,8 +8,9 @@ function About() {
       <div className="container mx-auto py-12">
         <SectionTitle title="Sobre mí" />
 
-        <Tabs>
-          <div label="Intro">
+        <Tabs.Tabs>
+          <Tabs.Button id="intro">Intro</Tabs.Button>
+          <Tabs.Panel id="intro">
             <p>
               Técnico Superior en Desarrollo de Aplicaciones Web desde 2013.
             </p>
@@ -39,9 +40,10 @@ function About() {
               <span className="italic">Telefónica</span> y{" "}
               <span className="italic">Repsol</span>, entre otros.
             </p>
-          </div>
+          </Tabs.Panel>
 
-          <div label="Objetivos profesionales">
+          <Tabs.Button id="objectives">Objetivos profesionales</Tabs.Button>
+          <Tabs.Panel id="objectives">
             <p>
               Aunque en todas las empresas en las que he estado me he dedicado a
               tiendas online la mayor parte del tiempo, no me gustaría quedarme
@@ -69,8 +71,8 @@ function About() {
               Además, me encantaría dar con una empresa donde prime la
               transparencia, la igualdad y la humildad.
             </p>
-          </div>
-        </Tabs>
+          </Tabs.Panel>
+        </Tabs.Tabs>
       </div>
     </div>
   );

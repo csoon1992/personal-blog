@@ -30,7 +30,7 @@ function ExperienceItem({
       </div>
       <div className="py-4 px-8 flex-1">
         <h3 className="text-primary text-lg font-bold">{itemTitle}</h3>
-        <p className="text-gray-400 text-sm">
+        <p className="text-gray-300 text-sm">
           {position} - Desde {fromDate} hasta {toDate}
         </p>
         <div className="resume mb-0">{children}</div>

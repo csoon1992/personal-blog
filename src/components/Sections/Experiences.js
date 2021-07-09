@@ -1,15 +1,12 @@
 import React from "react";
 import { SectionTitle } from "../SectionUtilities";
 import ExperienceItem from "./ExperienceItem";
-import ExperienceTimeline from "./ExperienceTimeline";
 
 function Experiences() {
   return (
     <div id="experiences" className="section">
       <div className="container mx-auto py-12">
         <SectionTitle title="Experiencia profesional" />
-
-        <ExperienceTimeline />
 
         <div className="mt-18 grid grid-cols-2 gap-x-8 gap-y-2">
           <ExperienceItem
@@ -31,8 +28,8 @@ function Experiences() {
           </ExperienceItem>
 
           <ExperienceItem
-            company="CBI"
-            url="https://cbiconsulting.es/"
+            company="CBI (ahora Sygris)"
+            url="https://sygris.com/"
             position="Web developer"
             fromDate="octubre de 2014"
             toDate="octubre de 2017"
@@ -41,13 +38,13 @@ function Experiences() {
           >
             <p>
               Colaboré en todo el proceso de preparación y lanzamiento de "El
-              Mercado de María", tienda online de muebles y decoración sobre
-              Magento 1.9. Desarrollé varios scripts PHP para automatizar
-              procesos de actualización de stocks y productos y realicé
-              proyectos (desde la planificación hasta la publicación y soporte
-              al cliente final) para grandes clientes corporativos como Mapfre,
-              Repsol y Telefónica. Maquetación de sitios completos y landings y
-              mails para Sage One.
+              Mercado de María" (ya cerrada), tienda online de muebles y
+              decoración sobre Magento 1.9. Desarrollé varios scripts PHP para
+              automatizar procesos de actualización de stocks y productos y
+              realicé proyectos (desde la planificación hasta la publicación y
+              soporte al cliente final) para grandes clientes corporativos como
+              Mapfre, Repsol y Telefónica. Maquetación de sitios completos y
+              landings y mails para Sage One.
             </p>
           </ExperienceItem>
 
@@ -81,10 +78,10 @@ function Experiences() {
             <p>
               En 2018 no pude resistirme a esta oferta, ya que era 100% remoto y
               podría volver a mi ciudad. Mejora, mantenimiento y resolución de
-              numerosas incidencias con trato directo con el cliente de los
-              proyectos existentes (Prestashop y WordPress). Desarrollo de
-              módulos personalizados desde cero, incluído uno para conectar
-              Prestashop con{" "}
+              numerosas incidencias de los proyectos existentes (Prestashop y
+              WordPress) con trato directo con el cliente. Desarrollo de módulos
+              personalizados desde cero, incluído uno para conectar Prestashop
+              con{" "}
               <a
                 href="https://dynamics.microsoft.com/es-es/"
                 title="Microsoft Dynamics 365"
