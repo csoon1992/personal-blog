@@ -13,7 +13,9 @@ function ExperienceItem({
 }) {
   let itemTitle = url ? (
     <Link href={url}>
-      <a>{company}</a>
+      <a target="_blank" rel="noopener noreferrer">
+        {company}
+      </a>
     </Link>
   ) : (
     company
