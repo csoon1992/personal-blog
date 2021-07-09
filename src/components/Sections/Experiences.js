@@ -15,7 +15,7 @@ function Experiences() {
             position="Web developer"
             fromDate="septiembre de 2014"
             toDate="octubre de 2014"
-            color="magister-color"
+            color="bg-magister-color"
             num="1"
           >
             <p>
@@ -33,7 +33,7 @@ function Experiences() {
             position="Web developer"
             fromDate="octubre de 2014"
             toDate="octubre de 2017"
-            color="cbi-color"
+            color="bg-cbi-color"
             num="2"
           >
             <p>
@@ -54,7 +54,7 @@ function Experiences() {
             position="Web developer"
             fromDate="noviembre de 2017"
             toDate="abril de 2018"
-            color="wetaca-color"
+            color="bg-wetaca-color"
             num="3"
           >
             <p>
@@ -72,7 +72,7 @@ function Experiences() {
             position="Senior Prestashop developer"
             fromDate="abril de 2018"
             toDate="junio de 2019"
-            color="redegal-color"
+            color="bg-redegal-color"
             num="4"
           >
             <p>
@@ -97,7 +97,7 @@ function Experiences() {
             position="Junior mommy"
             fromDate="junio de 2019"
             toDate="enero de 2021"
-            color="baby-color"
+            color="bg-baby-color"
             num="5"
           >
             <p>
@@ -115,7 +115,7 @@ function Experiences() {
             position="Web developer"
             fromDate="marzo de 2021"
             toDate="actualidad"
-            color="trevenque-color"
+            color="bg-trevenque-color"
             num="6"
           >
             <p>

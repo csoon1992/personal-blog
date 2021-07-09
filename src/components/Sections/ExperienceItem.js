@@ -22,8 +22,8 @@ function ExperienceItem({
   return (
     <div className="experience flex">
       <div
-        className={`count w-12 h-12 text-white font-bold text-center flex flex-row items-center justify-center transform rotate-45 bg-${
-          color ? color : "primary"
+        className={`count w-12 h-12 text-white font-bold text-center flex flex-row items-center justify-center transform rotate-45 ${
+          color ? color : "bg-primary"
         }`}
       >
         <div className="num transform -rotate-45 text-3xl">{num}</div>
