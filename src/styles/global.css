@@ -7,9 +7,9 @@ p {
 }
 
 .section:nth-child(even) {
-    @apply bg-dark-high;
+    @apply bg-dark-600;
 }
 
 .section:nth-child(odd) {
-    @apply bg-dark-low;
+    @apply bg-dark;
 }

@@ -85,7 +85,7 @@ function Panel({ children, index }) {
   }
 
   return (
-    <div className="tab-content p-12 bg-dark-low lg:max-w-4xl mx-auto">
+    <div className="tab-content p-12 bg-dark lg:max-w-4xl mx-auto">
       {children}
     </div>
   );

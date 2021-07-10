@@ -85,7 +85,7 @@ function Experiences() {
               <a
                 href="https://dynamics.microsoft.com/es-es/"
                 title="Microsoft Dynamics 365"
-                className="underline text-primary hover:text-primary-dark"
+                className="underline text-primary hover:text-primary-600"
               >
                 Microsoft Dynamics 365
               </a>{" "}
@@ -130,7 +130,7 @@ function Experiences() {
               <a
                 href="https://www.galdon.com/"
                 title="ERP Galdón"
-                className="underline text-primary hover:text-primary-dark"
+                className="underline text-primary hover:text-primary-600"
               >
                 Galdón
               </a>
