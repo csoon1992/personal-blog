@@ -3,11 +3,11 @@ import SocialLinks from "./SocialLinks";
 
 function Footer() {
   return (
-    <footer className="fixed-bottom bg-gray-600 text-white px-8 px-sm-5 py-16">
+    <footer className="fixed-bottom bg-dark text-white px-8 px-sm-5 py-16">
       <div className="contact flex flex-col items-center content-center">
         <div className="made-by mb-4">
           Hecho por&nbsp;
-          <span className="font-bold">Cristina Soler</span>
+          <span className="font-bold">Cristina Soler</span> &copy; 2021
         </div>
 
         <div className="links">

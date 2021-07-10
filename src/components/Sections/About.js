@@ -5,7 +5,7 @@ import Tabs from "../Tabs";
 function About() {
   return (
     <div id="about" className="section">
-      <div className="container mx-auto py-12">
+      <div className="container mx-auto py-20">
         <SectionTitle title="Sobre mí" />
 
         <Tabs.Tabs>
