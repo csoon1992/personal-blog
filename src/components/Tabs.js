@@ -1,24 +1,37 @@
-import React, { useState, createContext, useContext } from "react";
+import React, {
+  useState,
+  createContext,
+  useContext,
+  cloneElement,
+} from "react";
 import PropTypes from "prop-types";
 
 const TabsContext = createContext({ active: null, setActive: () => {} });
 
 function Tabs({ children }) {
-  const [currentActive, setActive] = useState(null);
+  const [currentActive, setActive] = useState(0);
   const { buttons, panels } = children.reduce(
     (result, childNode) => {
       if (childNode.type === Button) {
-        return { ...result, buttons: [...result.buttons, childNode] };
+        const count = result.buttons.length ?? 0;
+        return {
+          ...result,
+          buttons: [
+            ...result.buttons,
+            cloneElement(childNode, { index: count }),
+          ],
+        };
       }
 
-      return { ...result, panels: [...result.panels, childNode] };
+      const count = result.panels.length ?? 0;
+
+      return {
+        ...result,
+        panels: [...result.panels, cloneElement(childNode, { index: count })],
+      };
     },
     { buttons: [], panels: [] }
   );
-
-  if (!currentActive && buttons.length) {
-    setActive(buttons[0].props.id);
-  }
 
   return (
     <TabsContext.Provider value={{ active: currentActive, setActive }}>
@@ -34,9 +47,9 @@ Tabs.propTypes = {
   children: PropTypes.arrayOf(PropTypes.oneOfType([Button, Panel])).isRequired,
 };
 
-function Button({ children, id }) {
+function Button({ children, index }) {
   const { active, setActive } = useContext(TabsContext);
-  const isActive = active === id;
+  const isActive = active === index;
 
   let className =
     "tab-list-item inline-block py-3 px-8 border border-solid rounded-sm border-primary cursor-pointer";
@@ -49,7 +62,7 @@ function Button({ children, id }) {
   }
 
   return (
-    <button className={className} onClick={() => setActive(id)}>
+    <button className={className} onClick={() => setActive(index)}>
       {children}
     </button>
   );
@@ -60,12 +73,12 @@ Button.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  id: PropTypes.string.isRequired,
+  index: PropTypes.number,
 };
 
-function Panel({ children, id }) {
+function Panel({ children, index }) {
   const { active } = useContext(TabsContext);
-  const isActive = active === id;
+  const isActive = active === index;
 
   if (!isActive) {
     return null;
@@ -83,7 +96,7 @@ Panel.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  id: PropTypes.string.isRequired,
+  index: PropTypes.number,
 };
 
 export default { Tabs, Button, Panel };

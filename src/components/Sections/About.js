@@ -9,8 +9,8 @@ function About() {
         <SectionTitle title="Sobre mí" />
 
         <Tabs.Tabs>
-          <Tabs.Button id="intro">Intro</Tabs.Button>
-          <Tabs.Panel id="intro">
+          <Tabs.Button>Intro</Tabs.Button>
+          <Tabs.Panel>
             <p>
               Técnico Superior en Desarrollo de Aplicaciones Web desde 2013.
             </p>
@@ -42,8 +42,8 @@ function About() {
             </p>
           </Tabs.Panel>
 
-          <Tabs.Button id="objectives">Objetivos profesionales</Tabs.Button>
-          <Tabs.Panel id="objectives">
+          <Tabs.Button>Objetivos profesionales</Tabs.Button>
+          <Tabs.Panel>
             <p>
               Aunque en todas las empresas en las que he estado me he dedicado a
               tiendas online la mayor parte del tiempo, no me gustaría quedarme
