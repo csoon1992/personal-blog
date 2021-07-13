@@ -3,7 +3,7 @@ import SocialLinks from "./SocialLinks";
 
 function Footer() {
   return (
-    <footer className="fixed-bottom bg-dark text-white px-8 px-sm-5 py-16">
+    <footer className="fixed-bottom bg-dark-low text-white px-8 px-sm-5 py-16">
       <div className="contact flex flex-col items-center content-center">
         <div className="made-by mb-4">
           Hecho por&nbsp;

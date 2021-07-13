@@ -38,3 +38,5 @@ export const findPostBySlug = memoize(
 );
 
 export const allPosts = memoize(async () => await getAllPosts());
+
+export const recentPosts = memoize(async () => (await allPosts()).slice(0, 3));

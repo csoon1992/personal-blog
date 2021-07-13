@@ -40,8 +40,8 @@ function GradientPrimaryRoundedLink({
 
   if (isInternalLink) {
     linkElement = (
-      <Link href={url} {...props} className={linkClass}>
-        <a>{children}</a>
+      <Link href={url} {...props}>
+        <a className={linkClass}>{children}</a>
       </Link>
     );
   }
