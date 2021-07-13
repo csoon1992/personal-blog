@@ -18,7 +18,7 @@ function Tabs({ children }) {
           ...result,
           buttons: [
             ...result.buttons,
-            cloneElement(childNode, { index: count }),
+            cloneElement(childNode, { index: count, key: count }),
           ],
         };
       }
@@ -27,7 +27,10 @@ function Tabs({ children }) {
 
       return {
         ...result,
-        panels: [...result.panels, cloneElement(childNode, { index: count })],
+        panels: [
+          ...result.panels,
+          cloneElement(childNode, { index: count, key: count }),
+        ],
       };
     },
     { buttons: [], panels: [] }
@@ -36,7 +39,9 @@ function Tabs({ children }) {
   return (
     <TabsContext.Provider value={{ active: currentActive, setActive }}>
       <div className="tabs">
-        <ol className="tab-list space-x-6 text-center my-6">{buttons}</ol>
+        <ol className="tab-list space-x-6 text-center my-6 flex flex-row justify-center items-stretch">
+          {buttons}
+        </ol>
         {panels}
       </div>
     </TabsContext.Provider>
@@ -62,9 +67,11 @@ function Button({ children, index }) {
   }
 
   return (
-    <button className={className} onClick={() => setActive(index)}>
-      {children}
-    </button>
+    <li>
+      <button className={className} onClick={() => setActive(index)}>
+        {children}
+      </button>
+    </li>
   );
 }
 
