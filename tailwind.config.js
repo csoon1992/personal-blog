@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Montserrat", "Helvetica", "sans-serif"],
-        titles: ["Raleway", "Helvetica", "sans-serif"],
+        sans: "Montserrat,Helvetica,sans-serif",
+        titles: "Raleway, Helvetica,sans-serif",
       },
       colors: {
         primary: {
@@ -36,7 +36,6 @@ module.exports = {
           900: "#000000",
         },
         secondary: "#f35b8e",
-        "canary-color": "#E6D72A",
         "magister-color": "#013A81",
         "cbi-color": "#2F7198",
         "wetaca-color": "#E2655E",
@@ -90,16 +89,18 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            color: "#FFF",
             "h1, h2, h3, h4, h5, h6": {
-              color: theme("colors.primary"),
+              color: theme("colors.primary.DEFAULT"),
               fontWeight: "normal",
               margin: "1.5rem 0 0",
+              fontFamily: theme("fontFamily.titles"),
             },
             p: {
               margin: "0",
             },
             code: {
-              color: theme("colors.secondary"),
+              color: theme("colors.yellow.50"),
               backgroundColor: theme("colors.gray.100"),
               padding: theme("spacing.1"),
               display: "block",

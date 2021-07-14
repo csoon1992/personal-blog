@@ -5,7 +5,7 @@ import Card from "../components/Blog/Card";
 const BlogContent = ({ posts }) => {
   return (
     <Layout>
-      <div className="container mx-auto pb-20">
+      <div className="container mx-auto py-20">
         <SectionTitle title="Mis artículos" />
 
         <div className="grid grid-cols-3 gap-12">

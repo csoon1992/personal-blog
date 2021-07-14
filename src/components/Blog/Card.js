@@ -17,18 +17,18 @@ function Card({ post }) {
         />
       </div>
       <div className="bg-white rounded-tl-xl rounded-br-xl ml-10 -mt-20 p-8 space-y-6 flex flex-col flex-1 relative shadow-lg">
-        <h2 className="flex-1 font-bold text-2xl">{post.title}</h2>
+        <h2 className="flex-1 font-bold text-2xl text-dark-400">
+          {post.title}
+        </h2>
         <div className="flex flex-row items-center justify-between">
           <div className="flex flex-row align-items-center space-x-2">
             <div>
-              <IconContext.Provider
-                value={{ size: "22px", className: "text-gray-300" }}
-              >
+              <IconContext.Provider value={{ size: "22px" }}>
                 <IoTime />
               </IconContext.Provider>
             </div>
 
-            <div className="text-gray-500">
+            <div className="text-gray-500 text-sm">
               <PostDate date={post.date} />
             </div>
           </div>

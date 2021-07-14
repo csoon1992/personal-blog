@@ -15,8 +15,8 @@ pre[class*="language-"] {
     -webkit-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    background: #192834;
-    color: white;
+    background: #FFFBEB;
+    color: #21625F;
     text-shadow: none;
 }
 
@@ -25,7 +25,7 @@ pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
 code[class*="language-"] ::-moz-selection {
     text-shadow: none;
-    background: #1b6498
+    background: #f1f1f1;
 }
 
 pre[class*="language-"]::selection,
@@ -33,7 +33,7 @@ pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
     text-shadow: none;
-    background: #1b6498
+    background: #f1f1f1;
 }
 
 pre[class*="language-"] {
@@ -55,7 +55,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-    color: white;
+    color: #2D8984;
 }
 
 .token.namespace {
@@ -65,7 +65,7 @@ pre[class*="language-"] {
 .token.tag,
 .token.operator,
 .token.number {
-    color: #8ca1ca
+    color: #f35b8e
 }
 
 .token.property,
@@ -81,7 +81,7 @@ pre[class*="language-"] {
 
 code.language-javascript,
 .token.attr-name {
-    color: #98c3ae
+    color: #a077ef;
 }
 
 code.language-css,
@@ -104,7 +104,7 @@ code.language-scss,
 }
 
 .token.attr-value {
-    color: #b8f99a;
+    color: #44ce43;
 }
 
 .token.placeholder,

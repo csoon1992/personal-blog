@@ -8,8 +8,8 @@ export default function RecentPosts({ posts }) {
       <div className="container mx-auto py-20 ">
         <SectionTitle title="Mis últimos posts" />
         <div className="flex gap-x-8 justify-center items-stretch">
-          {posts.map((post) => (
-            <PostPreview post={post} />
+          {posts.map((post, ndx) => (
+            <PostPreview post={post} key={ndx} />
           ))}
         </div>
 
