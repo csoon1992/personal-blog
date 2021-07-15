@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
-import { SectionTitle } from "../../components/SectionUtilities";
+import { PageTitle } from "../../components/SectionUtilities";
 import Layout from "../../layouts/index";
 import markdownToHtml from "../../lib/markdownToHtml";
+import PostDate from "../../components/Blog/PostDate";
 
 function BlogPost({ post }) {
   const router = useRouter();
@@ -14,9 +15,18 @@ function BlogPost({ post }) {
 
   return (
     <Layout>
-      <article className="container mx-auto py-12">
-        <SectionTitle title={post.title} />
+      <div className="header-content relative top-0 -translate-y-20">
+        <div className="bg-dark bg-opacity-40 absolute z-20 top-0 bottom-0 w-full h-full flex flex-col items-center justify-center pt-20">
+          <PageTitle title={post.title} />
+          <div className="header-post-date">
+            <PostDate date={post.date} />
+          </div>
+        </div>
 
+        <img src={post.image} alt={post.title} className="block w-full z-10" />
+      </div>
+
+      <article className="container mx-auto">
         <div
           className="prose mx-auto xl:max-w-4xl"
           dangerouslySetInnerHTML={{ __html: post.content }}

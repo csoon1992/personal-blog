@@ -1,6 +1,14 @@
 import React from "react";
 import Link from "next/link";
 
+function PageTitle({ title }) {
+  return (
+    <h1 className="text-center font-medium text-5xl mb-12 font-titles">
+      {title}
+    </h1>
+  );
+}
+
 function SectionTitle({ title }) {
   return (
     <h2 className="text-center font-medium text-5xl mb-12 font-titles">
@@ -49,4 +57,4 @@ function GradientPrimaryRoundedLink({
   return linkElement;
 }
 
-export { SectionTitle, SectionSubtitle, GradientPrimaryRoundedLink };
+export { PageTitle, SectionTitle, SectionSubtitle, GradientPrimaryRoundedLink };
