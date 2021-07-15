@@ -12,6 +12,7 @@ function PostPreview({ post }) {
             <Image
               className="w-full"
               layout="fill"
+              objectFit="cover"
               src={post.image}
               alt={post.title}
             />

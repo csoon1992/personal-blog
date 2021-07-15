@@ -10,8 +10,9 @@ function Card({ post }) {
     <div className="card flex flex-col bg-dark border border-solid border-dark rounded-xl shadow-xl relative">
       <div className="bg-gray-400 h-56 rounded-t-xl relative">
         <Image
-          className="object-cover rounded-t-xl"
+          className="rounded-t-xl"
           layout="fill"
+          objectFit="cover"
           src={post.image}
           alt={post.title}
         />

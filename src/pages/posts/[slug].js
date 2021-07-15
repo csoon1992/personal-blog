@@ -1,5 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 import ErrorPage from "next/error";
 import { PageTitle } from "../../components/SectionUtilities";
 import Layout from "../../layouts/index";
@@ -23,7 +24,15 @@ function BlogPost({ post }) {
           </div>
         </div>
 
-        <img src={post.image} alt={post.title} className="block w-full z-10" />
+        <div className="relative h-96 mb-4">
+          <Image
+            className="w-full"
+            layout="fill"
+            objectFit="cover"
+            src={post.image}
+            alt={post.title}
+          />
+        </div>
       </div>
 
       <article className="container mx-auto">
