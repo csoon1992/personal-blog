@@ -2578,6 +2578,11 @@ react-side-effect@^2.1.0:
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.1.tgz#66c5701c3e7560ab4822a4ee2742dee215d72eb3"
   integrity sha512-2FoTQzRNTncBVtnzxFOk2mCpcfxQpenBMbk5kSVBg5UcPqV9fRbgY2zhb7GTWWOlpFmAxhClBDlIq8Rsubz1yQ==
 
+react-text-typist@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-text-typist/-/react-text-typist-1.0.6.tgz#06dadec9fd1695240999c2706762a4394c116e45"
+  integrity sha512-oM4Br+5mi6WmFezZEaC+kHo6fR0sbxaDPYcFhdiFX98L1ri/7YUSjIdY5A+cgzRNACW+x7HPOWxxlf+erR2Hrg==
+
 react@^17.0.1:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.2.tgz#d0b5cc516d29eb3eee383f75b62864cfb6800037"

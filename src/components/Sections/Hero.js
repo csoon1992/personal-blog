@@ -3,6 +3,7 @@ import { GradientPrimaryRoundedLink } from "../SectionUtilities";
 import Image from "next/image";
 import SocialLinks from "../SocialLinks";
 import "@fontsource/montserrat/300.css";
+import Typist from "react-text-typist";
 
 function Hero() {
   return (
@@ -33,7 +34,33 @@ function Hero() {
 
           <div className="mt-8">
             <h2 className="text-5xl font-medium my-4">
-              Soy <span className="text-primary">Cristina</span> Soler
+              <Typist
+                sentences={["Soy "]}
+                loop={false}
+                hideCursorOnFinish={true}
+                typingSpeed={100}
+                cursorClassName={"text-primary"}
+                pauseTime={0}
+              />
+              <Typist
+                sentences={["Cristina "]}
+                loop={false}
+                hideCursorOnFinish={true}
+                typingSpeed={100}
+                startDelay={400}
+                className={"text-primary"}
+                cursorClassName={"text-primary"}
+                pauseTime={0}
+              />
+              <Typist
+                sentences={["Soler"]}
+                loop={false}
+                hideCursorOnFinish={true}
+                typingSpeed={100}
+                startDelay={1300}
+                cursorClassName={"text-primary"}
+                pauseTime={0}
+              />
             </h2>
             <div className="text-2xl font-light">
               Programadora web especializada en el mundo del comercio
