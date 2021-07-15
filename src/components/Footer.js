@@ -8,7 +8,7 @@ function Footer() {
 
   return (
     <footer
-      className={`fixed-bottom bg-dark text-white px-8 px-sm-5 py-16${bgClass}`}
+      className={`fixed-bottom bg-dark text-white px-8 px-sm-5 py-16 ${bgClass}`}
     >
       <div className="contact flex flex-col items-center content-center">
         <div className="made-by mb-4">
