@@ -35,6 +35,7 @@ module.exports = {
           800: "#000000",
           900: "#000000",
         },
+        "block-code-color": "#afafaf",
         secondary: "#f35b8e",
         "magister-color": "#013A81",
         "cbi-color": "#2F7198",
@@ -100,8 +101,8 @@ module.exports = {
               margin: "0",
             },
             code: {
-              color: theme("colors.yellow.50"),
-              backgroundColor: theme("colors.gray.100"),
+              color: theme("colors.block-code-color"),
+              backgroundColor: theme("colors.dark.DEFAULT"),
               padding: theme("spacing.1"),
               display: "block",
               fontWeight: "normal",
@@ -115,6 +116,14 @@ module.exports = {
             },
             "ol > li > *:last-child": {
               marginBottom: "0",
+            },
+            a: {
+              color: theme("colors.primary.DEFAULT"),
+              textDecoration: "none",
+              cursor: "pointer",
+              "&:hover": {
+                textDecoration: "underline",
+              },
             },
           },
         },

@@ -1,4 +1,9 @@
 /* Meadow Dark theme with customizations */
+.prose code {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
     font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
@@ -15,8 +20,8 @@ pre[class*="language-"] {
     -webkit-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    background: #FFFBEB;
-    color: #21625F;
+    background: #363B5A;
+    color: #afafaf;
     text-shadow: none;
 }
 
@@ -155,4 +160,10 @@ pre>code.highlight {
     background: rgba(102, 163, 41, 0.2);
     background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(102, 163, 41, 0.2)), to(rgba(102, 163, 41, 0)));
     background: linear-gradient(to right, rgba(102, 163, 41, 0.2) 70%, rgba(102, 163, 41, 0))
+}
+
+.prose {
+    strong {
+        color: inherit;
+    }
 }

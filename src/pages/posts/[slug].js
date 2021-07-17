@@ -35,7 +35,7 @@ function BlogPost({ post }) {
         </div>
       </div>
 
-      <article className="container mx-auto">
+      <article className="container mx-auto pb-20">
         <div
           className="prose mx-auto xl:max-w-4xl"
           dangerouslySetInnerHTML={{ __html: post.content }}
