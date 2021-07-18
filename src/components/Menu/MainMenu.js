@@ -1,6 +1,7 @@
 import React from "react";
 import MenuLink from "./MenuLink";
 import Link from "next/link";
+import Scrollspy from "react-scrollspy";
 
 function MainMenu() {
   return (
@@ -14,12 +15,16 @@ function MainMenu() {
         </Link>
       </div>
 
-      <div className="space-x-6">
+      <Scrollspy
+        className="space-x-6"
+        items={["about", "experiences", "portfolio", "recent-posts"]}
+        currentClassName="text-primary"
+      >
         <MenuLink to="/#about" title="Sobre mí" anchor="true" />
         <MenuLink to="/#experiences" title="Experiencias" anchor="true" />
         <MenuLink to="/#portfolio" title="Portfolio" anchor="true" />
         <MenuLink to="/blog" title="Blog" />
-      </div>
+      </Scrollspy>
     </div>
   );
 }

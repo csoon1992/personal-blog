@@ -19,6 +19,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
+    "react-scrollspy": "^3.4.3",
     "react-text-typist": "^1.0.6",
     "rehype-react": "^6.2.0",
     "remark": "^13.0.0",
