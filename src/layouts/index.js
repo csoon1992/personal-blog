@@ -8,8 +8,10 @@ const TemplateWrapper = ({ children }) => {
   return (
     <div className="bg-dark-600 text-white font-sans">
       <LayoutHead />
-      <StickyMenu />
-      <div className="main-content">{children}</div>
+      <div className="main-content">
+        <StickyMenu />
+        {children}
+      </div>
 
       <Footer />
       <MyCookieConsent />
