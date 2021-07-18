@@ -18,7 +18,7 @@ function MainMenu() {
       <Scrollspy
         className="space-x-6"
         items={["about", "experiences", "portfolio", "recent-posts"]}
-        currentClassName="text-primary"
+        currentClassName="text-primary font-bold"
       >
         <MenuLink to="/#about" title="Sobre mí" anchor="true" />
         <MenuLink to="/#experiences" title="Experiencias" anchor="true" />

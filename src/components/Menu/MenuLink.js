@@ -11,7 +11,7 @@ function MenuLink({ to, title, anchor, className = "" }) {
     to == "/blog" &&
     (router.route == "/blog" || router.route == "/posts/[slug]")
   ) {
-    linkClass += " text-primary";
+    linkClass += " text-primary font-bold";
   }
 
   let link = (
