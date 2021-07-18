@@ -9,12 +9,12 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 const MePage = () => {
   return (
     <Layout isAbout>
-      <div className="about-content mx-0">
+      <section id="about" className="about-content mx-0">
         <h1 className="title d-block w-100 text-center mb-3 primary-color font-weight-bold">
           Sobre mí
         </h1>
 
-        <section className="presentation mb-5">
+        <div className="presentation mb-5">
           <h3 className="section-title mb-4">Presentación</h3>
           <p>
             Soy Técnico Superior en Desarrollo de Aplicaciones Web, con 4+ años
@@ -60,9 +60,9 @@ const MePage = () => {
             </a>
             .
           </p>
-        </section>
+        </div>
 
-        <section className="professional-exp mb-5">
+        <div className="professional-exp mb-5">
           <h3 className="section-title mb-4">Experiencia profesional</h3>
 
           <div className="company">
@@ -326,7 +326,7 @@ const MePage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
         <section className="public-works mb-5">
           <h3 className="section-title mb-4">Mis trabajos públicos</h3>
@@ -511,7 +511,7 @@ const MePage = () => {
             </div>
           </div>
         </section>
-      </div>
+      </section>
     </Layout>
   );
 };

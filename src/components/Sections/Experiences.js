@@ -4,7 +4,7 @@ import ExperienceItem from "./ExperienceItem";
 
 function Experiences() {
   return (
-    <div id="experiences" className="section">
+    <section id="experiences" className="section">
       <div className="container mx-auto py-20">
         <SectionTitle title="Experiencia profesional" />
 
@@ -140,7 +140,7 @@ function Experiences() {
           </ExperienceItem>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

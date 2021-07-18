@@ -4,7 +4,7 @@ import { SectionTitle, GradientPrimaryRoundedLink } from "../SectionUtilities";
 
 export default function RecentPosts({ posts }) {
   return (
-    <div className="section">
+    <section id="recent-posts" className="section">
       <div className="container mx-auto py-20 ">
         <SectionTitle title="Mis últimos posts" />
         <div className="flex gap-x-8 justify-center items-stretch">
@@ -19,6 +19,6 @@ export default function RecentPosts({ posts }) {
           </GradientPrimaryRoundedLink>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

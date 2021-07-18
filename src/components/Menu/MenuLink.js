@@ -1,22 +1,18 @@
 import React from "react";
 import Link from "next/link";
 
-function MenuLink({ to, title, active, anchor, className = "" }) {
+function MenuLink({ to, title, anchor, className = "" }) {
   let linkClass = "menu-item uppercase " + className;
 
-  if (active == "true") {
-    linkClass += " underline text-primary";
-  }
-
   let link = (
-    <Link href={to} className={linkClass}>
-      <a>{title}</a>
+    <Link href={to}>
+      <a className={linkClass}>{title}</a>
     </Link>
   );
 
   if (anchor) {
     link = (
-      <a href={to} className={`string ${linkClass}`}>
+      <a href={to} className={`${linkClass}`}>
         {title}
       </a>
     );
