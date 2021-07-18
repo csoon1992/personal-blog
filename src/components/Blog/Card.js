@@ -35,7 +35,7 @@ function Card({ post }) {
           <Link href="/posts/[slug]" as={`/posts${post.slug}`}>
             <a
               title={`Ver ${post.title}`}
-              className="block rounded-full border border-primary bg-transparent text-white p-2 transition-colors duration-300 hover:bg-primary"
+              className="block rounded-full border-2 border-primary bg-transparent text-white p-2 transition-colors duration-300 hover:bg-primary"
             >
               <IconContext.Provider value={{ size: "20px" }}>
                 <IoArrowForward />
