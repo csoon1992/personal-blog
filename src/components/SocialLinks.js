@@ -15,7 +15,7 @@ import {
 class SocialLinks extends React.Component {
   render() {
     let itemStyles =
-      "border border-primary rounded-full transition ease-in duration-400 bg-transparent hover:bg-primary";
+      "border-2 border-primary rounded-full transition ease-in duration-400 bg-transparent hover:bg-primary";
 
     return (
       <>
