@@ -10,11 +10,11 @@ function PostPreview({ post }) {
         <a title={`Ver ${post.title}`} className="block">
           <div className="relative h-32 mb-4">
             <Image
-              className="w-full"
-              layout="fill"
-              objectFit="cover"
               src={post.image}
               alt={post.title}
+              className="object-cover"
+              layout="fill"
+              sizes="33vw"
             />
           </div>
 

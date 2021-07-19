@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 function MenuLink({ to, title, anchor, className = "" }) {
   const router = useRouter();
   let linkClass = "menu-item uppercase " + className;
-  console.log(router);
 
   if (
     to == "/blog" &&
