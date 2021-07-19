@@ -1,15 +1,9 @@
 import React from "react";
 import SocialLinks from "./SocialLinks";
-import { useRouter } from "next/router";
 
 function Footer() {
-  const router = useRouter();
-  let bgClass = router.pathname == "/" ? " bg-dark-600" : "";
-
   return (
-    <footer
-      className={`fixed-bottom bg-dark text-white px-8 px-sm-5 py-16 ${bgClass}`}
-    >
+    <footer className="fixed-bottom text-white px-8 px-sm-5 py-16 bg-dark">
       <div className="contact flex flex-col items-center content-center">
         <div className="made-by mb-4">
           Hecho por&nbsp;

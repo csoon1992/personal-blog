@@ -5,10 +5,10 @@ import Card from "../components/Blog/Card";
 const BlogContent = ({ posts }) => {
   return (
     <Layout>
-      <div className="container mx-auto py-20">
+      <div className="max-w-3xl md:max-w-2xl xl:max-w-screen-2xl mx-auto py-20">
         <SectionTitle title="Mis artículos" />
 
-        <div className="grid grid-cols-3 gap-12">
+        <div className="grid grid-col lg:grid-cols-3 gap-12">
           {posts.map((post) => (
             <Card key={post.slug} post={post} />
           ))}

@@ -34,7 +34,7 @@ function GradientPrimaryRoundedLink({
   ...props
 }) {
   let linkClass =
-    "inline-block py-4 px-8 border border-solid border-primary text-primary bg-gradient-to-r hover:from-green-400 hover:to-primary hover:text-white hover:border-transparent";
+    "lg:inline-block lg:py-4 lg:px-8 lg:border lg:border-solid lg:border-primary lg:bg-gradient-to-r lg:hover:from-green-400 lg:hover:to-primary lg:hover:text-white lg:hover:border-transparent text-primary";
 
   if (rounded) {
     linkClass += " rounded-full";

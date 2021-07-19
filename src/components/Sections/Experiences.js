@@ -5,10 +5,10 @@ import ExperienceItem from "./ExperienceItem";
 function Experiences() {
   return (
     <section id="experiences" className="section">
-      <div className="container mx-auto py-20">
+      <div className="max-w-3xl md:max-w-2xl xl:max-w-screen-2xl mx-auto py-20">
         <SectionTitle title="Experiencia profesional" />
 
-        <div className="mt-18 grid grid-cols-2 gap-x-8 gap-y-2">
+        <div className="mt-18 grid grid-cols lg:grid-cols-2 gap-x-8 gap-y-2">
           <ExperienceItem
             company="Magister"
             url="https://web.magister.com/"

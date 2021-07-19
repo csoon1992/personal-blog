@@ -5,9 +5,9 @@ import { SectionTitle, GradientPrimaryRoundedLink } from "../SectionUtilities";
 export default function RecentPosts({ posts }) {
   return (
     <section id="recent-posts" className="section">
-      <div className="container mx-auto py-20 ">
+      <div className="max-w-3xl md:max-w-2xl xl:max-w-screen-2xl mx-auto py-20 ">
         <SectionTitle title="Mis últimos posts" />
-        <div className="flex gap-x-8 justify-center items-stretch">
+        <div className="grid auto-rows-fr lg:grid-cols-3 gap-y-6 lg:gap-y-0 lg:gap-x-8">
           {posts.map((post, ndx) => (
             <PostPreview post={post} key={ndx} />
           ))}
