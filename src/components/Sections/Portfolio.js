@@ -30,7 +30,7 @@ const publicsWorks = [
 function Portfolio() {
   return (
     <section id="portfolio" className="section">
-      <div className="max-w-3xl md:max-w-2xl xl:max-w-screen-2xl mx-auto py-20">
+      <div className="max-w-xs md:max-w-2xl xl:max-w-screen-2xl mx-auto py-20">
         <SectionTitle title="Mis trabajos públicos" />
         <div className="lg:max-w-6xl mx-auto grid auto-rows-fr lg:grid-cols-3 lg:gap-12">
           {publicsWorks.map((work, index) => (

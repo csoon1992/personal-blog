@@ -1,5 +1,7 @@
 @tailwind base;
+
 @tailwind components;
+
 @tailwind utilities;
 
 p {
@@ -12,4 +14,8 @@ p {
 
 .section:nth-child(odd) {
     @apply bg-dark;
+}
+
+.debug * {
+    outline: 1px solid red;
 }

@@ -16,7 +16,7 @@ function BlogPost({ post }) {
 
   return (
     <Layout>
-      <div className="header-content relative top-0 -translate-y-20">
+      <div className="header-content relative top-0 -translate-y-20 -mb-20">
         <div className="bg-dark bg-opacity-40 absolute z-20 top-0 bottom-0 w-full h-full flex flex-col items-center justify-center pt-20">
           <PageTitle title={post.title} />
           <div className="header-post-date">
@@ -35,9 +35,9 @@ function BlogPost({ post }) {
         </div>
       </div>
 
-      <article className="container mx-auto pb-20">
+      <article className="max-w-xs md:max-w-2xl xl:max-w-screen-2xl mx-auto pb-20">
         <div
-          className="prose mx-auto xl:max-w-4xl"
+          className="prose break-words mx-auto xl:max-w-4xl"
           dangerouslySetInnerHTML={{ __html: post.content }}
         ></div>
       </article>
