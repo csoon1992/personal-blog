@@ -31,10 +31,18 @@ function GradientPrimaryRoundedLink({
   isInternalLink = false,
   rounded = true,
   children,
+  keepInMobile,
   ...props
 }) {
-  let linkClass =
-    "lg:inline-block lg:py-4 lg:px-8 lg:border lg:border-solid lg:border-primary lg:bg-gradient-to-r lg:hover:from-green-400 lg:hover:to-primary lg:hover:text-white lg:hover:border-transparent text-primary";
+  let linkClass = "";
+
+  if (!keepInMobile) {
+    linkClass =
+      "lg:inline-block lg:py-4 lg:px-8 lg:border lg:border-solid lg:border-primary lg:bg-gradient-to-r lg:hover:from-green-400 lg:hover:to-primary lg:hover:text-white lg:hover:border-transparent text-primary";
+  } else {
+    linkClass =
+      "inline-block py-4 px-8 border border-solid border-primary bg-gradient-to-r from-green-400 to-primary text-white border-transparent";
+  }
 
   if (rounded) {
     linkClass += " rounded-full";

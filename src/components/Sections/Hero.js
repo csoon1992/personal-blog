@@ -7,33 +7,28 @@ import Typist from "react-text-typist";
 
 function Hero() {
   return (
-    <section id="hero" className="section w-full h-screen flex flex-col">
-      <div className="max-w-3xl md:max-w-2xl xl:max-w-screen-2xl flex-1 grid grid-cols-5 gap-20 justify-end items-center mx-auto">
-        <div className="col-span-2 h-full">
+    <section id="hero" className="section w-full md:h-screen flex flex-col">
+      <div className="max-w-xs md:max-w-2xl xl:max-w-screen-2xl flex-1 md:grid grid-cols-5 gap-20 justify-end items-center mx-auto pb-8 md:pb-0">
+        <div className="col-span-2 h-full hidden md:block">
           <div className="p-8 w-full h-full relative">
             <Image
               src="/img/intro-me.png"
               alt="Cristina Soler"
               layout="fill"
               objectFit="contain"
-              className="profile-photo absolute bottom-0 z-0 h-full"
+              className="profile-photo md:absolute bottom-0 z-0 h-full"
               style={{ minHeight: "0" }}
             />
-            <style jsx>{`
-              .profile-photo {
-                height: 100%;
-              }
-            `}</style>
           </div>
         </div>
 
         <div className="content col-span-3 col-start-3 col-end-5">
-          <div className="links">
+          <div className="links hidden md:block">
             <SocialLinks />
           </div>
 
-          <div className="mt-8">
-            <h2 className="text-5xl font-medium my-4">
+          <div className="mt-8 text-center md:text-left">
+            <h2 className="text-2xl md:text-5xl font-medium my-4">
               <Typist
                 sentences={["Soy "]}
                 loop={false}
@@ -62,7 +57,7 @@ function Hero() {
                 pauseTime={0}
               />
             </h2>
-            <div className="text-2xl font-light">
+            <div className="text-lg md:text-2xl font-light">
               Programadora web especializada en el mundo del comercio
               electrónico con PrestaShop y con muchas inquietudes sobre el
               desarrollo a medida.
@@ -72,6 +67,7 @@ function Hero() {
               <GradientPrimaryRoundedLink
                 url={"/files/CV_Cristina.pdf"}
                 download={true}
+                keepInMobile={true}
               >
                 Descargar CV
               </GradientPrimaryRoundedLink>

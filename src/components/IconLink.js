@@ -13,7 +13,7 @@ function IconLink({ url, title, linkClass, icon }) {
       rel="noopener noreferrer"
       className={linkClass}
     >
-      <a className="block p-3">
+      <a className="block p-2 md:p-3">
         <IconContext.Provider value={{ size: "24px" }} style={iconStyles}>
           {icon}
         </IconContext.Provider>

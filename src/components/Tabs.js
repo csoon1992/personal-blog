@@ -57,7 +57,7 @@ function Button({ children, index }) {
   const isActive = active === index;
 
   let className =
-    "tab-list-item inline-block py-3 px-8 border border-solid rounded-sm border-primary cursor-pointer";
+    "tab-list-item inline-block py-3 px-3 md:px-8 border border-solid rounded-sm border-primary cursor-pointer";
 
   if (isActive) {
     className +=
@@ -92,7 +92,7 @@ function Panel({ children, index }) {
   }
 
   return (
-    <div className="tab-content p-12 bg-dark lg:max-w-4xl mx-auto">
+    <div className="tab-content p-6 md:p-12 bg-dark lg:max-w-4xl mx-auto">
       {children}
     </div>
   );

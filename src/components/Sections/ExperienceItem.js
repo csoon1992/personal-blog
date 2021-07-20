@@ -23,17 +23,19 @@ function ExperienceItem({
   );
 
   return (
-    <div className="experience flex">
+    <div className="experience md:flex">
       <div
-        className={`count w-12 h-12 text-white font-bold text-center flex flex-row items-center justify-center transform rotate-45 ${
+        className={`count w-12 h-12 text-white font-bold text-center flex flex-row items-center justify-center transform rotate-45 mx-auto md:mx-0 ${
           color ? color : "bg-primary"
         }`}
       >
         <div className="num transform -rotate-45 text-3xl">{num}</div>
       </div>
       <div className="py-4 px-8 flex-1">
-        <h3 className="text-primary text-lg font-medium">{itemTitle}</h3>
-        <p className="text-gray-300 text-sm">
+        <h3 className="text-primary text-lg font-medium text-center md:text-left">
+          {itemTitle}
+        </h3>
+        <p className="text-gray-300 text-sm text-center md:text-left">
           {position} - Desde {fromDate} hasta {toDate}
         </p>
         <div className="resume mb-0">{children}</div>

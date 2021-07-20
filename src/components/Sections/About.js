@@ -5,7 +5,7 @@ import Tabs from "../Tabs";
 function About() {
   return (
     <section id="about" className="section">
-      <div className="max-w-xs md:max-w-2xl xl:max-w-screen-2xl mx-auto py-20">
+      <div className="max-w-xs md:max-w-2xl xl:max-w-screen-2xl mx-auto py-10 md:py-20">
         <SectionTitle title="Sobre mí" />
 
         <Tabs.Tabs>
