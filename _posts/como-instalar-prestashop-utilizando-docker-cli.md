@@ -1,7 +1,7 @@
 ---
 contentType: blog
 slug: /como-instalar-prestashop-utilizando-docker-cli
-image: /files/docker-ps-header.jpg
+image: /files/como-instalar-prestashop-utilizando-docker-cli.png
 title: Cómo instalar Prestashop utilizando Docker y CLI
 date: "2019-01-13T20:00:00+01:00"
 tags:
@@ -11,7 +11,7 @@ tags:
   - script
 ---
 
-En mi anterior [post](/como-instalar-prestashop-utilizando-docker) os conté cómo instalar Prestashop 1.7 utilizando [Docker](https://docs.docker.com/get-started/) y el asistente de instalación que nos ofrece Prestashop. Pero... ¿qué ocurre con aquellos que son tan fanáticos de la consola de comandos?
+En mi anterior [post](/posts/como-instalar-prestashop-utilizando-docker) os conté cómo instalar Prestashop 1.7 utilizando [Docker](https://docs.docker.com/get-started/) y el asistente de instalación que nos ofrece Prestashop. Pero... ¿qué ocurre con aquellos que son tan fanáticos de la consola de comandos?
 
 Prestashop trae consigo un pequeño script de instalación vía consola de comandos que permite realizar la instalación sin necesidad de acceder a nuestro navegador.
 

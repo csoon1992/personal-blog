@@ -31,7 +31,7 @@ function ExperienceItem({
       >
         <div className="num transform -rotate-45 text-3xl">{num}</div>
       </div>
-      <div className="py-4 px-8 flex-1">
+      <div className="p-4 md:px-8 flex-1">
         <h3 className="text-primary text-lg font-medium text-center md:text-left">
           {itemTitle}
         </h3>

@@ -19,7 +19,7 @@ class SocialLinks extends React.Component {
 
     return (
       <>
-        <ul className="flex flex-row align-items-center space-x-3">
+        <ul className="flex flex-row justify-center lg:justify-start align-items-center space-x-3">
           <li className={itemStyles}>
             <IconLink
               url="https://www.linkedin.com/in/csoon1992/"

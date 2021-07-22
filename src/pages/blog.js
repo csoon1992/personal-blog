@@ -8,7 +8,7 @@ const BlogContent = ({ posts }) => {
       <div className="max-w-xs md:max-w-2xl xl:max-w-screen-2xl mx-auto py-20">
         <SectionTitle title="Mis artículos" />
 
-        <div className="grid grid-col lg:grid-cols-3 gap-12">
+        <div className="grid grid-col lg:grid-cols-3 gap-12 px-4 lg:px-0">
           {posts.map((post) => (
             <Card key={post.slug} post={post} />
           ))}

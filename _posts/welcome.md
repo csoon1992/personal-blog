@@ -1,7 +1,7 @@
 ---
 contentType: blog
 slug: /welcome
-image: /files/teclas_blog.jpg
+image: /files/welcome.jpg
 title: Welcome!
 date: "2018-12-16T14:00:00+01:00"
 tags:

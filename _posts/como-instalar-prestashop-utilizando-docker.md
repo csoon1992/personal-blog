@@ -1,7 +1,7 @@
 ---
 contentType: blog
 slug: /como-instalar-prestashop-utilizando-docker
-image: /files/docker-ps-header.jpg
+image: /files/como-instalar-prestashop-utilizando-docker.png
 title: Cómo instalar Prestashop utilizando Docker
 date: "2019-01-04T16:00:00+01:00"
 tags:

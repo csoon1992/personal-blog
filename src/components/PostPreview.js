@@ -5,10 +5,10 @@ import PostDate from "./Blog/PostDate";
 
 function PostPreview({ post }) {
   return (
-    <div className="post-preview group flex flex-1 flex-row lg:flex-col">
+    <div className="post-preview group mb-12 lg:mb-0">
       <Link href="/posts/[slug]" as={`/posts${post.slug}`}>
-        <a title={`Ver ${post.title}`} className="flex flex-1 gap-x-4">
-          <div className="relative flex-1 lg:block lg:mb-4">
+        <a title={`Ver ${post.title}`} className="block">
+          <div className="relative h-32 mb-4">
             <Image
               src={post.image}
               alt={post.title}
@@ -18,7 +18,7 @@ function PostPreview({ post }) {
             />
           </div>
 
-          <div className="py-4 lg:py-0 px-3 flex flex-1 flex-col">
+          <div className="px-3">
             <div className="text-sm text-primary">
               <PostDate date={post.date} />
             </div>

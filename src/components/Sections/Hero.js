@@ -7,9 +7,9 @@ import Typist from "react-text-typist";
 
 function Hero() {
   return (
-    <section id="hero" className="section w-full md:h-screen flex flex-col">
-      <div className="max-w-xs md:max-w-2xl xl:max-w-screen-2xl flex-1 md:grid grid-cols-5 gap-20 justify-end items-center mx-auto pb-8 md:pb-0">
-        <div className="col-span-2 h-full hidden md:block">
+    <section id="hero" className="section w-full lg:h-screen flex flex-col">
+      <div className="max-w-xs md:max-w-2xl xl:max-w-screen-2xl flex-1 md:grid grid-rows-2 lg:grid-cols-5 gap-20 justify-end items-center mx-auto  py-20 lg:py-0 lg:pb-8">
+        <div className="lg:col-span-2 h-full hidden md:block">
           <div className="p-8 w-full h-full relative">
             <Image
               src="/img/intro-me.png"
@@ -22,12 +22,12 @@ function Hero() {
           </div>
         </div>
 
-        <div className="content col-span-3 col-start-3 col-end-5">
+        <div className="content lg:col-span-3 lg:col-start-3 lg:col-end-5">
           <div className="links hidden md:block">
             <SocialLinks />
           </div>
 
-          <div className="mt-8 text-center md:text-left">
+          <div className="mt-8 text-center lg:text-left">
             <h2 className="text-2xl md:text-5xl font-medium my-4">
               <Typist
                 sentences={["Soy "]}
