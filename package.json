@@ -43,9 +43,11 @@
     "dev": "npx next dev"
   },
   "devDependencies": {
+    "bufferutil": "^4.0.3",
     "gray-matter": "^4.0.2",
     "netlify-cli": "^5.2.2",
     "path": "^0.12.7",
+    "utf-8-validate": "^5.0.5",
     "webpack-node-externals": "^3.0.0"
   }
 }
