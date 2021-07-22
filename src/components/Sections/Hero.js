@@ -7,8 +7,8 @@ import Typist from "react-text-typist";
 
 function Hero() {
   return (
-    <section id="hero" className="section w-full lg:h-screen flex flex-col">
-      <div className="max-w-xs md:max-w-2xl xl:max-w-screen-2xl flex-1 md:grid grid-rows-2 lg:grid-cols-5 gap-20 justify-end items-center mx-auto  py-20 lg:py-0 lg:pb-8">
+    <section id="hero" className="section w-full md:h-screen flex flex-col">
+      <div className="max-w-xs md:max-w-2xl xl:max-w-screen-2xl flex-1 md:grid grid-rows-2 lg:grid-rows-none lg:grid-cols-5 gap-20 justify-end items-center mx-auto  py-20 lg:py-0 lg:pb-8">
         <div className="lg:col-span-2 h-full hidden md:block">
           <div className="p-8 w-full h-full relative">
             <Image
