@@ -9,4 +9,8 @@ module.exports = {
     });
     return config;
   },
+  i18n: {
+    locales: ["es-ES"],
+    defaultLocale: "es-ES",
+  },
 };

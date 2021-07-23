@@ -32,7 +32,11 @@ function MobileMenu() {
                   </Link>
 
                   <div className="-mr-4 flex items-center md:hidden">
-                    <Popover.Button className="p-2 inline-flex items-center justify-center text-white">
+                    <Popover.Button
+                      name="open-menu"
+                      aria-label="Open menu"
+                      className="p-2 inline-flex items-center justify-center text-white"
+                    >
                       <div className="h-6 w-6" aria-hidden="true">
                         <IconContext.Provider value={{ size: "24px" }}>
                           <FaBars />
@@ -88,7 +92,11 @@ function MobileMenu() {
                   </Link>
 
                   <div className="-mr-2">
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <Popover.Button
+                      name="close-menu"
+                      aria-label="Close menu"
+                      className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                    >
                       <div className="h-6 w-6" aria-hidden="true">
                         <IconContext.Provider value={{ size: "22px" }}>
                           <FaTimes />

@@ -57,11 +57,11 @@ function Button({ children, index }) {
   const isActive = active === index;
 
   let className =
-    "tab-list-item inline-block py-3 px-3 md:px-8 border border-solid rounded-sm border-primary cursor-pointer";
+    "tab-list-item inline-block py-3 px-3 md:px-8 border border-solid rounded-sm border-primary-500 cursor-pointer";
 
   if (isActive) {
     className +=
-      " tab-list-active text-white bg-gradient-to-r from-green-400 to-primary";
+      " tab-list-active text-white bg-gradient-to-r from-green-400 to-primary-500";
   } else {
     className += " text-primary bg-transparent";
   }
