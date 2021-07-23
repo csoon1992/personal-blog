@@ -4,8 +4,8 @@
     margin-bottom: 1rem;
 }
 
-code[class*="language-"],
-pre[class*="language-"] {
+.prose code,
+.prose pre {
     font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
     font-size: 14px;
     line-height: 1.375;
@@ -25,29 +25,29 @@ pre[class*="language-"] {
     text-shadow: none;
 }
 
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
+.prose pre::-moz-selection,
+.prose pre ::-moz-selection,
+.prose code::-moz-selection,
+.prose code ::-moz-selection {
     text-shadow: none;
     background: #f1f1f1;
 }
 
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
+.prose pre::selection,
+.prose pre ::selection,
+.prose code::selection,
+.prose code ::selection {
     text-shadow: none;
     background: #f1f1f1;
 }
 
-pre[class*="language-"] {
+.prose pre {
     padding: 1em;
     margin: .5em 0;
     overflow: auto
 }
 
-:not(pre)>code[class*="language-"] {
+.prose :not(pre)>code {
     padding: .1em;
     border-radius: .3em
 }

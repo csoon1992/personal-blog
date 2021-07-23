@@ -100,9 +100,12 @@ module.exports = {
             p: {
               margin: "0",
             },
+            pre: {
+              backgroundColor: "transparent",
+              padding: 0,
+            },
             code: {
               color: theme("colors.block-code-color"),
-              backgroundColor: theme("colors.dark.DEFAULT"),
               padding: theme("spacing.1"),
               display: "block",
               fontWeight: "normal",

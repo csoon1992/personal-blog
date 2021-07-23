@@ -4,11 +4,35 @@ import Image from "next/image";
 import ErrorPage from "next/error";
 import { PageTitle } from "../../components/SectionUtilities";
 import Layout from "../../layouts/index";
-import markdownToHtml from "../../lib/markdownToHtml";
+import ReactMarkdown from "react-markdown";
 import PostDate from "../../components/Blog/PostDate";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import theme from "react-syntax-highlighter/dist/cjs/styles/prism/a11y-dark";
+import Comments from "react-disqus-comments";
+
+const components = {
+  code({ node, inline, className, children, ...props }) {
+    const match = /language-(\w+)/.exec(className || "");
+    return !inline && match ? (
+      <SyntaxHighlighter
+        style={theme}
+        showLineNumbers={true}
+        language={match[1]}
+        PreTag="div"
+        children={String(children).replace(/\n$/, "")}
+        {...props}
+      />
+    ) : (
+      <code className={className} {...props}>
+        {children}
+      </code>
+    );
+  },
+};
 
 function BlogPost({ post }) {
   const router = useRouter();
+  const shortName = "cristinasoler";
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
@@ -35,12 +59,15 @@ function BlogPost({ post }) {
         </div>
       </div>
 
-      <article className="max-w-xs md:max-w-2xl xl:max-w-screen-2xl mx-auto pb-20 px-4 lg:px-0">
-        <div
-          className="prose break-words mx-auto xl:max-w-4xl"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        ></div>
+      <article className="max-w-screen md:max-w-2xl xl:max-w-screen-xl mx-auto pb-20 px-4 lg:px-0">
+        <div className="prose break-words mx-auto xl:max-w-screen-xl">
+          <ReactMarkdown components={components}>{post.body}</ReactMarkdown>
+        </div>
       </article>
+
+      <div className="max-w-xs md:max-w-2xl xl:max-w-screen-xl mx-auto">
+        <Comments shortname={shortName} />
+      </div>
     </Layout>
   );
 }
@@ -48,31 +75,23 @@ function BlogPost({ post }) {
 export default BlogPost;
 
 export async function getStaticProps({ params }) {
-  const { findPostBySlug } = require("../../lib/api");
-  const post = await findPostBySlug(params.slug);
-  const content = await markdownToHtml(post.content || "");
+  const { findPostBySlug } = await import("../../lib/api");
+
+  const post = await findPostBySlug(`/${params.slug}`);
+
   return {
     props: {
-      post: {
-        ...post,
-        content,
-      },
+      post,
     },
   };
 }
 
 export async function getStaticPaths() {
-  const { allPosts } = require("../../lib/api");
+  const { allPosts } = await import("../../lib/api");
   const posts = await allPosts();
 
   return {
-    paths: posts.map((post) => {
-      return {
-        params: {
-          slug: post.realSlug,
-        },
-      };
-    }),
+    paths: posts.map(({ slug }) => `/posts${slug}`),
     fallback: false,
   };
 }

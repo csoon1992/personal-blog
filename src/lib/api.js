@@ -1,36 +1,38 @@
 import matter from "gray-matter";
-import { join, extname } from "path";
-import { readFile, readdir } from "fs/promises";
 import memoize from "lodash.memoize";
 
-const postsDirectory = join(process.cwd(), "_posts");
+const loadedPosts = require.context("../../_posts", true, /\.md$/);
+
+const postContents = loadedPosts
+  .keys()
+  .map(loadedPosts)
+  .map((content) => {
+    const parsedContent = matter(content.default);
+
+    return {
+      body: parsedContent.content,
+      ...parsedContent.data,
+      realSlug: parsedContent.data.slug.replace(/\.md$/, ""),
+    };
+  })
+  .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+
+const postsBySlug = postContents.reduce((result, post) => {
+  return { ...result, [post.slug]: post };
+}, {});
 
 export async function getPostSlugs() {
-  const files = await readdir(postsDirectory);
-  return files.filter((file) => extname(file) == ".md");
+  return Object.keys(postsBySlug);
 }
 
 export async function getPostBySlug(slug) {
   const realSlug = slug.replace(/\.md$/, "");
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
 
-  const fileContents = await readFile(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
-
-  return { ...data, content, realSlug };
+  return postsBySlug[realSlug];
 }
 
 export async function getAllPosts() {
-  const slugs = await getPostSlugs();
-
-  const postsPromises = slugs.map((slug) => getPostBySlug(slug));
-
-  const resolvedPosts = await Promise.all(postsPromises);
-
-  // sort posts by date in descending order
-  return resolvedPosts.sort((post1, post2) =>
-    post1.date > post2.date ? -1 : 1
-  );
+  return postContents;
 }
 
 export const findPostBySlug = memoize(
