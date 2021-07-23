@@ -1,7 +1,7 @@
 ---
 contentType: blog
 slug: /redisenando-blog
-image: /files/nextjs.jpg
+image: /files/nextjs.png
 title: Rediseñando mi blog
 date: "2021-07-23T19:00:00+01:00"
 tags:

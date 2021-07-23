@@ -8,9 +8,11 @@ function PageTitle({ title }) {
     </h1>
   );
 }
-function SectionTitle({ title }) {
+function SectionTitle({ title, className }) {
   return (
-    <h2 className="text-center font-medium text-3xl lg:text-5xl mb-12 font-titles">
+    <h2
+      className={`text-center font-medium text-3xl lg:text-5xl mb-12 font-titles ${className}`}
+    >
       {title}
       <span className="block mx-auto bg-primary mt-3 h-1 w-20">&nbsp;</span>
     </h2>

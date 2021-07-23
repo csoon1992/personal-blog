@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import ErrorPage from "next/error";
-import { PageTitle } from "../../components/SectionUtilities";
+import { PageTitle, SectionTitle } from "../../components/SectionUtilities";
 import Layout from "../../layouts/index";
 import ReactMarkdown from "react-markdown";
 import PostDate from "../../components/Blog/PostDate";
@@ -41,15 +41,9 @@ function BlogPost({ post }) {
   return (
     <Layout>
       <div className="header-content relative top-0 -translate-y-20 -mb-20">
-        <div className="bg-dark bg-opacity-40 absolute z-20 top-0 bottom-0 w-full h-full flex flex-col items-center justify-center pt-20 px-4 lg:px-0">
-          <PageTitle title={post.title} />
-          <div className="header-post-date">
-            <PostDate date={post.date} />
-          </div>
-        </div>
-
         <div className="relative h-96 mb-4">
           <Image
+            quality="92"
             className="w-full"
             layout="fill"
             objectFit="cover"
@@ -59,7 +53,11 @@ function BlogPost({ post }) {
         </div>
       </div>
 
-      <article className="max-w-screen md:max-w-2xl xl:max-w-screen-xl mx-auto pb-20 px-4 lg:px-0">
+      <article className="max-w-screen md:max-w-2xl xl:max-w-screen-xl mx-auto pb-20 px-4 lg:px-0 space-y-3">
+        <SectionTitle title={post.title} className="mt-10 mb-3" />
+        <div className="header-post-date text-center pb-6">
+          <PostDate date={post.date} />
+        </div>
         <div className="prose break-words mx-auto xl:max-w-screen-xl">
           <ReactMarkdown components={components}>{post.body}</ReactMarkdown>
         </div>
