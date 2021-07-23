@@ -1,6 +1,11 @@
 /* Meadow Dark theme with customizations */
-code[class*="language-"],
-pre[class*="language-"] {
+.prose code {
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.prose code,
+.prose pre {
     font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
     font-size: 14px;
     line-height: 1.375;
@@ -15,34 +20,34 @@ pre[class*="language-"] {
     -webkit-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    background: #192834;
-    color: $white;
+    background: #363B5A;
+    color: #afafaf;
     text-shadow: none;
 }
 
-pre[class*="language-"]::-moz-selection,
-pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
+.prose pre::-moz-selection,
+.prose pre ::-moz-selection,
+.prose code::-moz-selection,
+.prose code ::-moz-selection {
     text-shadow: none;
-    background: #1b6498
+    background: #f1f1f1;
 }
 
-pre[class*="language-"]::selection,
-pre[class*="language-"] ::selection,
-code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
+.prose pre::selection,
+.prose pre ::selection,
+.prose code::selection,
+.prose code ::selection {
     text-shadow: none;
-    background: #1b6498
+    background: #f1f1f1;
 }
 
-pre[class*="language-"] {
+.prose pre {
     padding: 1em;
     margin: .5em 0;
     overflow: auto
 }
 
-:not(pre)>code[class*="language-"] {
+.prose :not(pre)>code {
     padding: .1em;
     border-radius: .3em
 }
@@ -55,7 +60,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-    color: $white;
+    color: #2D8984;
 }
 
 .token.namespace {
@@ -65,7 +70,7 @@ pre[class*="language-"] {
 .token.tag,
 .token.operator,
 .token.number {
-    color: #8ca1ca
+    color: #f35b8e
 }
 
 .token.property,
@@ -81,7 +86,7 @@ pre[class*="language-"] {
 
 code.language-javascript,
 .token.attr-name {
-    color: #98c3ae
+    color: #a077ef;
 }
 
 code.language-css,
@@ -104,7 +109,7 @@ code.language-scss,
 }
 
 .token.attr-value {
-    color: #b8f99a;
+    color: #44ce43;
 }
 
 .token.placeholder,
@@ -155,4 +160,10 @@ pre>code.highlight {
     background: rgba(102, 163, 41, 0.2);
     background: -webkit-gradient(linear, left top, right top, color-stop(70%, rgba(102, 163, 41, 0.2)), to(rgba(102, 163, 41, 0)));
     background: linear-gradient(to right, rgba(102, 163, 41, 0.2) 70%, rgba(102, 163, 41, 0))
+}
+
+.prose {
+    strong {
+        color: inherit;
+    }
 }

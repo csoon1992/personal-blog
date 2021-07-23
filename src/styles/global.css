@@ -1,0 +1,21 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+p {
+    margin-bottom: 1rem;
+}
+
+.section:nth-child(even) {
+    @apply bg-dark-600;
+}
+
+.section:nth-child(odd) {
+    @apply bg-dark;
+}
+
+.debug * {
+    outline: 1px solid red;
+}
