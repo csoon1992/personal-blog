@@ -5,7 +5,7 @@ import PostDate from "./Blog/PostDate";
 
 function PostPreview({ post }) {
   return (
-    <div className="post-preview group mb-12 lg:mb-0">
+    <div className="post-preview group mb-12 lg:mb-0 flex-1">
       <Link href="/posts/[slug]" as={`/posts${post.slug}`}>
         <a title={`Ver ${post.title}`} className="block">
           <div className="relative h-32 mb-4">
