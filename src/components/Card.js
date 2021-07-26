@@ -6,7 +6,14 @@ function Card({ data }) {
   return (
     <div className="card pb-6 flex flex-col rounded-xl bg-dark-400">
       <div className="relative flex-1 lg:block lg:mb-4">
-        <img src={data.image} alt={data.name} className="w-full rounded-t-xl" />
+        <Image
+          src={data.image}
+          alt={data.name}
+          className="object-cover w-full rounded-t-xl"
+          width={400}
+          height={336}
+          layout="responsive"
+        />
       </div>
 
       <div className="p-6 flex flex-1 flex-col">

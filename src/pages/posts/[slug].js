@@ -47,6 +47,7 @@ function BlogPost({ post }) {
             className="w-full"
             layout="fill"
             objectFit="cover"
+            priority={true}
             src={post.image}
             alt={post.title}
           />

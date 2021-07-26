@@ -13,8 +13,9 @@ function PostPreview({ post }) {
               src={post.image}
               alt={post.title}
               className="object-cover rounded-md lg:rounded-none"
-              layout="fill"
-              sizes="33vw"
+              width={1280}
+              height={350}
+              layout="responsive"
             />
           </div>
 
