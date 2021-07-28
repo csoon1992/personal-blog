@@ -2,33 +2,12 @@ import React from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import ErrorPage from "next/error";
-import { PageTitle, SectionTitle } from "../../components/SectionUtilities";
+import { SectionTitle } from "../../components/SectionUtilities";
 import Layout from "../../layouts/index";
 import ReactMarkdown from "react-markdown";
 import PostDate from "../../components/Blog/PostDate";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import theme from "react-syntax-highlighter/dist/cjs/styles/prism/a11y-dark";
 import Comments from "react-disqus-comments";
-
-const components = {
-  code({ node, inline, className, children, ...props }) {
-    const match = /language-(\w+)/.exec(className || "");
-    return !inline && match ? (
-      <SyntaxHighlighter
-        style={theme}
-        showLineNumbers={true}
-        language={match[1]}
-        PreTag="div"
-        children={String(children).replace(/\n$/, "")}
-        {...props}
-      />
-    ) : (
-      <code className={className} {...props}>
-        {children}
-      </code>
-    );
-  },
-};
+import components from "../../components/MdComponents";
 
 function BlogPost({ post }) {
   const router = useRouter();

@@ -29,7 +29,7 @@ Por tanto, siempre que estemos ante la necesidad de modificar cualquier fichero 
 
 He aquí la página de producto del tema _Classic_ de Prestashop:
 
-![Página de producto por defecto](/files/default_product_page.png)
+![Página de producto por defecto {1163x786}](/files/default_product_page.png)
 
 Imaginemos que queremos mostrar la referencia debajo del nombre del producto, que el tema _Classic_ no lo hace por defecto.
 
@@ -47,21 +47,21 @@ Ahora en serio. Para crear un tema hijo sólo necesitamos crear una carpeta en t
 
 Tras esto, clonamos la carpeta _config_ del tema padre (_Classic_) en la carpeta del tema hijo (_csoon-childtheme_) y el preview.png (como aún no tengo modificaciones del tema hechas, dejo la misma preview ya que no hay cambios), de modo que tendremos lo siguiente:
 
-![Estructura básica del tema hijo](/files/childtheme-folder-structure.png)
+![Estructura básica del tema hijo {366x202}](/files/childtheme-folder-structure.png)
 
 Ahora realizaremos unas pequeñas modificaciones en el fichero de configuración del tema hijo: _theme.yml_.
 
-![Fichero de configuración del tema hijo](/files/childtheme-config.png)
+![Fichero de configuración del tema hijo {1229x624}](/files/childtheme-config.png)
 
 Básicamente lo que he hecho ha sido cambiar la información básica del tema (líneas 1-8) y descomentar (quitar la almohadilla "#") que había delante de _use_parent_assets_ para que se incluyan los assets del tema padre y toda la funcionalidad se mantenga tal cual está en el tema padre.
 
 Con esto, ya tenemos un tema hijo creado. Ahora mismo es un tema hijo sin sentido, ya que no se ha realizado ninguna modificación respecto al tema padre, pero lo que es estar, está. De hecho, es hora de ir al Backoffice > Diseño > Tema y logotipo. Aquí ya debemos visualizar tanto el tema Classic seleccionado como un nuevo tema disponible llamado csoon-childtheme:
 
-![Listado de temas en el BackOffice](/files/backoffice_themes.png)
+![Listado de temas en el BackOffice {1082x990}](/files/backoffice_themes.png)
 
 Seleccionamos el nuevo y ya estamos listos para realizar modificaciones en el tema hijo e ir viéndolos aplicados en el front.
 
-![Tema hijo seleccionado](/files/childtheme_selected.png)
+![Tema hijo seleccionado {1081x579}](/files/childtheme_selected.png)
 
 ### Realizar modificaciones en el tema hijo
 

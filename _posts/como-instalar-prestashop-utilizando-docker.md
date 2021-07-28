@@ -53,30 +53,30 @@ El proceso de instalación de compone de seis pasos súper sencillos:
 
 ### 1. Elección de lenguaje
 
-![Instalación de Prestashop: Paso 1](/files/01_install.png)
+![Instalación de Prestashop: Paso 1 {990x712}](/files/01_install.png)
 
 ### 2. Acuerdo de licencia
 
 Ya sabéis, nos leemos el acuerdo como siempre, aceptamos y listo.
 
-![Instalación de Prestashop: Paso 2](/files/02_install.png)
+![Instalación de Prestashop: Paso 2 {990x708}](/files/02_install.png)
 
 ### 3. Compatibilidad del sistema
 
 Yo de momento pasaré de la recomendación de Prestashop para obtener los datos de internacionalización más recientes, por lo que no actualizaré el **paquete de sistema ICU** ni la **extensión Intl PHP**.
 
-![Instalación de Prestashop: Paso 3 sin error](/files/03_install_b.png)
+![Instalación de Prestashop: Paso 3 sin error {990x709}](/files/03_install_b.png)
 
 ### 4. Información de la tienda
 
-![Instalación de Prestashop: Paso 4](/files/04_install.png)
+![Instalación de Prestashop: Paso 4 {993x1069}](/files/04_install.png)
 
 ### 5. Configuración del sistema
 
 En este paso, se configura la conexión a la base de datos que se utilizará para este proyecto de acuerdo a las variables definidas en el **.env**.
 Recordad que la dirección del servidor de base de datos es el nombre del servicio mysql definido en el docker-compose.yml
 
-![Instalación de Prestashop: Paso 5](/files/05_install.png)
+![Instalación de Prestashop: Paso 5 {991x866}](/files/05_install.png)
 
 Si tras hacer clic al botón "Comprobar conexión a la base de datos ahora" nos aparece un maravilloso mensajito verde, ¡estamos de suerte!
 
@@ -84,7 +84,7 @@ Por último, damos al botón "Siguiente" y se comenzará a instalar Prestashop. 
 
 Finalmente, obtendremos una pantalla en la que se nos informa de que la instalación ha finalizado por completo.
 
-![Instalación de Prestashop: Paso 6](/files/06_install.png)
+![Instalación de Prestashop: Paso 6 {986x703}](/files/06_install.png)
 
 Acto seguido, hacemos lo que nos pide Prestashop: eliminamos la carpeta de instalación de nuestro proyecto, por motivos de seguridad.
 
@@ -92,7 +92,7 @@ Acto seguido, hacemos lo que nos pide Prestashop: eliminamos la carpeta de insta
 
 Ahora es el momento de comprobar que tanto el Backoffice como el Front funcionan correctamente. Normalmente, el Backoffice funcionará a la primera. Yo lo primero que hago es acceder a **Parámetros Avanzados > Información** para comprobar que no hay ningún error de configuración:
 
-![Backoffice](/files/backoffice_info.png)
+![Backoffice {437x142}](/files/backoffice_info.png)
 
 Sin embargo, el Front normalmente necesitará que demos permisos de escritura al directorio _assets/_ del tema para que pueda crear el directorio _cache/_ dentro de este.
 Por tanto, volvemos a la terminal y ejecutamos el siguiente comando:
@@ -101,4 +101,4 @@ Por tanto, volvemos a la terminal y ejecutamos el siguiente comando:
 
 Recargamos la página del front y veremos que ahora sí, todo está funcionando correctamente.
 
-![Front](/files/front.png)
+![Front {2493x2333}](/files/front.png)
