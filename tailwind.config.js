@@ -10,7 +10,7 @@ module.exports = {
       },
       colors: {
         primary: {
-          DEFAULT: "#35fff5",
+          DEFAULT: "#00cac1",
           50: "#f5fbfa",
           100: "#C8EDEB",
           200: "#A2E0DD",
@@ -127,6 +127,9 @@ module.exports = {
               "&:hover": {
                 textDecoration: "underline",
               },
+            },
+            strong: {
+              color: theme("colors.primary.DEFAULT"),
             },
           },
         },
