@@ -134,8 +134,7 @@ function Experiences() {
               >
                 Galdón
               </a>
-              . También me encargo de algunos mantenimientos de WordPress pero
-              éstos en menor medida.
+              . También he comenzado a montar proyectos con PrestaShop 8, así como proyectos en Laravel.
             </p>
           </ExperienceItem>
         </div>
