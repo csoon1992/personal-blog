@@ -3,6 +3,22 @@ import { GradientPrimaryRoundedLink } from "./SectionUtilities";
 import Image from "next/image";
 
 function Card({ data }) {
+    let cardButton = <div className="mt-8 text-right">
+        <GradientPrimaryRoundedLink
+            url={data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            {data.buttonText || "Visitar"}
+        </GradientPrimaryRoundedLink>
+    </div>;
+
+   if (data.disabled) {
+       cardButton = <div className="mt-8 text-right text-sm italic text-slate-300">
+           No disponible
+       </div>
+   }
+
   return (
     <div className="card pb-6 flex flex-col rounded-xl bg-dark-400">
       <div className="relative flex-1 lg:block lg:mb-4">
@@ -23,15 +39,7 @@ function Card({ data }) {
           <div className="pb-2">{data.description || ""}</div>
         </div>
 
-        <div className="mt-8 text-right">
-          <GradientPrimaryRoundedLink
-            url={data.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {data.buttonText || "Visitar"}
-          </GradientPrimaryRoundedLink>
-        </div>
+          {cardButton}
       </div>
     </div>
   );

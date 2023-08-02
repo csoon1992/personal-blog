@@ -113,9 +113,9 @@ function Experiences() {
 
           <ExperienceItem
             company="Grupo Trevenque"
-            position="Web developer"
+            position="Senior Prestashop developer"
             fromDate="marzo de 2021"
-            toDate="actualidad"
+            toDate="agosto de 2023"
             color="bg-trevenque-color"
             num="6"
           >
@@ -125,7 +125,7 @@ function Experiences() {
               profesionalmente. Mi función en esta empresa es desarrollar
               tiendas online con PrestaShop 1.7 y mantener las ya existentes en
               PrestaShop 1.6. Desarrollo de nuevos módulos a medida para
-              distintos clientes y funcionalidades, incluído uno para conectar
+              distintos clientes y funcionalidades, incluido uno para conectar
               con{" "}
               <a
                 href="https://www.galdon.com/"
@@ -133,8 +133,19 @@ function Experiences() {
                 className="underline text-primary hover:text-primary-600"
               >
                 Galdón
-              </a>
-              . También he comenzado a montar proyectos con PrestaShop 8, así como proyectos en Laravel.
+              </a> y otro para conectar con{" "}
+              <a
+                  href="https://www.azetadistribuciones.es/par/index.php"
+                  title="Azeta"
+                  className="underline text-primary hover:text-primary-600"
+              >
+                Azeta
+              </a>, una distribuidora de libros procesando ficheros ONIX para adaptarlos a PrestaShop.
+              <br/>
+              He comenzado a montar proyectos con PrestaShop 8, así como proyectos en Laravel
+               (con Docker en algunos casos).
+              Una de las cosas que más me ha gustado es que he mentorizado a algunos compañeros <i>juniors</i>
+              que entraron poco después de mí en la empresa y se aprende muchísimo, en ambos sentidos.
             </p>
           </ExperienceItem>
         </div>

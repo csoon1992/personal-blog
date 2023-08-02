@@ -9,6 +9,7 @@ const publicsWorks = [
     subtitle: "2017 - Web personal",
     description: "Web cuenta-atrás para mi boda.",
     image: "/img/mispapissecasan.jpg",
+    disabled: true,
   },
   {
     url: "https://leticiaortizescritora.com/",

@@ -6,7 +6,7 @@ import { SectionTitle } from "../../components/SectionUtilities";
 import Layout from "../../layouts/index";
 import ReactMarkdown from "react-markdown";
 import PostDate from "../../components/Blog/PostDate";
-import Comments from "react-disqus-comments";
+import { DiscussionEmbed } from 'disqus-react';
 import components from "../../components/MdComponents";
 
 function BlogPost({ post }) {
@@ -44,7 +44,17 @@ function BlogPost({ post }) {
       </article>
 
       <div className="max-w-xs md:max-w-2xl xl:max-w-screen-xl mx-auto">
-        <Comments shortname={shortName} />
+        <DiscussionEmbed
+            shortname={shortName}
+            config={
+              {
+                url: `https://cristinasoler.me${post.slug}`,
+                identifier: post.slug,
+                title: post.title,
+                language: 'es_ES'
+              }
+            }
+        />
       </div>
     </Layout>
   );
