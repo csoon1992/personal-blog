@@ -43,7 +43,7 @@ export default {
               alt={child.properties.alt}
               width={width}
               height={height}
-              layout="responsive"
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
         );

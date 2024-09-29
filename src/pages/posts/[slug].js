@@ -24,8 +24,8 @@ function BlogPost({ post }) {
           <Image
             quality="92"
             className="w-full"
-            layout="fill"
-            objectFit="cover"
+            fill={true}
+            style={{objectFit: "cover"}}
             priority={true}
             src={post.image}
             alt={post.title}

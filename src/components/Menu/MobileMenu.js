@@ -24,11 +24,9 @@ function MobileMenu() {
             >
               <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div className="flex items-center justify-between w-full md:w-auto">
-                  <Link href="/">
-                    <a className="text-2xl">
+                  <Link href="/" className="text-2xl">
                       <span>Cristina</span>
                       <span className="text-primary">Soler</span>
-                    </a>
                   </Link>
 
                   <div className="-mr-4 flex items-center md:hidden">
@@ -84,11 +82,9 @@ function MobileMenu() {
             >
               <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="px-5 pt-4 flex items-center justify-between border-b border-gray-100">
-                  <Link href="/">
-                    <a className="text-2xl">
+                  <Link href="/" className="text-2xl">
                       <span className="text-dark">Cristina</span>
                       <span className="text-primary">Soler</span>
-                    </a>
                   </Link>
 
                   <div className="-mr-2">

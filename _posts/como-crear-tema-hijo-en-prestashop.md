@@ -53,7 +53,7 @@ Ahora realizaremos unas pequeñas modificaciones en el fichero de configuración
 
 ![Fichero de configuración del tema hijo {1229x624}](/files/childtheme-config.png)
 
-Básicamente lo que he hecho ha sido cambiar la información básica del tema (líneas 1-8) y descomentar (quitar la almohadilla "#") que había delante de _use_parent_assets_ para que se incluyan los assets del tema padre y toda la funcionalidad se mantenga tal cual está en el tema padre.
+Básicamente, lo que he hecho ha sido cambiar la información básica del tema (líneas 1-8) y descomentar (quitar la almohadilla "#") que había delante de _use_parent_assets_ para que se incluyan los assets del tema padre y toda la funcionalidad se mantenga tal cual está en el tema padre.
 
 Con esto, ya tenemos un tema hijo creado. Ahora mismo es un tema hijo sin sentido, ya que no se ha realizado ninguna modificación respecto al tema padre, pero lo que es estar, está. De hecho, es hora de ir al Backoffice > Diseño > Tema y logotipo. Aquí ya debemos visualizar tanto el tema Classic seleccionado como un nuevo tema disponible llamado csoon-childtheme:
 

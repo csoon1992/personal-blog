@@ -1,6 +1,5 @@
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   mode: "jit",
   theme: {
     extend: {
@@ -43,6 +42,7 @@ module.exports = {
         "redegal-color": "#318DCC",
         "baby-color": "#E0008A",
         "trevenque-color": "#1EBD00",
+        "webimpacto-color": "#DF134B",
       },
       gridTemplateColumns: {
         // Simple 24 column grid

@@ -28,7 +28,7 @@ function Card({ data }) {
           className="object-cover w-full rounded-t-xl"
           width={400}
           height={336}
-          layout="responsive"
+          style={{ width: '100%', height: 'auto' }}
         />
       </div>
 

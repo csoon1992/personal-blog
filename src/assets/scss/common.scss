@@ -8,6 +8,10 @@ body {
     font-family: $montserrat; 
 }
 
+.typed-cursor {
+    @apply text-primary;
+}
+
 .shadow-light-hover {
     &:hover {
         &.shadow-right {

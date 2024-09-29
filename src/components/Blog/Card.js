@@ -11,8 +11,8 @@ function Card({ post }) {
       <div className="bg-gray-400 h-56 rounded-t-xl relative">
         <Image
           className="rounded-t-xl"
-          layout="fill"
-          objectFit="cover"
+          fill={true}
+          style={{objectFit: "cover"}}
           src={post.image}
           alt={post.title}
         />
@@ -32,15 +32,11 @@ function Card({ post }) {
             </div>
           </div>
 
-          <Link href="/posts/[slug]" as={`/posts${post.slug}`}>
-            <a
-              title={`Ver ${post.title}`}
-              className="block rounded-full border-2 border-primary bg-transparent text-white p-2 transition-colors duration-300 hover:bg-primary"
-            >
+          <Link href="/posts/[slug]" as={`/posts${post.slug}`} title={`Ver ${post.title}`}
+                className="block rounded-full border-2 border-primary bg-transparent text-white p-2 transition-colors duration-300 hover:bg-primary">
               <IconContext.Provider value={{ size: "20px" }}>
                 <IoArrowForward />
               </IconContext.Provider>
-            </a>
           </Link>
         </div>
       </div>

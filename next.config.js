@@ -1,8 +1,6 @@
-module.exports = {
-  // Supported targets are "serverless" and "experimental-serverless-trace"
-  target: "serverless",
-  webpack5: true,
-  webpack: function (config) {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,
       use: "raw-loader",
@@ -13,4 +11,7 @@ module.exports = {
     locales: ["es-ES"],
     defaultLocale: "es-ES",
   },
+  // Cualquier otra configuración adicional puede agregarse aquí.
 };
+
+module.exports = nextConfig;

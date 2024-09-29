@@ -6,8 +6,8 @@ import PostDate from "./Blog/PostDate";
 function PostPreview({ post }) {
   return (
     <div className="post-preview group mb-12 lg:mb-0 flex-1">
-      <Link href="/posts/[slug]" as={`/posts${post.slug}`}>
-        <a title={`Ver ${post.title}`} className="block">
+      <Link href="/posts/[slug]" as={`/posts${post.slug}`} title={`Ver ${post.title}`} className="block">
+        <>
           <div className="relative h-32 mb-4">
             <Image
               src={post.image}
@@ -15,7 +15,7 @@ function PostPreview({ post }) {
               className="object-cover rounded-md lg:rounded-none"
               width={1280}
               height={350}
-              layout="responsive"
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
 
@@ -27,7 +27,7 @@ function PostPreview({ post }) {
               {post.title}
             </div>
           </div>
-        </a>
+        </>
       </Link>
     </div>
   );

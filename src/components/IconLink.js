@@ -11,13 +11,11 @@ function IconLink({ url, title, linkClass, icon }) {
       title={title}
       target="_blank"
       rel="noopener noreferrer"
-      className={linkClass}
+      className={`block p-2 md:p-3 ${linkClass}`}
     >
-      <a title={title} className="block p-2 md:p-3">
         <IconContext.Provider value={{ size: "24px" }} style={iconStyles}>
           {icon}
         </IconContext.Provider>
-      </a>
     </Link>
   );
 }

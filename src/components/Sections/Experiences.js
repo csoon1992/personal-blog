@@ -144,8 +144,21 @@ function Experiences() {
               <br/>
               He comenzado a montar proyectos con PrestaShop 8, así como proyectos en Laravel
                (con Docker en algunos casos).
-              Una de las cosas que más me ha gustado es que he mentorizado a algunos compañeros <i>juniors</i>
+              Una de las cosas que más me ha gustado es que he <i>mentorizado</i> a algunos compañeros <i>juniors</i>
               que entraron poco después de mí en la empresa y se aprende muchísimo, en ambos sentidos.
+            </p>
+          </ExperienceItem>
+
+          <ExperienceItem
+              company="Webimpacto"
+              position="Senior Developer"
+              fromDate="agosto de 2023"
+              toDate="actualidad"
+              color="bg-webimpacto-color"
+              num="7"
+          >
+            <p>
+              Tras algo más de 2 años en mi empresa anterior, decido cambiar de aires y unirme a Webimpacto, empresa top en el sector a la que le seguía la pista desde hacía años. El cambio fue motivado por la necesidad de formar parte de un equipo mayor donde tener algún referente con el que poder seguir creciendo profesionalmente.
             </p>
           </ExperienceItem>
         </div>
